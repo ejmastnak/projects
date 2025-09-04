@@ -3,7 +3,7 @@ import SimpleImagePanel from '@/Components/SimpleImagePanel.vue'
 
 import mattingZupancicevaImg from '@/assets/img/tv47-attic-gym/1-matting-zupanciceva.jpg?w=600'
 import emptyAtticImg from '@/assets/img/tv47-attic-gym/2-empty-attic.jpg?w=600'
-import slatsDiagonalImg from '@/assets/img/tv47-attic-gym/4-slats-diagonal.jpg?w=100'
+import slatsDiagonalImg from '@/assets/img/tv47-attic-gym/4-slats-diagonal.jpg?w=600'
 import boardsInstalledImg from '@/assets/img/tv47-attic-gym/5-boards-installed.jpg?w=600'
 import osbInstalledImg from '@/assets/img/tv47-attic-gym/6-osb-installed.jpg?w=600'
 import extensionCornerImg from '@/assets/img/tv47-attic-gym/8-extension-corner.jpg?w=600'
