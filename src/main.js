@@ -1,7 +1,14 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
-import router from './router'
+import Home from '@/Pages/Home.vue'
+import AtticGym from '@/Pages/TV47/AtticGym.vue'
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
+const routes = [
+  { path: '/', component: Home },
+  { path: '/tv47/attic-gym', component: AtticGym },
+]
+
+export const createApp = ViteSSG(
+  App,
+  { routes },
+)
