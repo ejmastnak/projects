@@ -4,7 +4,7 @@ import Nav from '@/Shared/Nav.vue'
 
 <template>
   <Nav />
-  <main class="max-w-5xl px-8 py-12 mx-auto">
+  <main class="max-w-5xl px-5 sm:px-8 py-8 sm:py-12 mx-auto">
     <RouterView />
   </main>
 </template>
