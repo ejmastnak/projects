@@ -12,7 +12,7 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
 
 </script>
 <template>
-  <div class="max-w-5xl py-12">
+  <div>
     <h1 class="text-5xl">Attic Gym at TV47</h1>
 
     <SimpleImagePanel
