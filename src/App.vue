@@ -1,5 +1,10 @@
+<script setup>
+import Nav from '@/Shared/Nav.vue'
+</script>
+
 <template>
-  <main class="py-12 px-8 mx-auto max-w-5xl">
+  <Nav />
+  <main class="max-w-5xl px-8 py-12 mx-auto">
     <RouterView />
   </main>
 </template>
