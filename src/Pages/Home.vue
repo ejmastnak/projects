@@ -25,7 +25,7 @@ import boardsInstalledImg from '@/assets/img/tv47-attic-gym/5-boards-installed.j
 
     <p class="mt-4">Here is the list of projects — small for now, to be expanded soon:</p>
 
-    <ul class="mt-5 gap-y-2">
+    <ul class="mt-10 flex flex-col gap-y-20">
 
       <!-- TV47 attic gym -->
       <li>
