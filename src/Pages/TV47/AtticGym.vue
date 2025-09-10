@@ -9,8 +9,8 @@ import osbInstalledImg from '@/assets/img/tv47-attic-gym/6-osb-installed.jpg?w=6
 import extensionCornerImg from '@/assets/img/tv47-attic-gym/8-extension-corner.jpg?w=600'
 import sleepersCadImg from '@/assets/img/tv47-attic-gym/cad-sleepers.png?w=600'
 import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
-
 </script>
+
 <template>
   <div>
     <h1 class="text-5xl">Attic Gym at TV47</h1>
@@ -44,7 +44,7 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
 
     </SimpleImagePanel>
 
-    <h2 class="mt-10 text-4xl text-left">Preparation...</h2>
+    <h2 class="mt-16 text-4xl text-left">Preparation...</h2>
 
     <SimpleImagePanel
       class="mt-8"
@@ -92,7 +92,7 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
 
     </SimpleImagePanel>
 
-    <h2 class="mt-10 text-4xl text-left">Subfloor technical details</h2>
+    <h2 class="mt-20 text-4xl text-left">Subfloor technical details</h2>
 
     <SimpleImagePanel
       class="mt-12"

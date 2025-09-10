@@ -16,7 +16,7 @@ const props = defineProps({
 </script>
 <template>
   <div
-    class="md:flex md:gap-x-6"
+    class="md:flex md:gap-x-12"
     :class="reverse ? 'md:flex-row-reverse' : ''"
   >
     <div class="mb-4 md:mb-0 shrink-0">

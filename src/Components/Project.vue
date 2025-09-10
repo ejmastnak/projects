@@ -17,11 +17,10 @@ const props = defineProps({
       />
     </RouterLink>
     <div class="max-w-lg">
-      <RouterLink class="text-blue-500 hover:text-blue-600 hover:underline font-semibold leading-snug" :to="href">{{title}}</RouterLink>
-      <div class="mt-1 sm:mt-px text-sm text-gray-800">
+      <RouterLink class="text-lg text-blue-500 hover:text-blue-600 hover:underline font-semibold leading-snug" :to="href">{{title}}</RouterLink>
+      <div class="mt-1 text-sm text-gray-800">
         <slot />
       </div>
     </div>
   </div>
-
 </template>
