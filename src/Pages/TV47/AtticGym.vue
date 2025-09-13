@@ -13,7 +13,7 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
 
 <template>
   <div>
-    <h1 class="text-5xl">Attic Gym at TV47</h1>
+    <h1 class="text-5xl">Attic Gym</h1>
 
     <SimpleImagePanel
       class="mt-12"
@@ -25,7 +25,7 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
     >
       <p class="max-w-xl">
         <strong class="font-bold">Summary:</strong>
-        This page documents building an attic gym at our farm at Tolsti Vrh 47.
+        This page documents building an attic gym at my Dad's home in the countryside in Slovenia.
         I had two principal goals:
       </p>
 
