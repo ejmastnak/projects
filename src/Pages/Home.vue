@@ -30,12 +30,12 @@ import boardsInstalledImg from '@/assets/img/tv47-attic-gym/5-boards-installed.j
       <!-- TV47 attic gym -->
       <li>
         <Project
-          title="TV47 attic gym"
+          title="Attic gym"
           :img="boardsInstalledImg"
           imgAlg="Framework of elastic sleepers build to support the gym's floor."
           href="/tv47/attic-gym"
         >
-              A gym built in the attic of our farm at Tolsti Vrh 47 with an elastic, "bouncy" floor to absorb the impact of weights and plyometric exercises while training, and designed to use the exposed timber framing for mounting exercise equipment.
+              A gym built in the attic of my Dad's home in the Slovene countryside, designed with an elastic, "bouncy" floor to absorb the impact of weights and plyometric exercises while training.
         </Project>
       </li>
 
