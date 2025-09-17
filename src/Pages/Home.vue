@@ -1,7 +1,7 @@
 <script setup>
 import Project from '@/Components/Project.vue'
 
-import boardsInstalledImg from '@/assets/img/tv47-attic-gym/5-boards-installed.jpg?w=400'
+import atticGymImg from '@/assets/img/tv47-attic-gym/9-complete.jpg?w=600'
 </script>
 
 <template>
@@ -31,7 +31,7 @@ import boardsInstalledImg from '@/assets/img/tv47-attic-gym/5-boards-installed.j
       <li>
         <Project
           title="Attic gym"
-          :img="boardsInstalledImg"
+          :img="atticGymImg"
           imgAlg="Framework of elastic sleepers build to support the gym's floor."
           href="/tv47/attic-gym"
         >
