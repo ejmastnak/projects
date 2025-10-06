@@ -23,7 +23,7 @@ const { name, img, imgAlt, href, } = Astro.props as Props;
   </div>
 
   <a class="mx-auto block w-fit" href={href}>
-    <Image src={img} alt={imgAlt} class="object-cover md:h-64 lg:h-80 max-w-lg rounded-lg" width="600" />
+    <Image src={img} alt={imgAlt} loading="eager" class="object-cover md:h-64 lg:h-80 max-w-lg rounded-lg" width="600" />
   </a>
 
 </div>
