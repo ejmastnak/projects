@@ -1,27 +1,30 @@
-<script setup>
-import SimpleImagePanel from '@/Components/SimpleImagePanel.vue'
+---
+import { Image } from 'astro:assets';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SimpleImagePanel from '@/components/SimpleImagePanel.astro'
 
-import mattingZupancicevaImg from '@/assets/img/tv47-attic-gym/1-matting-zupanciceva.jpg?w=600'
-import emptyAtticImg from '@/assets/img/tv47-attic-gym/2-empty-attic.jpg?w=600'
-import slatsDiagonalImg from '@/assets/img/tv47-attic-gym/4-slats-diagonal.jpg?w=600'
-import boardsInstalledImg from '@/assets/img/tv47-attic-gym/5-boards-installed.jpg?w=600'
-import osbInstallingImg from '@/assets/img/tv47-attic-gym/6-osb-installing.jpg?w=600'
-import extensionCornerImg from '@/assets/img/tv47-attic-gym/8-extension-corner.jpg?w=600'
-import completeImg from '@/assets/img/tv47-attic-gym/9-complete.jpg?w=600'
-import coverImg from '@/assets/img/tv47-attic-gym/9-cover.jpg?w=600'
+const title = "Attic Gym"
+const description = "A gym built in the attic of my Dad's home in the Slovene countryside, designed with an elastic, floor to absorb the impact of weights and plyometric exercises while training."
 
-import sleepersCadImg from '@/assets/img/tv47-attic-gym/cad-sleepers.png?w=600'
-import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
-</script>
+import mattingZupancicevaImg from '@/assets/img/tv47-attic-gym/1-matting-zupanciceva.jpg'
+import emptyAtticImg from '@/assets/img/tv47-attic-gym/2-empty-attic.jpg'
+import slatsDiagonalImg from '@/assets/img/tv47-attic-gym/4-slats-diagonal.jpg'
+import boardsInstalledImg from '@/assets/img/tv47-attic-gym/5-boards-installed.jpg'
+import osbInstallingImg from '@/assets/img/tv47-attic-gym/6-osb-installing.jpg'
+import extensionCornerImg from '@/assets/img/tv47-attic-gym/8-extension-corner.jpg'
+import completeImg from '@/assets/img/tv47-attic-gym/9-complete.jpg'
+import coverImg from '@/assets/img/tv47-attic-gym/9-cover.jpg'
+import sleepersCadImg from '@/assets/img/tv47-attic-gym/cad-sleepers.png'
+import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png'
+---
 
-<template>
-  <div>
-    <h1 class="text-5xl">Attic Gym</h1>
+<BaseLayout title={title} description={description}>
+  <h1 class="text-5xl">Attic Gym</h1>
 
+  <div class="mt-12">
     <SimpleImagePanel
-      class="mt-12"
-      :reverse="true"
-      :imgSrc="coverImg"
+      reverse={true}
+      img={coverImg}
       imgAlt="The completed floor with rubber mats installed."
       imgCaption="The completed floor with rubber mats installed."
       imgClasses="h-60 w-full max-w-sm mx-auto md:h-80 md:max-w-md border border-gray-300"
@@ -46,13 +49,14 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
       </p>
 
     </SimpleImagePanel>
+  </div>
 
-    <h2 class="mt-16 text-4xl text-left">Preparation...</h2>
+  <h2 class="mt-16 text-4xl text-left">Preparation...</h2>
 
+  <div class="mt-8">
     <SimpleImagePanel
-      class="mt-8"
-      :reverse="true"
-      :imgSrc="mattingZupancicevaImg"
+      reverse={true}
+      img={mattingZupancicevaImg}
       imgAlt="In the process of reframing the first-floor bathroom with stronger lumber."
       imgCaption="Rubber matting fresh out of the van, stacked outside the basement of my city apartment in Ljubljana, ready to be taken inside for storage."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
@@ -73,12 +77,12 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
         Aside: rubber mats are difficult to carry in bulk! SBR rubber is relatively heavy—about 1000 kg per cubic meter, the same density as water—so each 1 m x 1 m x 15 mm tile is 15 kg or so, and floppy. I found the best compromise was to carry two tiles at a time, folded over your head like a hat.
       </p>
     </SimpleImagePanel>
+  </div>
 
-
+  <div class="mt-12">
     <SimpleImagePanel
-      class="mt-12"
-      :reverse="false"
-      :imgSrc="emptyAtticImg"
+      reverse={false}
+      img={emptyAtticImg}
       imgAlt="Empty attic"
       imgCaption="The (mostly) empty attic space where gym will go."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-96 object-top"
@@ -94,13 +98,14 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
       <p class="mt-2">You can see a picture of the (almost) emptied attic space <span class="md:hidden">above.</span> <span class="hidden md:inline">on the left.</span> If you squint you miss the large closet lying on its side on the floor, still waiting to be moved downstairs.</p>
 
     </SimpleImagePanel>
+  </div>
 
-    <h2 class="mt-20 text-4xl text-left">Subfloor technical details</h2>
+  <h2 class="mt-20 text-4xl text-left">Subfloor technical details</h2>
 
+  <div class="mt-12">
     <SimpleImagePanel
-      class="mt-12"
-      :reverse="true"
-      :imgSrc="slatsDiagonalImg"
+      reverse={true}
+      img={slatsDiagonalImg}
       imgAlt="The bottom layer of the sleeper grid. This was shimmed to level, covered with a perpendicular layer of slats, and then covered with OSB panels."
       imgCaption="The bottom layer of the sleeper grid. This was shimmed to level, covered with a perpendicular layer of slats, and then covered with OSB panels."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
@@ -108,37 +113,38 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
     >
       <p class="max-w-2xl">
         The gym floor is a 5 meter by 5 meter square covered in SBR rubber mats placed on a subfloor of OSB panels on a doubled grid of sleepers.
-        </p>
+      </p>
 
-        <p class="mt-2">
+      <p class="mt-2">
         The bottom layer of the sleeper grid is recycled from salvaged roofing slats left over from when we re-roofed the barn.
         The slats are roughly 3 mm x 5 mm in cross section and 3-4 meters in length (i.e. less than the 5 meter length/width of the floor) and had to be spliced to reach 5 meters, as shown in the plans below.
         The slats were shimmed to level, then covered with a second layer of perpendicular slats, followed by OSB panels.
       </p>
     </SimpleImagePanel>
+  </div>
 
-    <p class="mt-10">
-      Below are the CAD drawings I used to plan the subfloor.
-      I used a 625 mm modular dimension to match the standard 625 mm width of OSB panels in the EU, which also divides cleanly into the 5 meter length and width of the floor (8 panels are exactly 5 meters wide).
-    </p>
+  <p class="mt-10">
+    Below are the CAD drawings I used to plan the subfloor.
+    I used a 625 mm modular dimension to match the standard 625 mm width of OSB panels in the EU, which also divides cleanly into the 5 meter length and width of the floor (8 panels are exactly 5 meters wide).
+  </p>
 
-    <div class="flex flex-col lg:flex-row">
-      <div class="sm:grid sm:grid-cols-2 space-x-4">
-        <img :src="sleepersCadImg" />
-        <p class="sm:hidden text-center text-sm text-gray-700">CAD plans for the grid of sleepers, made of two perpendicular layers of slats. The 625 mm on-center spacing accomodates the future OSB panels.</p>
+  <div class="flex flex-col lg:flex-row">
+    <div class="sm:grid sm:grid-cols-2 space-x-4">
+      <Image src={sleepersCadImg} alt="CAD plans for the grid of sleepers" width="700" />
+      <p class="sm:hidden text-center text-sm text-gray-700">CAD plans for the grid of sleepers, made of two perpendicular layers of slats. The 625 mm on-center spacing accomodates the future OSB panels.</p>
 
-        <img class="mt-5 sm:mt-0" :src="osbCadImg" />
-        <p class="sm:hidden text-center text-sm text-gray-700">Layout of the OSB panels placed on top of the sleepers. I used standard 2500 mm x 625 mm panels. The joints are staggered for improved strength.</p>
+      <Image class="mt-5 sm:mt-0" src={osbCadImg} alt="CAD layout of the OSB panels placed on top of the sleepers" width="700" />
+      <p class="sm:hidden text-center text-sm text-gray-700">Layout of the OSB panels placed on top of the sleepers. I used standard 2500 mm x 625 mm panels. The joints are staggered for improved strength.</p>
 
-        <p class="hidden sm:block text-center text-sm text-gray-700">CAD plans for the grid of sleepers, made of two perpendicular layers of slats. The 625 mm on-center spacing accomodates the future OSB panels.</p>
-        <p class="hidden sm:block text-center text-sm text-gray-700">Layout of the OSB panels placed on top of the sleepers. I used standard 2500 mm x 625 mm panels. The joints are staggered for improved strength.</p>
-      </div>
+      <p class="hidden sm:block text-center text-sm text-gray-700">CAD plans for the grid of sleepers, made of two perpendicular layers of slats. The 625 mm on-center spacing accomodates the future OSB panels.</p>
+      <p class="hidden sm:block text-center text-sm text-gray-700">Layout of the OSB panels placed on top of the sleepers. I used standard 2500 mm x 625 mm panels. The joints are staggered for improved strength.</p>
     </div>
+  </div>
 
+  <div class="mt-12">
     <SimpleImagePanel
-      class="mt-12"
-      :reverse="false"
-      :imgSrc="boardsInstalledImg"
+      reverse={false}
+      img={boardsInstalledImg}
       imgAlt="The top layer of the sleeper grid, made of 1 inch thick spruce. OSB panels go on top."
       imgCaption="The top layer of the sleeper grid, made of 1 inch thick spruce. OSB panels go on top."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
@@ -154,11 +160,12 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
       </p>
 
     </SimpleImagePanel>
+  </div>
 
+  <div class="mt-12">
     <SimpleImagePanel
-      class="mt-12"
-      :reverse="true"
-      :imgSrc="osbInstallingImg"
+      reverse={true}
+      img={osbInstallingImg}
       imgAlt="In the process of installing OSB panels over the sleeper grid."
       imgCaption="In the process of installing OSB panels over the sleeper grid."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
@@ -170,11 +177,12 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
         The panel joints are staggered for better strength, and the tongues and grooves on the panels help tie the individual panels into a unified planar structure.
       </p>
     </SimpleImagePanel>
+  </div>
 
+  <div class="mt-12">
     <SimpleImagePanel
-      class="mt-12"
-      :reverse="false"
-      :imgSrc="extensionCornerImg"
+      reverse={false}
+      img={extensionCornerImg}
       imgAlt="extensionCornerImg"
       imgCaption="In the process of laying the final layer of rubber mats on top of the OSB subfloor."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
@@ -187,11 +195,12 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
         No adhesive was needed—the relatively high coefficient of friction between the mats and subfloor keeps the mats in place.
       </p>
     </SimpleImagePanel>
+  </div>
 
+  <div class="mt-12">
     <SimpleImagePanel
-      class="mt-12"
-      :reverse="true"
-      :imgSrc="completeImg"
+      reverse={true}
+      img={completeImg}
       imgAlt="A picture of the complete gym floor with the first pieces of equipment already in."
       imgCaption="A picture of the complete gym floor with the first pieces of equipment already in."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
@@ -204,6 +213,5 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png?w=600'
         I'm pleased with how the project turned out.
       </p>
     </SimpleImagePanel>
-
   </div>
-</template>
+</BaseLayout>

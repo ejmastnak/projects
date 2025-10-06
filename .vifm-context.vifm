@@ -1,7 +1,3 @@
 let $VIFM_CONTEXT = expand('%d')
-
-source $VIFM/navigation/vue.vifm
+source $VIFM/navigation/astro.vifm
 nnoremap ;tt :goto $VIFM_CONTEXT/TODO.md<CR>
-
-nnoremap ;lj :cd $VIFM_CONTEXT/src/Pages/LJ16<CR>
-nnoremap ;tv :cd $VIFM_CONTEXT/src/Pages/TV47<CR>

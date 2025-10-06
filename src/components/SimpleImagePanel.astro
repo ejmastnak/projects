@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  reverse: boolean,
+  img: string,
+  imgAlt: string,
+  imgCaption: string,
+  imgClasses?: string,
+  captionClasses?: string,
+}
+const { reverse, img, imgAlt, imgCaption, imgClasses = "", captionClasses = "" } = Astro.props as Props;
+
+const visible = true
+---
+
+<div
+  class={`md:flex md:gap-x-12 ${reverse ? 'md:flex-row-reverse' : ''}`}
+>
+  <div class="mb-4 md:mb-0 shrink-0">
+    <Image
+      src={img}
+      alt={imgAlt}
+      class={`mx-auto my-auto object-cover rounded-md ${imgClasses ?? ''}`}
+      width="700"
+    />
+    {!!imgCaption && <p class={`text-base text-gray-700 text-center mx-auto ${captionClasses ?? ''}`}>{imgCaption}</p>}
+  </div>
+  <div>
+    <slot />
+  </div>
+</div>
+

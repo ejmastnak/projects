@@ -1,10 +1,14 @@
-<script setup>
-import Project from '@/Components/Project.vue'
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Project from '@/components/Project.astro'
 
-import atticGymImg from '@/assets/img/tv47-attic-gym/9-complete.jpg?w=600'
-</script>
+import atticGymImg from '@/assets/img/tv47-attic-gym/9-complete.jpg'
 
-<template>
+const title = "Home"
+const description = "EliProjects is a site created for documenting my building projects to share with friends, family, and acquaintances. You'll find write-ups, photos, CAD plans, and the occasional story or anecdote of things I've built."
+---
+
+<BaseLayout title={title} description={description}>
   <div>
 
     <h1 class="text-5xl">Welcome</h1>
@@ -30,16 +34,16 @@ import atticGymImg from '@/assets/img/tv47-attic-gym/9-complete.jpg?w=600'
       <!-- TV47 attic gym -->
       <li>
         <Project
-          title="Attic gym"
-          :img="atticGymImg"
-          imgAlg="Framework of elastic sleepers build to support the gym's floor."
+          name="Attic gym"
+          img={atticGymImg}
+          imgAlt="Framework of elastic sleepers build to support the gym's floor."
           href="/tv47/attic-gym"
         >
-              A gym built in the attic of my Dad's home in the Slovene countryside, designed with an elastic, "bouncy" floor to absorb the impact of weights and plyometric exercises while training.
+          A gym built in the attic of my Dad's home in the Slovene countryside, designed with an elastic, "bouncy" floor to absorb the impact of weights and plyometric exercises while training.
         </Project>
       </li>
 
     </ul>
 
   </div>
-</template>
+</BaseLayout>
