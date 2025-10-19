@@ -8,7 +8,7 @@ const description = "A gym built in the attic of my Dad's home in the Slovene co
 
 import mattingZupancicevaImg from '@/assets/img/tv47-attic-gym/1-matting-zupanciceva.jpg'
 import emptyAtticImg from '@/assets/img/tv47-attic-gym/2-empty-attic.jpg'
-import slatsDiagonalImg from '@/assets/img/tv47-attic-gym/4-slats-diagonal.jpg'
+import boardsMaterialsImg from '@/assets/img/tv47-attic-gym/5-boards-materials.jpg'
 import boardsInstalledImg from '@/assets/img/tv47-attic-gym/5-boards-installed.jpg'
 import osbInstallingImg from '@/assets/img/tv47-attic-gym/6-osb-installing.jpg'
 import extensionCornerImg from '@/assets/img/tv47-attic-gym/8-extension-corner.jpg'
@@ -105,39 +105,40 @@ import osbCadImg from '@/assets/img/tv47-attic-gym/cad-osb.png'
   <div class="mt-12">
     <SimpleImagePanel
       reverse={true}
-      img={slatsDiagonalImg}
-      imgAlt="The bottom layer of the sleeper grid. This was shimmed to level, covered with a perpendicular layer of slats, and then covered with OSB panels."
-      imgCaption="The bottom layer of the sleeper grid. This was shimmed to level, covered with a perpendicular layer of slats, and then covered with OSB panels."
+      img={boardsMaterialsImg}
+      imgAlt="The bottom layer of the sleeper grid (with the soon-to-be-installed second layer of perpendicular slats on top). The assembly was shimmed to level, then covered with OSB panels."
+      imgCaption="The bottom layer of the sleeper grid (with the soon-to-be-installed second layer of perpendicular slats on top). The assembly was shimmed to level, then covered with OSB panels."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
       captionClasses="max-w-sm"
     >
       <p class="max-w-2xl">
-        The gym floor is a 5 meter by 5 meter square covered in SBR rubber mats placed on a subfloor of OSB panels on a doubled grid of sleepers.
+        The gym floor is a 5 meter by 5 meter square covered in SBR rubber mats placed on a subfloor of OSB panels on a doubled grid of wooden sleepers.
       </p>
 
       <p class="mt-2">
         The bottom layer of the sleeper grid is recycled from salvaged roofing slats left over from when we re-roofed the barn.
-        The slats are roughly 3 mm x 5 mm in cross section and 3-4 meters in length (i.e. less than the 5 meter length/width of the floor) and had to be spliced to reach 5 meters, as shown in the plans below.
+        The slats are roughly 3 cm x 5 cm in cross section and 3-4 meters in length (i.e. less than the 5 meter length/width of the floor) and had to be spliced to reach 5 meters, as shown in the plans below.
         The slats were shimmed to level, then covered with a second layer of perpendicular slats, followed by OSB panels.
+        More in the pictures below.
       </p>
     </SimpleImagePanel>
   </div>
 
   <p class="mt-10">
     Below are the CAD drawings I used to plan the subfloor.
-    I used a 625 mm modular dimension to match the standard 625 mm width of OSB panels in the EU, which also divides cleanly into the 5 meter length and width of the floor (8 panels are exactly 5 meters wide).
+    I used a 625 mm modular dimension to match the standard 625 mm width of OSB panels in the EU, which also (intentionally!) divides cleanly into the 5 meter length and width of the floor (8 panels are exactly 5 meters wide).
   </p>
 
   <div class="flex flex-col lg:flex-row">
     <div class="sm:grid sm:grid-cols-2 space-x-4">
       <Image src={sleepersCadImg} alt="CAD plans for the grid of sleepers" width="700" />
-      <p class="sm:hidden text-center text-sm text-gray-700">CAD plans for the grid of sleepers, made of two perpendicular layers of slats. The 625 mm on-center spacing accomodates the future OSB panels.</p>
+      <p class="sm:hidden text-center text-sm text-gray-700">CAD plans for the grid of sleepers, made of two perpendicular layers of slats (dimensions in millimeters). The 625 mm on-center spacing accomodates the future OSB panels.</p>
 
       <Image class="mt-5 sm:mt-0" src={osbCadImg} alt="CAD layout of the OSB panels placed on top of the sleepers" width="700" />
-      <p class="sm:hidden text-center text-sm text-gray-700">Layout of the OSB panels placed on top of the sleepers. I used standard 2500 mm x 625 mm panels. The joints are staggered for improved strength.</p>
+      <p class="sm:hidden text-center text-sm text-gray-700">Layout of the OSB panels placed on top of the sleepers (dimensions in millimeters). I used standard 2500 mm x 625 mm panels. The joints are staggered for improved strength.</p>
 
-      <p class="hidden sm:block text-center text-sm text-gray-700">CAD plans for the grid of sleepers, made of two perpendicular layers of slats. The 625 mm on-center spacing accomodates the future OSB panels.</p>
-      <p class="hidden sm:block text-center text-sm text-gray-700">Layout of the OSB panels placed on top of the sleepers. I used standard 2500 mm x 625 mm panels. The joints are staggered for improved strength.</p>
+      <p class="hidden sm:block text-center text-sm text-gray-700">CAD plans for the grid of sleepers, made of two perpendicular layers of slats (dimensions in millimeters). The 625 mm on-center spacing accomodates the future OSB panels.</p>
+      <p class="hidden sm:block text-center text-sm text-gray-700">Layout of the OSB panels placed on top of the sleepers (dimensions in millimeters). I used standard 2500 mm x 625 mm panels. The joints are staggered for improved strength.</p>
     </div>
   </div>
 
