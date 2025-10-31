@@ -2,25 +2,31 @@
 import { Image } from 'astro:assets';
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SimpleImagePanel from '@/components/SimpleImagePanel.astro'
+import BentoCard from '@/components/BentoCard.astro'
+import BentoWrapper from '@/components/BentoWrapper.astro'
 
 const title = "MiniOffice"
 const description = "A small office built in a decomissioned detached hallway bathroom."
 
-import computerConduitImg from '@/assets/img/minioffice/6-computer-conduit.jpg'
+import newCableImg from '@/assets/img/minioffice/new-cable.jpg'
+import originalImg from '@/assets/img/minioffice/original.jpg'
 
-import hallwayWiringImg from '@/assets/img/minioffice/1-hallway-wiring.jpg'
-import interiorLightJunctionGipsImg from '@/assets/img/minioffice/2-interior-light-junction-gips.jpg'
-import interiorLightJunctionOldImg from '@/assets/img/minioffice/2-interior-light-junction-old.jpg'
-import switchJunctionNewImg from '@/assets/img/minioffice/3-switch-junction-new.jpg'
-import switchJunctionZoomedOutImg from '@/assets/img/minioffice/3-switch-junction-zoomed-out.jpg'
-import computerOutletExcavatedBroomImg from '@/assets/img/minioffice/4-computer-outlet-excavated-broom.jpg'
-import computerBoxFlushImg from '@/assets/img/minioffice/5-computer-box-flush.jpg'
-import computerConduitGipsImg from '@/assets/img/minioffice/6-computer-conduit-gips.jpg'
-import computerConduitImg from '@/assets/img/minioffice/6-computer-conduit.jpg'
-import computerOutletCompleteImg from '@/assets/img/minioffice/6-computer-outlet-complete.jpg'
-import computerOutletLevelImg from '@/assets/img/minioffice/6-computer-outlet-level.jpg'
-import timberScrapingBottomImg from '@/assets/img/minioffice/7-timber-scraping-bottom.jpg'
-import timberScrapingStartImg from '@/assets/img/minioffice/7-timber-scraping-start.jpg'
+import oldWoodJunctionImg from '@/assets/img/minioffice/old-wood-junction.jpg'
+import newJunctionImg from '@/assets/img/minioffice/new-junction.jpg'
+
+import originalLightImg from '@/assets/img/minioffice/original-light.jpg'
+import newLightImg from '@/assets/img/minioffice/new-light-lit.jpg'
+
+import switchJunctionNewImg from '@/assets/img/minioffice/switch-junction-gipsed.jpg'
+import switchJunctionHoleImg from '@/assets/img/minioffice/switch-junction-hole.jpg'
+import switchJunctionFlushImg from '@/assets/img/minioffice/switch-junction-flush.jpg'
+
+import conduitChaseImg from '@/assets/img/minioffice/conduit-chase.jpg'
+import conduitInstallingImg from '@/assets/img/minioffice/conduit-installing.jpg'
+import conduitInstalledImg from '@/assets/img/minioffice/conduit-installed.jpg'
+
+// import timberScrapingBottomImg from '@/assets/img/minioffice/timber-scraping-bottom.jpg'
+// import timberScrapingStartImg from '@/assets/img/minioffice/timber-scraping-start.jpg'
 
 ---
 
@@ -30,10 +36,10 @@ import timberScrapingStartImg from '@/assets/img/minioffice/7-timber-scraping-st
   <div class="mt-12">
     <SimpleImagePanel
       reverse={true}
-      img={computerConduitImg}
-      imgAlt="Placeholder"
-      imgCaption="Placeholder"
-      imgClasses="h-60 w-full max-w-sm mx-auto md:h-80 md:max-w-md border border-gray-300"
+      img={originalImg}
+      imgAlt="The soon-to-be office room just before beginning the project"
+      imgCaption="The soon-to-be office room just before beginning the project"
+      imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
     >
       <p class="max-w-xl">
         <strong class="font-bold">Summary:</strong>
@@ -43,12 +49,7 @@ import timberScrapingStartImg from '@/assets/img/minioffice/7-timber-scraping-st
       <p class="mt-3">
         The office is located just across the hallway from the apartment; the basic form factor is a 2 m x 1 m rectangle (read: <span class="italic">small!</span>).
 
-        Installed outlets.
-        Refinished the walls.
-        Installed a proper light.
-        Sanded and oiled structural timbers, which were previously hidden behind a palster coating.
-        Installed a foldable(?) desk
-
+        The project involved running new electrical cable, installing outlets, refinished the walls, installing a light fixture, and sanding and refinishing the structural timbers, which were previously hidden behind a palster coating.
       </p>
 
     </SimpleImagePanel>
@@ -59,14 +60,14 @@ import timberScrapingStartImg from '@/assets/img/minioffice/7-timber-scraping-st
   <div class="mt-8">
     <SimpleImagePanel
       reverse={true}
-      img={computerConduitImg}
-      imgAlt="Placeholder"
-      imgCaption="Placeholder"
+      img={conduitInstallingImg}
+      imgAlt="A freshly cut/excavated chase and conduit to supply outlets for a computer."
+      imgCaption="A freshly cut/excavated chase and conduit to supply outlets for a computer."
       imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
       captionClasses="max-w-sm"
     >
       <p>
-        When beginning the project, the room was supplied with a hot and a neutral line that powered a bare lightbulb hanging above the door.
+        <span class="font-bold">Initial status:</span> When beginning the project, the room was supplied with a hot and a neutral line that powered a bare lightbulb hanging above the door.
         There were no outlets, and also no ground wire—the existing wiring predated current building practice where ground wires are run as a matter of course.
       </p>
 
@@ -74,11 +75,11 @@ import timberScrapingStartImg from '@/assets/img/minioffice/7-timber-scraping-st
         Summary of improvements:
       </p>
       <ul class="list-disc ml-5">
-        <li>Replace the existing hot and neutral wires in the office with modern 3-wire VDE cable (that includes a ground wire!)</li>
-        <li>Install outlets</li>
-        <li>Cut chases (in the masonry wall—yuck!) and run conduit and cable for outlets</li>
-        <li>Add proper junction boxes</li>
-        <li>Install a proper light fixture to replace the bare dangling bulb</li>
+        <li>Replacing the existing hot and neutral wires in the office with modern 3-wire VDE cable (that includes a ground wire!)</li>
+        <li>Installing outlets</li>
+        <li>Cutting chases in the masonry wall and run conduit and cable for outlets</li>
+        <li>Installing junction boxes</li>
+        <li>Installing a proper light fixture to replace the bare dangling bulb</li>
         </li>
       </ul>
       <p class="mt-2">
@@ -92,129 +93,92 @@ import timberScrapingStartImg from '@/assets/img/minioffice/7-timber-scraping-st
     <p class="mt-2">
       The existing wiring supplying the office ran from the main panel in my apartment through conduit in the hallway to a hallway junction box just outside the office, then through the hallway-office wall into the office.
       By a great stroke of luck, a 3-wire cable of wire of sufficient gauge happened to run continuously from the main panel in my apartment to this hallway junction box outside the office.
-      Only the hot and neutral wires were connected in my main panel, but it was a simple matter of hooking up the ground wire to the ground busbar in my main panel, and <span class="italic">voilà!</span>, there was the grounding for the office.
+      Only the hot and neutral wires were connected in my main panel, but it was a simple matter of hooking up the ground wire to the ground busbar in my main panel, and <span class="italic">voilà!</span>, there was the for the office.
     </p>
 
     <p class="mt-2">
-      By another great stroke of luck, the connection between the hallway junction box and office was made with conduit (in old European masonry buildings you'll sometimes find wires built directly into the brick wall), so replacing cable was a simple matter of pulling old wires out while running new cable in (no need to drill a chase through the hallway-office wall).
+      By another stroke of luck, the connection between the hallway junction box and office was made with conduit (in old masonry buildings in Slovenia you'll sometimes find wires built directly into the brick wall), so replacing cable was a simple matter of pulling old wires out while running new cable in (no need to drill a chase through the hallway-office wall).
     </p>
 
     <p class="mt-2">
-      Okay, I had a solid ground, neutral, and hot wire running between the office and main panel; I could then begin electrical work in the office itself.
+      With a solid ground, neutral, and hot wire running between the office and my main panel; I could then begin electrical work in the office itself.
       This involved:
     </p>
 
     <ul class="ml-5 list-disc">
       <li>
-        Replaced all wiring in the office with modern 1.5 mm2 VDE cable.
+        Replacing all existing wiring in the office with modern 1.5 mm2 VDE cable.
       </li>
       <li>
-        Adding a proper junction box in the office for the junction for the light fixture's connections (previously there was an, erm, <span class="italic">makeshift</span> junction box hewn out of a scrap piece of construction lumber).
+        Replacing the, erm, makeshift <span class="italic">wooden</span> junction box hewn out of a scrap piece of construction lumber that held the main light/switch junction with a modern fire-retardent high-impact polystyrene junction box.
       </li>
       <li>
-        Installed a proper wall-mounted light fixture to replace the lightbulb dangling from the wall by its supply wires.
+        Installing a proper wall-mounted light fixture to replace the lightbulb dangling from the wall by its supply wires.
       </li>
       <li>
-        Cut chases into the masonry wall for new conduit and junction/fixture boxes.
+        Cutting chases into the masonry wall for new conduit and junction/fixture boxes.
         This was unpleasant because of a constant worry of bothering the neighbors (cutting/drilling into masonry, whether with an angle grinder or rotary hammer drill, is <span class="italic">loud</span>).
       </li>
       <li>
-        Installed conduit and cable for outlets, and of course installed the outlets themselves.
+        Installing conduit and cable for outlets, and of course installing the outlets themselves.
       </li>
     </ul>
   </div>
 
   <h3 class="mt-5 text-2xl">Electrical: Gallery</h3>
 
+  <div class="mt-6 mx-auto max-w-2xl lg:max-w-7xl">
+    <BentoWrapper>
 
-<!-- import switchJunctionNewImg from '@/assets/img/minioffice/3-switch-junction-new.jpg' -->
-<!-- import switchJunctionZoomedOutImg from '@/assets/img/minioffice/3-switch-junction-zoomed-out.jpg' -->
-<!-- import computerOutletExcavatedBroomImg from '@/assets/img/minioffice/4-computer-outlet-excavated-broom.jpg' -->
-<!-- import computerBoxFlushImg from '@/assets/img/minioffice/5-computer-box-flush.jpg' -->
-<!-- import computerConduitGipsImg from '@/assets/img/minioffice/6-computer-conduit-gips.jpg' -->
-<!-- import computerConduitImg from '@/assets/img/minioffice/6-computer-conduit.jpg' -->
-<!-- import computerOutletCompleteImg from '@/assets/img/minioffice/6-computer-outlet-complete.jpg' -->
-<!-- import computerOutletLevelImg from '@/assets/img/minioffice/6-computer-outlet-level.jpg' -->
+      <!-- Wood junction before/after -->
+      <BentoCard classes="lg:col-span-3" title='Old wooden "junction box"...' imgSrc={oldWoodJunctionImg.src} imgAlt="The hewn-out scrap piece of construction lumber originally serving as the room's junction box.">
+        The original supply wires for the room were routed through this hewn-out piece of scrap construction lumber. This was replaced with the modern molded plastic box at right.
+        Note the very much welcome(!!) existing sub-surface conduit (the black tube continuing to the right)—this supplies the light switch and saved me from cutting a new chase in the masonry wall.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-3" title="...and its modern replacement" imgSrc={newJunctionImg.src} imgAlt="The fire-retardant high-impact polystyrene junction box replacing the original makeshift wooden box.">
+        The room's new main junction box, now made of more appropriate molded fire-retardant high-impact polystyrene.
+        The main supply enters through the wall, then continues to the right through sub-surface conduit to the light switch and new outlets.
+        The two masonry anchors will hold screws for a light fixture.
+      </BentoCard>
 
+      <!-- Light before/after -->
+      <BentoCard classes="lg:col-span-3" title="Original bare lightbulb..." imgSrc={originalLightImg.src} imgAlt="The original bare lightbulb, seen dangling from the wall by its supply wires.">
+        The original bare lightbulb, seen dangling from the wall by its supply wires.
+        If you look closely you'll see that electrical connectors are exposed about halfway along the exposed portion of the wires; you can also recognize the wooden junction box from the previous row of pictures.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-3" title="...and its new replacement" imgSrc={newLightImg.src} imgAlt="The new wall-mounted light fixture replacing the original bare lightbulb.">
+        The new wall-mounted light fixture replacing the original bare lightbulb.
+        It is mounted over the new junction box shown above.
+        Fun story: this is a repurposed light fixture from our old family home in Ljubljana, which we took with us after moving out but didn't find a place for in our new home.
+      </BentoCard>
 
-  <div class="mx-auto max-w-2xl lg:max-w-7xl">
-    <div class="mt-4 grid grid-cols-1 gap-4 sm:mt-6 lg:grid-cols-6 lg:grid-rows-2">
+      <!-- Light switch electrical before/after -->
+      <BentoCard classes="lg:col-span-2" title="Hewn-out cavity for a new electrical box" imgSrc={switchJunctionHoleImg.src} imgAlt="The rectangular cavity hewn out of the masonry wall to hold a new electrical box.">
+        This hole will hold a new electrical box with the room's light switch and an outlet.
+        I used an angle grinder and hammer drill to cut the hole in the masonry wall.
+      </BentoCard>
+      <BentoCard classes="hidden lg:block lg:col-span-2" title="Checking new box is flush..." imgSrc={switchJunctionFlushImg.src} imgAlt="Using a straight-edge to ensure the face of the new box is flush with the plane of the existing wall.">
+        Here I am using a straight-edge to ensure the face of the new box is flush with the plane of the existing wall. The surrounding gaps are then filled with a gypsum-based plaster.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-2" title="The new electrical box" imgSrc={switchJunctionNewImg.src} imgAlt="Foo image">
+        The "rough-in" installation of the new electrical box—the box is installed with a gypsum-based plaster (<span class="italic">gips</span> in colloquial Slovene).
+        This will hold a light switch and outlet.
+      </BentoCard>
 
-      <!-- Box -->
-      <div class="relative lg:col-span-3">
-        <div class="absolute inset-0 rounded-lg bg-white max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] dark:bg-gray-800"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
-          <img src={switchJunctionNewImg.src} alt="" class="h-80 object-cover object-left dark:hidden" />
-          <img src={switchJunctionNewImg.src} alt="" class="hidden h-80 object-cover object-left dark:block" />
-          <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">Performance</h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Lightning-fast builds</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida justo et nulla efficitur, maximus egestas sem pellentesque.</p>
-          </div>
-        </div>
-        <div class="pointer-events-none absolute inset-0 rounded-lg shadow outline outline-1 outline-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] dark:outline-white/15"></div>
-      </div>
+      <!-- Computer outlet conduit -->
+      <BentoCard classes="lg:col-span-2" title="Cutting a new chase" imgSrc={conduitChaseImg.src} imgAlt="A new chase cut into the masonry wall to hold conduit and cable for a second outlet.">
+        A new chase cut into the masonry wall with an angle grinder to hold conduit and cable for a second electrical box, which will hold an outlet supplying the computer desk.
+      </BentoCard>
+      <BentoCard classes="hidden lg:block lg:col-span-2" title="Installing new conduit" imgSrc={conduitInstallingImg.src} imgAlt="New conduit to hold the cable supplying the computer desk outlet.">
+        New conduit to hold the cable supplying the computer desk outlet.
+        You can see the outlet's box already installed flush with the wall on the right.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-2" title="Conduit installed!" imgSrc={conduitInstalledImg.src} imgAlt="The installed new conduit, with the chase filled in with plaster.">
+        The installed conduit, with the chase filled in with the same fast-setting gypsum-based plaster used to install the junction boxes.
+        I painted this over provisionally with a lime-based whitewash, but would later repaint the whole room in a warmer color.
+      </BentoCard>
 
-      <!-- Box -->
-      <div class="relative lg:col-span-3">
-        <div class="absolute inset-0 rounded-lg bg-white lg:rounded-tr-[2rem] dark:bg-gray-800"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
-          <img src={switchJunctionZoomedOutImg.src} alt="" class="h-80 object-cover object-left lg:object-right dark:hidden" />
-          <img src={switchJunctionZoomedOutImg.src} alt="" class="hidden h-80 object-cover object-left lg:object-right dark:block" />
-          <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">Releases</h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Push to deploy</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus massa, laoreet dapibus ex elit vitae odio.</p>
-          </div>
-        </div>
-        <div class="pointer-events-none absolute inset-0 rounded-lg shadow outline outline-1 outline-black/5 lg:rounded-tr-[2rem] dark:outline-white/15"></div>
-      </div>
-
-      <!-- Box -->
-      <div class="relative lg:col-span-2">
-        <div class="absolute inset-0 rounded-lg bg-white lg:rounded-bl-[2rem] dark:bg-gray-800"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
-          <img src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-speed.png" alt="" class="h-80 object-cover object-left dark:hidden" />
-          <img src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-01-speed.png" alt="" class="hidden h-80 object-cover object-left dark:block" />
-          <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">Speed</h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Built for power users</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">Sed congue eros non finibus molestie. Vestibulum euismod augue.</p>
-          </div>
-        </div>
-        <div class="pointer-events-none absolute inset-0 rounded-lg shadow outline outline-1 outline-black/5 lg:rounded-bl-[2rem] dark:outline-white/15"></div>
-      </div>
-
-      <!-- Box -->
-      <div class="relative lg:col-span-2">
-        <div class="absolute inset-0 rounded-lg bg-white dark:bg-gray-800"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-          <img src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-integrations.png" alt="" class="h-80 object-cover dark:hidden" />
-          <img src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-01-integrations.png" alt="" class="hidden h-80 object-cover dark:block" />
-          <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">Integrations</h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Connect your favorite tools</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">Maecenas at augue sed elit dictum vulputate, in nisi aliquam maximus arcu.</p>
-          </div>
-        </div>
-        <div class="pointer-events-none absolute inset-0 rounded-lg shadow outline outline-1 outline-black/5 dark:outline-white/15"></div>
-      </div>
-
-      <!-- Box -->
-      <div class="relative lg:col-span-2">
-        <div class="absolute inset-0 rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-br-[2rem] dark:bg-gray-800"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
-          <img src="https://tailwindcss.com/plus-assets/img/component-images/bento-01-network.png" alt="" class="h-80 object-cover dark:hidden" />
-          <img src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-01-network.png" alt="" class="hidden h-80 object-cover dark:block" />
-          <div class="p-10 pt-4">
-            <h3 class="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">Network</h3>
-            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Globally distributed CDN</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">Aenean vulputate justo commodo auctor vehicula in malesuada semper.</p>
-          </div>
-        </div>
-        <div class="pointer-events-none absolute inset-0 rounded-lg shadow outline outline-1 outline-black/5 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem] dark:outline-white/15"></div>
-      </div>
-    </div>
+    </BentoWrapper>
   </div>
 
   <h2 class="mt-16 text-4xl text-left">Refinishing timber framing</h2>
@@ -238,5 +202,6 @@ import timberScrapingStartImg from '@/assets/img/minioffice/7-timber-scraping-st
     </ul>
     Sanding the plaster on the wood kicked up a lot of dust in a small space (thankfully there was a small window for ventilation, but it still got pretty rough in there.)
   </div>
+
 
 </BaseLayout>
