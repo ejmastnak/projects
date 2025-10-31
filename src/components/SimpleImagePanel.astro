@@ -25,7 +25,7 @@ const visible = true
       class={`mx-auto my-auto object-cover rounded-md ${imgClasses ?? ''}`}
       width="700"
     />
-    {!!imgCaption && <p class={`text-base text-gray-700 text-center mx-auto ${captionClasses ?? ''}`}>{imgCaption}</p>}
+    {!!imgCaption && <p class={`text-base text-gray-700 text-center mx-auto max-w-sm ${captionClasses ?? ''}`}>{imgCaption}</p>}
   </div>
   <div>
     <slot />
