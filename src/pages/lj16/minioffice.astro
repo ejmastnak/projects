@@ -25,7 +25,7 @@ import conduitChaseImg from '@/assets/img/minioffice/conduit-chase.jpg'
 import conduitInstallingImg from '@/assets/img/minioffice/conduit-installing.jpg'
 import conduitInstalledImg from '@/assets/img/minioffice/conduit-installed.jpg'
 
-// import timberScrapingBottomImg from '@/assets/img/minioffice/timber-scraping-bottom.jpg'
+import timbersSandedImg from '@/assets/img/minioffice/timbers-sanded.jpg'
 // import timberScrapingStartImg from '@/assets/img/minioffice/timber-scraping-start.jpg'
 
 ---
@@ -82,8 +82,6 @@ import conduitInstalledImg from '@/assets/img/minioffice/conduit-installed.jpg'
         <li>Installing a proper light fixture to replace the bare dangling bulb</li>
         </li>
       </ul>
-      <p class="mt-2">
-      </p>
 
     </SimpleImagePanel>
   </div>
@@ -127,7 +125,7 @@ import conduitInstalledImg from '@/assets/img/minioffice/conduit-installed.jpg'
 
   <h3 class="mt-5 text-2xl">Electrical: Gallery</h3>
 
-  <div class="mt-6 mx-auto max-w-2xl lg:max-w-7xl">
+  <div class="mt-6">
     <BentoWrapper>
 
       <!-- Wood junction before/after -->
@@ -183,25 +181,56 @@ import conduitInstalledImg from '@/assets/img/minioffice/conduit-installed.jpg'
 
   <h2 class="mt-16 text-4xl text-left">Refinishing timber framing</h2>
 
-  <div class="mt-12">
-    <p>
-      My building is masonry, but the roof is timber-framed. I happen to live on the top floor (i.e. under the timber-framed roof), and some of the structural timber framing supporting the roof happens to run through the office room.
+  <div class="mt-8">
+    <SimpleImagePanel
+      reverse={true}
+      img={timbersSandedImg}
+      imgAlt="Re-exposed structural timbers after removing the original plaster coating."
+      imgCaption="Re-exposed structural timbers after removing the original plaster coating."
+      imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
+    >
+      <p>
+        <span class="font-bold">Background:</span> 
+        My building is masonry, but the roof is timber-framed.
+        I happen to live on the top floor (i.e. under the timber-framed roof), and some of the structural timber framing supporting the roof happens to run through the office room. Unfortunately (at least if you ask me) this timber framing was covered with a plaster coating, concealing the beauty of the underlying wood!
+        I am a sucker for timber framing, so I decided to expose and refinish the structural timbers.
+        Here is the process:
+      </p>
 
-      Unfortunately (at least if you ask me) this timber framing was covered with an awkward plaster coating, concealing the beauty of the underlying wood!
-      I removed this plaster coating, then sanded the timbers down and refinished them to have exposed timber framing running through the office.
-      This was an aesthetic step—I love the vibe exposed structural timber framing lends a space.
-    </p>
+      <p class="mt-4 font-bold">Process</p>
+      <ul class="list-disc ml-5">
+        <li>Roughly scraping the plaster off the timbers with a thick-bladed 5-in-1-style putty knife.</li>
+        <li>Grinding off lingering plaster bits with a flap disk attachment on an angle grinder.</li>
+        <li>Sanding down the timbers with a random orbital sander.</li>
+        <li>Refinishing the timbers with <span class="">TODO: TBD</span></li>
+      </ul>
 
-    Like cutting electrical chases into masonry, this step was unpleasant/icky for all the dust it raised and noise it generated.
-    The process went:
-    <ul>
-      <li>Roughly scrape the plaster off the timbers</li>
-      <li>Sand down the timbers with a flap disk attachment on an angle grinder to remove all the lingering plaster bits</li>
-      <li>Sand the timbers with a random orbital sander</li>
-      <li>Refinish the timbers with tung oil</li>
-    </ul>
-    Sanding the plaster on the wood kicked up a lot of dust in a small space (thankfully there was a small window for ventilation, but it still got pretty rough in there.)
+    </SimpleImagePanel>
+
+
   </div>
+
+  <div class="mt-10">
+    <h3 class="text-xl">Aside: worrying about bothering the neighbors</h3>
+    <p class="mt-2 max-w-2xl">
+      Like cutting electrical chases into the masonry wall, this step was unpleasant/icky for all the noise it generated and the dust it raised.
+      I personally don't mind the dust and noise—modern PPE protects you quite well—and was much more worried about bothering the neighbors!
+      Angle grinders are <span class="italic">loud</span>, and the old interior door provides only token acoustic insulation, so the noise would ring out into the hallway and echo through the building.
+      I did my best to work only in short shifts to avoid prolonged construction noise, and only at sane hours of the day. Thankfully no one complained.
+    </p>
+  </div>
+
+
+  <h3 class="mt-5 text-2xl">Timber refinishing: Gallery</h3>
+
+  <div class="mt-6">
+    Coming soon!
+    <BentoWrapper>
+    </BentoWrapper>
+  </div>
+
+
+  <!-- Sanding the plaster on the wood kicked up a lot of dust in a small space (thankfully there was a small window for ventilation, but it still got pretty rough in there.) -->
 
 
 </BaseLayout>
