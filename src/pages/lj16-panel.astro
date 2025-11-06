@@ -1,0 +1,148 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SimpleImagePanel from '@/components/SimpleImagePanel.astro'
+import BentoCard from '@/components/BentoCard.astro'
+import BentoWrapper from '@/components/BentoWrapper.astro'
+
+import multimeterImg from '@/assets/img/lj16-panel/multimeter.jpg'
+import originalImg from '@/assets/img/lj16-panel/original.jpg'
+import threePhaseBusbarImg from '@/assets/img/lj16-panel/3-phase-busbar.jpg'
+import threePhaseBreakerImg from '@/assets/img/lj16-panel/3-phase-breaker.jpg'
+import threePhaseJumpersImg from '@/assets/img/lj16-panel/3-phase-jumpers.jpg'
+import busbarImg from '@/assets/img/lj16-panel/busbar.jpg'
+
+const title = "Electrical Panel Replacement"
+const description = "Replacing a small electrical panel in my Ljubljana apartment to add neutral and ground busbars and a residual current circuit breaker."
+
+---
+
+<BaseLayout title={title} description={description}>
+  <h1 class="text-5xl">Electrical Panel Replacement</h1>
+
+  <div class="mt-12">
+    <SimpleImagePanel
+      reverse={true}
+      img={multimeterImg}
+      imgAlt="Mapping out continuity of breakers in the panel before the replacement using a multimeter."
+      imgCaption="Investigating the panel before beginning the rewire and replacement."
+      imgClasses="h-96 w-full max-w-sm object-top mx-auto border border-gray-300"
+    >
+      <p class="max-w-xl">
+        <strong class="font-bold">Summary:</strong>
+        This page documents replacing the electrical panel in our family's Ljubljana apartment.
+      </p>
+
+      <p class="mt-3">
+        My initial motivation was to simply to install a residual current circuit breaker (RCCB) as a basic safety measure, but the panel had enough questionable traits beyond the lack of an RCCB that I opted for a full replacement—the details are covered in the following text.
+      </p>
+
+      <p class="mt-3">
+        The end result is far from textbook (in particular it is far more cramped than I would have liked—a consequence of reusing the existing cavity instead of cutting a new, larger cavity into into the masonry wall).
+        But, crucially, I ended up with properly balanced circuits, residual current/ground fault protection, and a clear picture of what's going on in the panel. 
+      </p>
+
+    </SimpleImagePanel>
+  </div>
+
+  <h2 class="mt-16 text-4xl text-left">Problems with the previous panel</h2>
+
+  <div class="mt-8">
+    <SimpleImagePanel
+      reverse={true}
+      img={originalImg}
+      imgAlt="The original panel, showing chaotic wiring and no cover"
+      imgCaption="The original panel was visibly chaotic even to the casual observer, with a number of less-visible quirks described in the text below."
+      imgClasses="h-80 w-full max-w-md mx-auto md:h-80"
+      captionClasses="max-w-sm"
+    >
+      <p>
+        <span class="font-bold">Initial status:</span>
+        Following the sacred electrician's tradition of talking shit on the existing work (not that I can claim to be an electrician, only a shit-talker), here are some of the, um, questionable characteristics I discovered and replaced in the original panel.
+        Some are dangerous, some merely curiosities to chuckle at:
+      </p>
+
+      <ul class="list-disc mt-5 ml-5">
+        <li>No cover</li>
+        <li>No neutral or ground busbars</li>
+        <li>No ground fault protection</li>
+        <li>Overly-stripped wire around connectors (read: exposed copper)</li>
+        <li>An undersized 10 ampere main breaker</li>
+        <li>Overloaded shared neutral wires</li>
+        <li>A 3-phase main breaker and supply rail, even though I have one-phase supply</li>
+      </ul>
+
+    </SimpleImagePanel>
+
+    <p class="mt-5">Following is a gallery of some of these problems in more detail.</p>
+
+    <h3 class="mt-5 text-2xl"> Gallery: Problems with the original panel</h3>
+
+    <div class="mt-6">
+      <BentoWrapper>
+
+        <BentoCard classes="lg:col-span-2" title="A renegade three-phase breaker..." imgSrc={threePhaseBreakerImg.src} imgAlt="The three-phase main breaker in the original panel.">
+          <p>
+            The panel mysteriously used a three phase breaker—note the 400 V rating and three-terminal switching diagram.
+            I say mysteriously, because <span class="italic">I have only 1-phase supply!</span> What's going on here? Did I originally have 3-phase power? (This is not unusual in Slovenia like it would be in the USA, even in residential settings.) Who knows...
+          </p>
+          <p class="mt-2">A consequence: the main breaker was rated for 10 amperes (note the C10 marking)—this makes sense with 3-phase input, where the 10 A rating applies to each phase separately. But with my 1-phase input connected to a single terminal only (see the faintly visible thick black wire entering the third-from-left breakers from the top), the end result is a 10 A main breaker, which is <span class="italic">smaller(!)</span> than some of the 16 A breakers used for individual circuits, meaning the main breaker would trip <span class="italic">before</span> any individual circuit breaker, cutting power to the whole apartment if a single circuit overloads.</p>
+        </BentoCard>
+
+        <BentoCard classes="lg:col-span-2" title="...made to work with jumper wires..." imgSrc={threePhaseJumpersImg.src} imgAlt="Close-up image of the jumper cables used to connect the three-phase main breaker's terminals.">
+          <p>
+            Again, my panel had a three-phase main breaker but a one-phase supply.
+            To distribute the single-phase supply (black wire entering the breaker on the top left) among the three-phase breaker's (isolated) three terminals, the original installer connected the terminals together with jumper wires (the two short brown wires in the top terminals), making for the funny-looking hack shown above.
+
+          <p class="italic mt-2">By the way, look at that brittle insulation and exposed copper!</p>
+          </p>
+        </BentoCard>
+
+        <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="...because of needless use of a three-phase rail" imgSrc={threePhaseBusbarImg.src} imgAlt="The removed three-phase rail originally used to distribute power across the breakers of my one-phase panel.">
+          <p>
+            The panel used a <span class="italic">three-phase</span> supply rail (the piece I am holding in my left hand, with the copper teeth sticking out).
+            A three-phase rail like this has three electrically isolated pieces of copper (every third tooth is electrically connected), meant to keep three phases separate. A one-phase rail would have done just fine for my one-phase supply (and been about three times cheaper, <span class="italic">and</span> absolved the need for the hack with the jumper wires, since all the breakers would have been connected by the single piece of copper anyway).
+          </p>
+          <p class="mt-2">Evidence points to my having a three-phase supply at one point, and that whoever did the conversion didn't bother to switch to appropriate one-phase material... or perhaps the original installer just had spare three-phase parts lying around he needed to get rid of? It's a mystery to me!</p>
+        </BentoCard>
+      </BentoWrapper>
+
+      <div class="mt-5">
+        <BentoWrapper>
+          <BentoCard classes="lg:col-span-3" title="Busbars?" imgSrc={originalImg.src} imgAlt="The original panel, conspicuously missing busbars.">
+            The original panel featured a conspicuous lack of either neutral or ground busbars...
+          </BentoCard>
+          <BentoCard classes="lg:col-span-3 h-fit" title="Who needs busbars?" imgSrc={busbarImg.src} imgAlt="The large connectors used to tie the neutral and ground wires together in place of busbars.">
+            ...and just stuffed all the neutral and ground wires into large shared connectors. The remains of the disassembled neutral "busbar" are shown here.
+          </BentoCard>
+        </BentoWrapper>
+      </div>
+
+    </div>
+
+  </div>
+
+  <h2 class="mt-16 text-4xl text-left">Preparation...</h2>
+
+  <div class="mt-8">
+    <SimpleImagePanel
+      reverse={true}
+      img={originalImg}
+      imgAlt="The original panel, showing chaotic wiring and no cover"
+      imgCaption="The original panel was visibly chaotic even to the casual observer, with a number of less-visible quirks described in the text below."
+      imgClasses="h-80 w-full max-w-md mx-auto md:h-80"
+      captionClasses="max-w-sm"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </SimpleImagePanel>
+
+    <h3 class="mt-5 text-2xl">Gallery: Preparation</h3>
+
+    <div class="mt-6">
+
+    </div>
+
+  </div>
+
+
+</BaseLayout>
