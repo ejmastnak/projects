@@ -14,7 +14,7 @@ const { title, imgSrc, imgAlt, classes, imgClasses, } = Astro.props as Props;
     <img src={imgSrc} alt={imgAlt} class={`h-80 object-cover ${imgClasses ?? ""}`} />
     <div class="px-8 pb-6 pt-4">
       <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">{title}</p>
-      <p class="mt-2 max-w-lg text-sm/6 text-gray-600"><slot /></p>
+      <div class="mt-2 max-w-lg text-sm/6 text-gray-600"><slot /></div>
     </div>
   </div>
   <div class="pointer-events-none absolute inset-0 rounded-lg shadow outline outline-1 outline-black/5"></div>
