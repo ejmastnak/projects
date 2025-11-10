@@ -1,0 +1,19 @@
+# Which wires supply which circuits
+wires:
+  "cable-1-black": "Kitchen countertop outlets"
+  "cable-1-brown": "Server"
+  "cable-1-grey": null  # null wires are capped!
+  "cable-1-neutral": "Neutral busbar"
+  "cable-1-gnd": "Ground busbar"
+
+  "cable-2": "Dining table outlets"
+  "cable-2-neutral": "Neutral busbar"
+  "cable-2-gnd": "Ground busbar"
+
+  "cable-3-black": "Living room computer outlets"
+  "cable-3-brown": null
+  "cable-3-grey": null
+  "cable-3-neutral": "Neutral busbar"
+  "cable-3-gnd": "Ground busbar"
+
+  # and so on for all 11 cables...

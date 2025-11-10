@@ -1,0 +1,16 @@
+# Which circuits should be controlled by which breakers
+breakers:
+  "MiniOffice": "breaker-1"
+  "Kitchen lights": "breaker-2"
+  "Entry door outlet": "breaker-3"
+  "Server": "breaker-4"
+  "Kitchen countertop outlets": "breaker-4"
+  "Fridge and oven": "breaker-5"
+  "Bathroom light and outlets": "breaker-6"
+  "Washing machine": "breaker-7"
+  "Boiler": "breaker-7"
+  "Gym outlets": "breaker-8"
+  "Partition wall outlets": "breaker-8"
+  "Living room light": "breaker-9"
+  "Living room computer outlets": "breaker-10"
+  "Dining table outlets": "breaker-10"

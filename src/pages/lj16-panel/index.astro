@@ -1,4 +1,5 @@
 ---
+import { Code } from 'astro:components';
 import { Image } from 'astro:assets';
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SimpleImagePanel from '@/components/SimpleImagePanel.astro'
@@ -12,8 +13,27 @@ import threePhaseBreakerImg from '@/assets/img/lj16-panel/3-phase-breaker.jpg'
 import threePhaseJumpersImg from '@/assets/img/lj16-panel/3-phase-jumpers.jpg'
 import busbarImg from '@/assets/img/lj16-panel/busbar.jpg'
 
+import wires2circuits from './code/wires2circuits.yaml?raw';
+import circuits2breakers from './code/circuits2breakers.yaml?raw';
+
 const title = "Electrical Panel Replacement"
 const description = "Replacing a small electrical panel in my Ljubljana apartment to add neutral and ground busbars and a residual current circuit breaker."
+
+const wires = [
+  { wire: "cable-1-black", destination: "Breaker 4"},
+  { wire: "cable-1-brown", destination: "Breaker 4"},
+  { wire: "cable-1-grey", destination: "Capped"},
+  { wire: "cable-1-neutral", destination: "Neutral busbar"},
+  { wire: "cable-1-gnd", destination: "Ground busbar"},
+  { wire: "cable-2", destination: "Breaker 10"},
+  { wire: "cable-2-neutral", destination: "Neutral busbar"},
+  { wire: "cable-2-gnd", destination: "Ground busbar"},
+  { wire: "cable-3-black", destination: "Breaker 10"},
+  { wire: "cable-3-brown", destination: "Capped"},
+  { wire: "cable-3-grey", destination: "Capped"},
+  { wire: "cable-3-neutral", destination: "Neutral busbar"},
+  { wire: "cable-3-gnd", destination: "Ground busbar"},
+]
 
 ---
 
@@ -122,7 +142,7 @@ const description = "Replacing a small electrical panel in my Ljubljana apartmen
 
   </div>
 
-  <h2 class="mt-16 text-4xl text-left">Preparation...</h2>
+  <h2 class="mt-16 text-4xl text-left">Planning...</h2>
 
   <div class="mt-8">
     <SimpleImagePanel
@@ -133,8 +153,77 @@ const description = "Replacing a small electrical panel in my Ljubljana apartmen
       imgClasses="h-80 w-full max-w-md mx-auto md:h-80"
       captionClasses="max-w-sm"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <span class="font-bold">Summary:</span> The end result of the planning phase was a list of the final destination of every wire in every cable that entered the panel.
+      The list looked something like this:
+
+      <table class="my-5 relative min-w-full divide-y divide-gray-300">
+        <thead>
+          <tr>
+            <th scope="col" class="whitespace-nowrap px-2 py-1 text-left text-sm font-semibold text-gray-900">Wire</th>
+            <th scope="col" class="whitespace-nowrap px-2 py-1 text-left text-sm font-semibold text-gray-900">Destination</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 bg-white">
+          {wires.map((wire) => (
+          <tr>
+            <td class="whitespace-nowrap px-2 py-1 text-sm font-medium text-gray-900">{wire.wire}</td>
+            <td class="whitespace-nowrap px-2 py-1 text-sm font-medium text-gray-900">{wire.destination}</td>
+          </tr>
+          ))}
+          <tr>
+            <td class="whitespace-nowrap px-2 py-1 text-sm font-medium text-gray-600">...and so on...</td>
+            <td class="whitespace-nowrap px-2 py-1 text-sm font-medium text-gray-600">...for all 11 cables...</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The goal here was ensure everything went smoothly once I began the rewire (i.e. you don't want to discover halfway through rewiring your panel, with the power cut and the freezer thawing, that you forgot to plan out were an extra cable should go).</p>
     </SimpleImagePanel>
+
+    <div class="max-w-2xl">
+
+      <h3 class="mt-5 text-2xl">Planning: Details</h3>
+
+      <p class="mt-3">
+        I first mapped out all wires entering the panel to see which circuits they corresponded to, then gave each cable and its constituent wires a label, which I used to keep track of which cable/wire would go where when rewiring.
+      </p>
+
+      <p class="mt-2">I then re-planned circuits to:</p>
+
+      <ul class="my-5 ml-5 list-disc">
+        <li>eliminate a few shared neutrals</li>
+        <li>balance loads on breakers (e.g. previously the fridge and electric oven were on the same circuit breaker, while a separate circuit elsewhere consisted of only a single rarely-used outlet)</li>
+        <li>ensure lights where on different breakers than outlets (standard practice so that if a breaker flips from an overloaded outlet the lights in the room stay on to let you figure out what's going on)</li>
+        <li>and (within reason) make breakers near each other in the panel correspond to circuits near each other in the apartment.</li>
+      </ul>
+
+      The planning went well; there was no confusion come go-time about which wire went where.
+
+      <details open class="mt-5 bg-gray-50 border border-gray-300 px-4 py-2 rounded-lg">
+        <summary>
+          <span class="font-semibold">Details:</span>
+          I'm a helpless nerd, so the planning was done semi-programatically.
+          Click to expand if you're curious.
+        </summary>
+
+        <p class="mt-4">I first mapped wires to the circuits they should supply, then mapped circuits to the breakers that should control them.
+          Note the step of indirection here: I'm first thinking in terms of wires and circuits (when designing circuits in the planning stage), then in terms of circuits and breakers (during the actual boots-on-the-ground work of connecting wires to breakers).</p>
+
+        <p class="mt-4">
+          I kept the wires-to-circuits mappings and circuits-to-breakers mappings in separate <a href="https://en.wikipedia.org/wiki/YAML" class="text-blue-500 hover:text-blue-600 hover:underline">YAML</a> dictionaries and used a Python program to handle the mapping between them progamatically.
+        </p>
+
+        <p class="mt-5">The wires-to-circuits mapping looks like this...</p>
+        <Code class="my-5 rounded-lg p-4" code={wires2circuits} lang="yaml" />
+        <p>...the circuits-to-breakers looks like this...</p>
+        <Code class="my-5 rounded-lg p-4" code={circuits2breakers} lang="yaml" />
+
+        The glue between the two files is a just a simple Python script that loads the YAML data into two dictionaries, iterates over the wires and prints the breaker or busbar the wire should connect to.
+        Note that the values in the wires-to-circuits dictionary match the keys in the circuits-to-breakers dictionary, which, given a wire in the wires-to-circuits dictionary, allows constant-time lookup of the corresponding breaker. Of course the O(1) lookup time is completely irrelevant in practice for a ~20-entry dataset :)
+      </details>
+
+
+    </div>
 
     <h3 class="mt-5 text-2xl">Gallery: Preparation</h3>
 
