@@ -1,17 +1,20 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
   title: string;
   imgSrc: string;
   imgAlt: string;
   classes?: string;
   imgClasses?: string;
+  width?: number;
 }
-const { title, imgSrc, imgAlt, classes, imgClasses, } = Astro.props as Props;
+const { title, imgSrc, imgAlt, classes, imgClasses, width = 700 } = Astro.props as Props;
 ---
 
 <div class={`relative ${classes ?? ""}`}>
   <div class="relative flex h-full flex-col overflow-hidden rounded-lg">
-    <img src={imgSrc} alt={imgAlt} class={`h-80 object-cover ${imgClasses ?? ""}`} />
+    <Image src={imgSrc} alt={imgAlt} width={width} class={`h-80 object-cover ${imgClasses ?? ""}`} />
     <div class="px-8 pb-6 pt-4">
       <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">{title}</p>
       <div class="mt-2 max-w-lg text-sm/6 text-gray-600"><slot /></div>
