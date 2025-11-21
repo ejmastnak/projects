@@ -3,6 +3,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Project from '@/components/Project.astro'
 
 import atticGymImg from '@/assets/img/tv47-attic-gym/9-complete.jpg'
+import multimeterImg from '@/assets/img/lj16-panel/multimeter.jpg'
+import screwdriverImg from '@/assets/img/lj16-panel/screwdriver-cropped.jpg'
 
 const title = "Home"
 const description = "EliProjects is a site created for documenting my building projects to share with friends, family, and acquaintances. You'll find write-ups, photos, CAD plans, and the occasional story or anecdote of things I've built."
@@ -43,9 +45,16 @@ const description = "EliProjects is a site created for documenting my building p
         </Project>
       </li>
 
-      <li><a href="/minioffice" class="text-blue-500 hover:text-blue-600">MiniOffice</a></li>
+      <Project
+        name="Electrical Panel Replacement"
+        img={screwdriverImg}
+        imgAlt="Beginning disassembly of the existing panel by removing the original live busbar."
+        href="/lj16-panel/"
+      >
+        Replacing the electrical panel in our family's Ljubljana apartment so as to install a residual current circuit breaker (RCCB), balance circuits, and clean up chaotic wiring.
+      </Project>
 
-      <li><a href="/lj16-panel/" class="text-blue-500 hover:text-blue-600">Electrical Panel Replacement</a></li>
+      <li><a href="/minioffice" class="text-blue-500 hover:text-blue-600">MiniOffice</a></li>
 
     </ul>
 
