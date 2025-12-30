@@ -5,6 +5,7 @@ import Project from '@/components/Project.astro'
 import atticGymImg from '@/assets/img/tv47-attic-gym/9-complete.jpg'
 import multimeterImg from '@/assets/img/lj16-panel/multimeter.jpg'
 import screwdriverImg from '@/assets/img/lj16-panel/screwdriver-cropped.jpg'
+import miniofficeImg from '@/assets/img/minioffice/oiled-door.jpg'
 
 const title = "Home"
 const description = "EliProjects is a site created for documenting my building projects to share with friends, family, and acquaintances. You'll find write-ups, photos, CAD plans, and the occasional story or anecdote of things I've built."
@@ -38,7 +39,7 @@ const description = "EliProjects is a site created for documenting my building p
         <Project
           name="Attic gym"
           img={atticGymImg}
-          imgAlt="Framework of elastic sleepers build to support the gym's floor."
+          imgAlt="The grid of perpendicular wooden sleepers built to provide an elastic base for the gym's floor."
           href="/attic-gym"
         >
           A gym built in the attic of my Dad's home in the Slovene countryside, designed with an elastic, "bouncy" floor to absorb the impact of weights and plyometric exercises while training.
@@ -48,13 +49,20 @@ const description = "EliProjects is a site created for documenting my building p
       <Project
         name="Electrical Panel Replacement"
         img={screwdriverImg}
-        imgAlt="Beginning disassembly of the existing panel by removing the original live busbar."
+        imgAlt="Original panel in the middle of disassembly: removing the original live busbar with an insulated screwdriver."
         href="/lj16-panel/"
       >
         Replacing the electrical panel in our family's Ljubljana apartment so as to install a residual current circuit breaker (RCCB), balance circuits, and clean up chaotic wiring.
       </Project>
 
-      <li><a href="/minioffice" class="text-blue-500 hover:text-blue-600">MiniOffice</a></li>
+      <Project
+        name="MiniOffice"
+        img={miniofficeImg}
+        imgAlt="The view into the office from the hallway after painting"
+        href="/minioffice/"
+      >
+        Building a small detached office in a decomissioned hallway bathroom in our family's Ljubljana apartment. 
+      </Project>
 
     </ul>
 

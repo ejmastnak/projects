@@ -34,6 +34,21 @@ import timbersSandedLandscapeImg from '@/assets/img/minioffice/timbers-sanded-la
 import timbersToolsImg from '@/assets/img/minioffice/timbers-tools.jpg'
 import timbersEliImg from '@/assets/img/minioffice/timbers-eli.jpg'
 
+import maskedImg from '@/assets/img/minioffice/masked.jpg'
+import coat2Img from '@/assets/img/minioffice/coat-2.jpg'
+import coat2DoorImg from '@/assets/img/minioffice/coat-2-door.jpg'
+import gapImg from '@/assets/img/minioffice/gap.jpg'
+import gipsImg from '@/assets/img/minioffice/gips.jpg'
+import gapPatchedImg from '@/assets/img/minioffice/gap-patched.jpg'
+import laserImg from '@/assets/img/minioffice/laser.jpg'
+import rollerImg from '@/assets/img/minioffice/roller.jpg'
+import mixingPaintImg from '@/assets/img/minioffice/mixing-paint.jpg'
+
+import oilCanImg from '@/assets/img/minioffice/oil-can.jpg'
+import oiledCloseUpImg from '@/assets/img/minioffice/oiled-close-up.jpg'
+import oiledImg from '@/assets/img/minioffice/oiled.jpg'
+import paintedOiledImg from '@/assets/img/minioffice/painted-oiled.jpg'
+
 ---
 
 <BaseLayout title={title} description={description}>
@@ -129,7 +144,7 @@ import timbersEliImg from '@/assets/img/minioffice/timbers-eli.jpg'
     </ul>
   </div>
 
-  <h3 class="mt-5 text-2xl">Electrical: Gallery</h3>
+  <h3 class="mt-5 text-2xl">Gallery: Electrical</h3>
 
   <div class="mt-6">
     <BentoWrapper>
@@ -208,7 +223,7 @@ import timbersEliImg from '@/assets/img/minioffice/timbers-eli.jpg'
         <li>Roughly scraping the plaster off the timbers with a thick-bladed 5-in-1-style putty knife.</li>
         <li>Grinding off lingering plaster bits with a flap disk attachment on an angle grinder.</li>
         <li>Sanding down the timbers with a random orbital sander.</li>
-        <li>Refinishing the timbers with <span class="">TODO: TBD</span></li>
+        <li>Refinishing the timbers with tung oil.</li>
       </ul>
 
     </SimpleImagePanel>
@@ -217,15 +232,14 @@ import timbersEliImg from '@/assets/img/minioffice/timbers-eli.jpg'
   <div class="mt-10">
     <h3 class="text-xl">Aside: worrying about bothering the neighbors</h3>
     <p class="mt-2 max-w-2xl">
-      Like cutting electrical chases into the masonry wall, this step was unpleasant/icky for all the noise it generated and the dust it raised.
-      I personally don't mind the dust and noise—modern PPE protects you quite well—and was much more worried about bothering the neighbors!
+      Like cutting electrical chases into the masonry wall, sanding/griding the plaster coating off the timbers was unpleasant for all the noise it generated and the dust it raised.
+      I don't mind the dust and noise myself—modern PPE protects you quite well—and was much more worried about bothering the neighbors!
       Angle grinders are <span class="italic">loud</span>, and the old interior door provides only token acoustic insulation, so the noise would ring out into the hallway and echo through the building.
-      I did my best to work only in short shifts to avoid prolonged construction noise, and only at sane hours of the day. Thankfully no one complained.
+      I did my best to work only in short bursts to avoid prolonged construction noise, and only at sane hours of the day. Thankfully no one complained.
     </p>
   </div>
 
-
-  <h3 class="mt-8 text-2xl">Timber refinishing: Gallery</h3>
+  <h3 class="mt-8 text-2xl">Gallery: Stripping plaster off timbers</h3>
 
   <div class="mt-6">
     <BentoWrapper>
@@ -238,7 +252,7 @@ import timbersEliImg from '@/assets/img/minioffice/timbers-eli.jpg'
         I first roughly scraped off the plaster coating with thick-bladed putty knife. I then made two more passes to remove the remaining plaster—first with an angle grinder with a flap disk attachment, then with a random-orbit sander.
       </BentoCard>
       <BentoCard classes="lg:col-span-2" title="Sanding complete!" imgSrc={timbersSandedLandscapeImg} imgAlt="The timbers after grinding off the remaining plaster, then sanding with a random orbit sander.">
-        This picture shows the timbers after grinding off the remaining plaster, then sanding with a random orbit sander. I would later fill the gaps between the timbers and walls with plaster.
+        This picture shows the timbers after grinding off the remaining plaster, then sanding with a random orbit sander. I would later fill the gaps between the timbers and walls with plaster before painting.
       </BentoCard>
 
       <!-- Tools/Eli/Dust -->
@@ -255,5 +269,111 @@ import timbersEliImg from '@/assets/img/minioffice/timbers-eli.jpg'
     </BentoWrapper>
   </div>
 
+  <h3 class="mt-10 text-2xl">Oiling the timbers</h3>
+
+  <div class="mt-5">
+    <SimpleImagePanel
+      reverse={true}
+      img={oilCanImg}
+      imgAlt=""
+      imgCaption=""
+      imgClasses="h-96 w-full max-w-md mx-auto border border-gray-300"
+    >
+      <p>
+        I finished the timbers with a tung oil—I find the smell gentler than than linseed oil (the other standard candidate for a finishing oil), which is particularly relevant in a small space.
+        I happened to have a can of tung oil lying around waiting to be used, and these timbers were a perfect opportunity to use it.
+      </p>
+      <p class="mt-2">
+        There was nothing much to this step, you wet a rag with oil and apply to the timbers.
+        As hoped for, the color of the timbers deepened and the grain grew more visible. I'm pleased with the result!
+      </p>
+    </SimpleImagePanel>
+  </div>
+
+  <div class="mt-6">
+    <BentoWrapper>
+      <BentoCard classes="lg:col-span-2" title="Before..." imgSrc={timbersSandedLandscapeImg} imgAlt="The timbers after sanding off the original plaster coat but before oiling.">
+        The timbers after sanding off the original plaster coat but before oiling.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-2" title="...and after" imgSrc={oiledImg} imgAlt="The timbers after finishing with tung oil.">
+        The timbers after finishing with tung oil. (I also painted the walls and patched the gap between the timber brace member and the wall in the meantime.)
+      </BentoCard>
+      <BentoCard classes="lg:col-span-2" title="Close-up" imgSrc={oiledCloseUpImg} imgAlt="Close-up image of the timbers after oiling, showing deeper color and visible grain pattern.">
+        As hoped, the color of the timbers deepened and the grain of the wood grew more visible after oiling.
+      </BentoCard>
+    </BentoWrapper>
+  </div>
+
+  <h2 class="mt-16 text-4xl text-left">Painting</h2>
+
+  <div class="mt-8">
+    <SimpleImagePanel
+      reverse={true}
+      img={coat2Img}
+      imgAlt="The room after the first coat of paint, with splotches and masking tape visible."
+      imgCaption="The room after the first coat of paint, with horizontal masking tape delineating the accent region."
+      imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
+    >
+      <p>
+        <span class="font-bold">Background:</span> 
+        I painted the room with a limewash paint made by Kreidezeit GmbH, composed of marble lime hydrate, marble powder, sinter water, and methyl cellulose as a binding agent and thickener.
+      </p>
+      <p class="mt-2">
+        I chose a limewash paint for for its vapor diffusivity, natural composition (lack of VOCs, organic solvents, synthetic resins, etc. made sense in a small, enclosed space), good bond to the masonry substrate, and because the high alkalinity dramaticaly reduces the risk of mold.
+      </p>
+
+      <p class="mt-2">The process was more or less standard:</p>
+
+      <p class="mt-4 font-bold">Process</p>
+      <ul class="list-disc ml-5">
+        <li>I first patched cracks and gaps in the walls and ceiling using gypsum-based plaster, and went over particularly rough areas with a spackle-like filler compound to create a smoother surface to accept paint.</li>
+        <li>I protected the timbers, window and door trim, and utilities with masking tape—I'm not skilled enough to trust myself to cut in by hand around all the nooks and crannies!</li>
+        <li>I applied an initial base coat of paint over the entire room.</li>
+        <li>I finished the bottom third of the room with a pastel-yellow accent, and the remainder of the walls and ceiling with a second coat of white.</li>
+      </ul>
+
+    </SimpleImagePanel>
+  </div>
+
+  <h3 class="mt-8 text-2xl">Gallery: Painting</h3>
+
+  <div class="mt-6">
+    <BentoWrapper>
+
+      <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="Plaster for patching gaps" imgSrc={gipsImg} imgAlt="Plastering materials layed out on the floor: spackle knife, plaster, and bucket for mixing.">
+        I used fast-setting gypsum-based plaster (colloquially <span class="italic">gips</span> in Slovene) to patch gaps between the timbers and wall, and a finer spackle-like compound to patch fine cracks in the walls.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-2" title="Note the gap..." imgSrc={gapImg} imgAlt="A visible gap running between a brace in the timber framing and the masonry wall.">
+        Note the gap running between the wall and the brace of the timber frame structure, which required patching before painting.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-2" title="...now patched with plaster" imgSrc={gapPatchedImg} imgAlt="The gaps between timber members and wall patched with plaster.">
+        The gap is now patched and ready to be painted over.
+        I smoothed over the various other cracks and flakes on the walls and ceilings with a combination of sanding and plaster.
+      </BentoCard>
+
+      <BentoCard classes="lg:col-span-3" title="Protective masking tape on" imgSrc={maskedImg} imgAlt="Masking tape applied to timbers and window trim.">
+        I protected the timbers, window and door trim, and utilities with masking tape—a skilled painter might have cut these areas in freehand, but I'm not skilled!
+      </BentoCard>
+      <BentoCard classes="lg:col-span-3" title="Mixing paint" imgSrc={mixingPaintImg} imgAlt="Mixing pastel yellow pigment into paint with a paddle attachment and corded electric drill.">
+        The limewash paint I used did not come colored—you color it by mixing mineral-based pigment into a generic white "base" paint. I opted for a pastel yellow accent color, which I felt would cheer up the space.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-3" title="First coat complete" imgSrc={coat2DoorImg} imgAlt="A zoomed-out view of the office with the first coat of paint applied.">
+        Here is the first coat, which I applied uniformly over walls and ceilings. It looks white, though is in fact slightly yellow-tinted.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-3" title="Laying out accent area" imgSrc={laserImg} imgAlt="A laser level being used to lay out a level line around the room for the yellow accent.">
+        I used a laser level to lay out a level line around the room to define the region for the yellow accent—I chose the height at which the brace meets the post in the timber framing. A laser level is perhaps overkill for this small space, but why not use the toy if you're lucky enough to have it?
+      </BentoCard>
+      
+      <BentoCard classes="lg:col-span-3" title="Rolling on paint" imgSrc={rollerImg} imgAlt="Rolling on the yellow paint for the accent region.">
+        I painted most of the room with a roller (and used a brush where the roller could not reach).
+        Here I am rolling on the yellow for the accent area.
+      </BentoCard>
+      <BentoCard classes="lg:col-span-3" title="All done with painting!" imgSrc={paintedOiledImg} imgAlt="The painted room with masking tape removed.">
+        Here is the painted room with paint dry and masking tape removed.
+        The lower pastel-yellow accent region came out more subtle than I envisioned, partly because the warm-yellow light bulb illuminating the room tints the upper, nominally white, region yellow too, lowering the contrast with the yellow bottom. 
+        But I think the subtleness works—it's not too overbearing and brings out the color and grain of the wood timbers.
+      </BentoCard>
+    </BentoWrapper>
+  </div>
 
 </BaseLayout>
