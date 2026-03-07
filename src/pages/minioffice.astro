@@ -49,6 +49,18 @@ import oiledCloseUpImg from '@/assets/img/minioffice/oiled-close-up.jpg'
 import oiledImg from '@/assets/img/minioffice/oiled.jpg'
 import paintedOiledImg from '@/assets/img/minioffice/painted-oiled.jpg'
 
+import monitorImg from '@/assets/img/minioffice/monitor.jpg'
+import monitor2Img from '@/assets/img/minioffice/monitor-2.jpg'
+
+import bosuChairImg from '@/assets/img/minioffice/desk/bosu-chair.jpg'
+import hangerBoardImg from '@/assets/img/minioffice/desk/hanger-board.jpg'
+import ledgersImg from '@/assets/img/minioffice/desk/ledgers.jpg'
+import ledgersLaserImg from '@/assets/img/minioffice/desk/ledgers-laser.jpg'
+import ledgersProfiledImg from '@/assets/img/minioffice/desk/ledgers-profiled.jpg'
+import ledgersRawImg from '@/assets/img/minioffice/desk/ledgers-raw.jpg'
+import deskInstalledImg from '@/assets/img/minioffice/desk/desk-installed.jpg'
+import templateImg from '@/assets/img/minioffice/desk/template.jpg'
+
 ---
 
 <BaseLayout title={title} description={description}>
@@ -76,311 +88,378 @@ import paintedOiledImg from '@/assets/img/minioffice/painted-oiled.jpg'
     </SimpleImagePanel>
   </div>
 
-  <h2 class="mt-16 text-4xl text-left">Electrical</h2>
+  <section class="mt-16">
+    <h2 class="text-4xl text-left">Electrical</h2>
 
-  <div class="mt-8">
-    <SimpleImagePanel
-      reverse={true}
-      img={conduitInstallingImg}
-      imgAlt="A freshly cut/excavated chase and conduit to supply outlets for a computer."
-      imgCaption="A freshly cut/excavated chase and conduit to supply outlets for a computer."
-      imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
-      captionClasses="max-w-sm"
-    >
-      <p>
-        <span class="font-bold">Initial status:</span> When beginning the project, the room was supplied with a hot and a neutral line that powered a bare lightbulb hanging above the door.
-        There were no outlets, and also no ground wire—the existing wiring predated current building practice where ground wires are run as a matter of course.
+    <div class="mt-8">
+      <SimpleImagePanel
+        reverse={true}
+        img={conduitInstallingImg}
+        imgAlt="A freshly cut/excavated chase and conduit to supply outlets for a computer."
+        imgCaption="A freshly cut/excavated chase and conduit to supply outlets for a computer."
+        imgClasses="h-64 w-full max-w-md mx-auto md:h-80 object-top"
+        captionClasses="max-w-sm"
+      >
+        <p>
+          <span class="font-bold">Initial status:</span> When beginning the project, the room was supplied with a hot and a neutral line that powered a bare lightbulb hanging above the door.
+          There were no outlets, and also no ground wire—the existing wiring predated current building practice where ground wires are run as a matter of course.
+        </p>
+
+        <p class="mt-3 font-bold">
+          Summary of improvements:
+        </p>
+        <ul class="list-disc ml-5">
+          <li>Replacing the existing hot and neutral wires in the office with modern 3-wire VDE cable (that includes a ground wire!)</li>
+          <li>Installing outlets</li>
+          <li>Cutting chases in the masonry wall and run conduit and cable for outlets</li>
+          <li>Installing junction boxes</li>
+          <li>Installing a proper light fixture to replace the bare dangling bulb</li>
+          </li>
+        </ul>
+
+      </SimpleImagePanel>
+    </div>
+
+    <div class="mt-3">
+      <h3 class="text-2xl">Electrical: Details</h3>
+      <p class="mt-2">
+        The existing wiring supplying the office ran from the main panel in my apartment through conduit in the hallway to a hallway junction box just outside the office, then through the hallway-office wall into the office.
+        By a great stroke of luck, a 3-wire cable of wire of sufficient gauge happened to run continuously from the main panel in my apartment to this hallway junction box outside the office.
+        Only the hot and neutral wires were connected in my main panel, but it was a simple matter of hooking up the ground wire to the ground busbar in my main panel, and <span class="italic">voilà!</span>, there was the for the office.
       </p>
 
-      <p class="mt-3 font-bold">
-        Summary of improvements:
+      <p class="mt-2">
+        By another stroke of luck, the connection between the hallway junction box and office was made with conduit (in old masonry buildings in Slovenia you'll sometimes find wires built directly into the brick wall), so replacing cable was a simple matter of pulling old wires out while running new cable in (no need to drill a chase through the hallway-office wall).
       </p>
-      <ul class="list-disc ml-5">
-        <li>Replacing the existing hot and neutral wires in the office with modern 3-wire VDE cable (that includes a ground wire!)</li>
-        <li>Installing outlets</li>
-        <li>Cutting chases in the masonry wall and run conduit and cable for outlets</li>
-        <li>Installing junction boxes</li>
-        <li>Installing a proper light fixture to replace the bare dangling bulb</li>
+
+      <p class="mt-2">
+        With a solid ground, neutral, and hot wire running between the office and my main panel; I could then begin electrical work in the office itself.
+        This involved:
+      </p>
+
+      <ul class="ml-5 list-disc">
+        <li>
+          Replacing all existing wiring in the office with modern 1.5 mm2 VDE cable.
+        </li>
+        <li>
+          Replacing the, erm, makeshift <span class="italic">wooden</span> junction box hewn out of a scrap piece of construction lumber that held the main light/switch junction with a modern fire-retardant high-impact polystyrene junction box.
+        </li>
+        <li>
+          Installing a proper wall-mounted light fixture to replace the lightbulb dangling from the wall by its supply wires.
+        </li>
+        <li>
+          Cutting chases into the masonry wall for new conduit and junction/fixture boxes.
+          This was unpleasant because of a constant worry of bothering the neighbors (cutting/drilling into masonry, whether with an angle grinder or rotary hammer drill, is <span class="italic">loud</span>).
+        </li>
+        <li>
+          Installing conduit and cable for outlets, and of course installing the outlets themselves.
         </li>
       </ul>
+    </div>
 
-    </SimpleImagePanel>
-  </div>
+    <h3 class="mt-5 text-2xl">Gallery: Electrical</h3>
 
-  <div class="mt-3">
-    <h3 class="text-2xl">Electrical: Details</h3>
-    <p class="mt-2">
-      The existing wiring supplying the office ran from the main panel in my apartment through conduit in the hallway to a hallway junction box just outside the office, then through the hallway-office wall into the office.
-      By a great stroke of luck, a 3-wire cable of wire of sufficient gauge happened to run continuously from the main panel in my apartment to this hallway junction box outside the office.
-      Only the hot and neutral wires were connected in my main panel, but it was a simple matter of hooking up the ground wire to the ground busbar in my main panel, and <span class="italic">voilà!</span>, there was the for the office.
-    </p>
+    <div class="mt-6">
+      <BentoWrapper>
 
-    <p class="mt-2">
-      By another stroke of luck, the connection between the hallway junction box and office was made with conduit (in old masonry buildings in Slovenia you'll sometimes find wires built directly into the brick wall), so replacing cable was a simple matter of pulling old wires out while running new cable in (no need to drill a chase through the hallway-office wall).
-    </p>
+        <!-- Wood junction before/after -->
+        <BentoCard classes="lg:col-span-3" title='Old wooden "junction box"...' imgSrc={oldWoodJunctionImg} imgAlt="The hewn-out scrap piece of construction lumber originally serving as the room's junction box.">
+          The original supply wires for the room were routed through this hewn-out piece of scrap construction lumber. This was replaced with the modern molded plastic box at right.
+          Note the very much welcome(!!) existing sub-surface conduit (the black tube continuing to the right)—this supplies the light switch and saved me from cutting a new chase in the masonry wall.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="...and its modern replacement" imgSrc={newJunctionImg} imgAlt="The fire-retardant high-impact polystyrene junction box replacing the original makeshift wooden box.">
+          The room's new main junction box, now made of more appropriate molded fire-retardant high-impact polystyrene.
+          The main supply enters through the wall, then continues to the right through sub-surface conduit to the light switch and new outlets.
+          The two masonry anchors will hold screws for a light fixture.
+        </BentoCard>
 
-    <p class="mt-2">
-      With a solid ground, neutral, and hot wire running between the office and my main panel; I could then begin electrical work in the office itself.
-      This involved:
-    </p>
+        <!-- Light before/after -->
+        <BentoCard classes="lg:col-span-3" title="Original bare lightbulb..." imgSrc={originalLightImg} imgAlt="The original bare lightbulb, seen dangling from the wall by its supply wires.">
+          The original bare lightbulb, seen dangling from the wall by its supply wires.
+          If you look closely you'll see that electrical connectors are exposed about halfway along the exposed portion of the wires; you can also recognize the wooden junction box from the previous row of pictures.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="...and its new replacement" imgSrc={newLightImg} imgAlt="The new wall-mounted light fixture replacing the original bare lightbulb.">
+          The new wall-mounted light fixture replacing the original bare lightbulb.
+          It is mounted over the new junction box shown above.
+          Fun story: this is a repurposed light fixture from our old family home in Ljubljana, which we took with us after moving out but didn't find a place for in our new home.
+        </BentoCard>
 
-    <ul class="ml-5 list-disc">
-      <li>
-        Replacing all existing wiring in the office with modern 1.5 mm2 VDE cable.
-      </li>
-      <li>
-        Replacing the, erm, makeshift <span class="italic">wooden</span> junction box hewn out of a scrap piece of construction lumber that held the main light/switch junction with a modern fire-retardant high-impact polystyrene junction box.
-      </li>
-      <li>
-        Installing a proper wall-mounted light fixture to replace the lightbulb dangling from the wall by its supply wires.
-      </li>
-      <li>
-        Cutting chases into the masonry wall for new conduit and junction/fixture boxes.
-        This was unpleasant because of a constant worry of bothering the neighbors (cutting/drilling into masonry, whether with an angle grinder or rotary hammer drill, is <span class="italic">loud</span>).
-      </li>
-      <li>
-        Installing conduit and cable for outlets, and of course installing the outlets themselves.
-      </li>
-    </ul>
-  </div>
+        <!-- Light switch electrical before/after -->
+        <BentoCard classes="lg:col-span-2" title="Hewn-out cavity for a new electrical box" imgSrc={switchJunctionHoleImg} imgAlt="The rectangular cavity hewn out of the masonry wall to hold a new electrical box.">
+          This hole will hold a new electrical box with the room's light switch and an outlet.
+          I used an angle grinder and hammer drill to cut the hole in the masonry wall.
+        </BentoCard>
+        <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="Checking new box is flush..." imgSrc={switchJunctionFlushImg} imgAlt="Using a straight-edge to ensure the face of the new box is flush with the plane of the existing wall.">
+          Here I am using a straight-edge to ensure the face of the new box is flush with the plane of the existing wall. The surrounding gaps are then filled with a gypsum-based plaster.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="The new electrical box" imgSrc={switchJunctionNewImg} imgAlt="Foo image">
+          The "rough-in" installation of the new electrical box—the box is installed with a gypsum-based plaster (<span class="italic">gips</span> in colloquial Slovene).
+          This will hold a light switch and outlet.
+        </BentoCard>
 
-  <h3 class="mt-5 text-2xl">Gallery: Electrical</h3>
+        <!-- Computer outlet conduit -->
+        <BentoCard classes="lg:col-span-2" title="Cutting a new chase" imgSrc={conduitChaseImg} imgAlt="A new chase cut into the masonry wall to hold conduit and cable for a second outlet.">
+          A new chase cut into the masonry wall with an angle grinder to hold conduit and cable for a second electrical box, which will hold an outlet supplying the computer desk.
+        </BentoCard>
+        <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="Installing new conduit" imgSrc={conduitInstallingImg} imgAlt="New conduit to hold the cable supplying the computer desk outlet.">
+          New conduit to hold the cable supplying the computer desk outlet.
+          You can see the outlet's box already installed flush with the wall on the right.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="Conduit installed!" imgSrc={conduitInstalledImg} imgAlt="The installed new conduit, with the chase filled in with plaster.">
+          The installed conduit, with the chase filled in with the same fast-setting gypsum-based plaster used to install the junction boxes.
+          I painted this over provisionally with a lime-based whitewash, but would later repaint the whole room in a warmer color.
+        </BentoCard>
 
-  <div class="mt-6">
-    <BentoWrapper>
+      </BentoWrapper>
+    </div>
+  </section>
 
-      <!-- Wood junction before/after -->
-      <BentoCard classes="lg:col-span-3" title='Old wooden "junction box"...' imgSrc={oldWoodJunctionImg} imgAlt="The hewn-out scrap piece of construction lumber originally serving as the room's junction box.">
-        The original supply wires for the room were routed through this hewn-out piece of scrap construction lumber. This was replaced with the modern molded plastic box at right.
-        Note the very much welcome(!!) existing sub-surface conduit (the black tube continuing to the right)—this supplies the light switch and saved me from cutting a new chase in the masonry wall.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-3" title="...and its modern replacement" imgSrc={newJunctionImg} imgAlt="The fire-retardant high-impact polystyrene junction box replacing the original makeshift wooden box.">
-        The room's new main junction box, now made of more appropriate molded fire-retardant high-impact polystyrene.
-        The main supply enters through the wall, then continues to the right through sub-surface conduit to the light switch and new outlets.
-        The two masonry anchors will hold screws for a light fixture.
-      </BentoCard>
+  <section class="mt-16">
+    <h2 class="text-4xl text-left">Refinishing timber framing</h2>
 
-      <!-- Light before/after -->
-      <BentoCard classes="lg:col-span-3" title="Original bare lightbulb..." imgSrc={originalLightImg} imgAlt="The original bare lightbulb, seen dangling from the wall by its supply wires.">
-        The original bare lightbulb, seen dangling from the wall by its supply wires.
-        If you look closely you'll see that electrical connectors are exposed about halfway along the exposed portion of the wires; you can also recognize the wooden junction box from the previous row of pictures.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-3" title="...and its new replacement" imgSrc={newLightImg} imgAlt="The new wall-mounted light fixture replacing the original bare lightbulb.">
-        The new wall-mounted light fixture replacing the original bare lightbulb.
-        It is mounted over the new junction box shown above.
-        Fun story: this is a repurposed light fixture from our old family home in Ljubljana, which we took with us after moving out but didn't find a place for in our new home.
-      </BentoCard>
+    <div class="mt-8">
+      <SimpleImagePanel
+        reverse={true}
+        img={timbersSandedImg}
+        imgAlt="Re-exposed structural timbers after removing the original plaster coating."
+        imgCaption="Re-exposed structural timbers after removing the original plaster coating."
+        imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
+      >
+        <p>
+          <span class="font-bold">Background:</span> 
+          My building is masonry, but the roof is timber-framed.
+          I happen to live on the top floor (i.e. under the timber-framed roof), and some of the structural timber framing supporting the roof happens to run through the office room. Unfortunately (at least if you ask me) this timber framing was covered with a plaster coating, concealing the beauty of the underlying wood!
+          I am a sucker for timber framing, so I decided to expose and refinish the structural timbers.
+          Here is the process:
+        </p>
 
-      <!-- Light switch electrical before/after -->
-      <BentoCard classes="lg:col-span-2" title="Hewn-out cavity for a new electrical box" imgSrc={switchJunctionHoleImg} imgAlt="The rectangular cavity hewn out of the masonry wall to hold a new electrical box.">
-        This hole will hold a new electrical box with the room's light switch and an outlet.
-        I used an angle grinder and hammer drill to cut the hole in the masonry wall.
-      </BentoCard>
-      <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="Checking new box is flush..." imgSrc={switchJunctionFlushImg} imgAlt="Using a straight-edge to ensure the face of the new box is flush with the plane of the existing wall.">
-        Here I am using a straight-edge to ensure the face of the new box is flush with the plane of the existing wall. The surrounding gaps are then filled with a gypsum-based plaster.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-2" title="The new electrical box" imgSrc={switchJunctionNewImg} imgAlt="Foo image">
-        The "rough-in" installation of the new electrical box—the box is installed with a gypsum-based plaster (<span class="italic">gips</span> in colloquial Slovene).
-        This will hold a light switch and outlet.
-      </BentoCard>
+        <p class="mt-4 font-bold">Process</p>
+        <ul class="list-disc ml-5">
+          <li>Roughly scraping the plaster off the timbers with a thick-bladed 5-in-1-style putty knife.</li>
+          <li>Grinding off lingering plaster bits with a flap disk attachment on an angle grinder.</li>
+          <li>Sanding down the timbers with a random orbital sander.</li>
+          <li>Refinishing the timbers with tung oil.</li>
+        </ul>
 
-      <!-- Computer outlet conduit -->
-      <BentoCard classes="lg:col-span-2" title="Cutting a new chase" imgSrc={conduitChaseImg} imgAlt="A new chase cut into the masonry wall to hold conduit and cable for a second outlet.">
-        A new chase cut into the masonry wall with an angle grinder to hold conduit and cable for a second electrical box, which will hold an outlet supplying the computer desk.
-      </BentoCard>
-      <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="Installing new conduit" imgSrc={conduitInstallingImg} imgAlt="New conduit to hold the cable supplying the computer desk outlet.">
-        New conduit to hold the cable supplying the computer desk outlet.
-        You can see the outlet's box already installed flush with the wall on the right.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-2" title="Conduit installed!" imgSrc={conduitInstalledImg} imgAlt="The installed new conduit, with the chase filled in with plaster.">
-        The installed conduit, with the chase filled in with the same fast-setting gypsum-based plaster used to install the junction boxes.
-        I painted this over provisionally with a lime-based whitewash, but would later repaint the whole room in a warmer color.
-      </BentoCard>
+      </SimpleImagePanel>
+    </div>
 
-    </BentoWrapper>
-  </div>
-
-  <h2 class="mt-16 text-4xl text-left">Refinishing timber framing</h2>
-
-  <div class="mt-8">
-    <SimpleImagePanel
-      reverse={true}
-      img={timbersSandedImg}
-      imgAlt="Re-exposed structural timbers after removing the original plaster coating."
-      imgCaption="Re-exposed structural timbers after removing the original plaster coating."
-      imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
-    >
-      <p>
-        <span class="font-bold">Background:</span> 
-        My building is masonry, but the roof is timber-framed.
-        I happen to live on the top floor (i.e. under the timber-framed roof), and some of the structural timber framing supporting the roof happens to run through the office room. Unfortunately (at least if you ask me) this timber framing was covered with a plaster coating, concealing the beauty of the underlying wood!
-        I am a sucker for timber framing, so I decided to expose and refinish the structural timbers.
-        Here is the process:
+    <div class="mt-10">
+      <h3 class="text-xl">Aside: worrying about bothering the neighbors</h3>
+      <p class="mt-2 max-w-2xl">
+        Like cutting electrical chases into the masonry wall, sanding/griding the plaster coating off the timbers was unpleasant for all the noise it generated and the dust it raised.
+        I don't mind the dust and noise myself—modern PPE protects you quite well—and was much more worried about bothering the neighbors!
+        Angle grinders are <span class="italic">loud</span>, and the old interior door provides only token acoustic insulation, so the noise would ring out into the hallway and echo through the building.
+        I did my best to work only in short bursts to avoid prolonged construction noise, and only at sane hours of the day. Thankfully no one complained.
       </p>
+    </div>
 
-      <p class="mt-4 font-bold">Process</p>
-      <ul class="list-disc ml-5">
-        <li>Roughly scraping the plaster off the timbers with a thick-bladed 5-in-1-style putty knife.</li>
-        <li>Grinding off lingering plaster bits with a flap disk attachment on an angle grinder.</li>
-        <li>Sanding down the timbers with a random orbital sander.</li>
-        <li>Refinishing the timbers with tung oil.</li>
-      </ul>
+    <h3 class="mt-8 text-2xl">Gallery: Stripping plaster off timbers</h3>
 
-    </SimpleImagePanel>
-  </div>
+    <div class="mt-6">
+      <BentoWrapper>
 
-  <div class="mt-10">
-    <h3 class="text-xl">Aside: worrying about bothering the neighbors</h3>
-    <p class="mt-2 max-w-2xl">
-      Like cutting electrical chases into the masonry wall, sanding/griding the plaster coating off the timbers was unpleasant for all the noise it generated and the dust it raised.
-      I don't mind the dust and noise myself—modern PPE protects you quite well—and was much more worried about bothering the neighbors!
-      Angle grinders are <span class="italic">loud</span>, and the old interior door provides only token acoustic insulation, so the noise would ring out into the hallway and echo through the building.
-      I did my best to work only in short bursts to avoid prolonged construction noise, and only at sane hours of the day. Thankfully no one complained.
-    </p>
-  </div>
+        <!-- Process from raw to scraped to sanded -->
+        <BentoCard classes="lg:col-span-2" title="Timbers covered in plaster" imgSrc={timbersStartImg} imgAlt="The first pieces of plaster coating removed from the timber framing.">
+          The timber framing was originally covered in a plaster coating, which I removed to expose the underlying wood. In this picture I've just started to remove plaster where the brace meets the post.
+        </BentoCard>
+        <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="First pass complete..." imgSrc={timbersScrapedImg} imgAlt="The timbers after scraping off the bulk of the coating.">
+          I first roughly scraped off the plaster coating with thick-bladed putty knife. I then made two more passes to remove the remaining plaster—first with an angle grinder with a flap disk attachment, then with a random-orbit sander.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="Sanding complete!" imgSrc={timbersSandedLandscapeImg} imgAlt="The timbers after grinding off the remaining plaster, then sanding with a random orbit sander.">
+          This picture shows the timbers after grinding off the remaining plaster, then sanding with a random orbit sander. I would later fill the gaps between the timbers and walls with plaster before painting.
+        </BentoCard>
 
-  <h3 class="mt-8 text-2xl">Gallery: Stripping plaster off timbers</h3>
+        <!-- Tools/Eli/Dust -->
+        <BentoCard classes="lg:col-span-3" title="Tools" imgSrc={timbersToolsImg} imgAlt="Angle grinder and PPE layed on the floor.">
+          I did the bulk of the timber refinishing with an angle grinder and flap disk attachment, which did a good job of quickly removing large amounts of combined plaster-wood material.
+          I experimented with the spray bottle to cut down on the plaster dust, but adding too much moisture would wet the underlying timbers and clog up the grinder disk with wet sawdust.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="Dust, dust dust!" imgClasses="max-w-md rounded-b" imgSrc={timbersEliImg} imgAlt="The fire-retardant high-impact polystyrene junction box replacing the original makeshift wooden box.">
+          Grinding the lingering plaster off the wooden beams kicked up a lot of dust in a small enclosed space.
+          Thankfully there was a small window for ventilation, but it still got pretty rough in there—the respirator proved invaluable.
+          You can vaguely see a bit of the haze in the picture.
+        </BentoCard>
 
-  <div class="mt-6">
-    <BentoWrapper>
+      </BentoWrapper>
+    </div>
 
-      <!-- Process from raw to scraped to sanded -->
-      <BentoCard classes="lg:col-span-2" title="Timbers covered in plaster" imgSrc={timbersStartImg} imgAlt="The first pieces of plaster coating removed from the timber framing.">
-        The timber framing was originally covered in a plaster coating, which I removed to expose the underlying wood. In this picture I've just started to remove plaster where the brace meets the post.
-      </BentoCard>
-      <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="First pass complete..." imgSrc={timbersScrapedImg} imgAlt="The timbers after scraping off the bulk of the coating.">
-        I first roughly scraped off the plaster coating with thick-bladed putty knife. I then made two more passes to remove the remaining plaster—first with an angle grinder with a flap disk attachment, then with a random-orbit sander.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-2" title="Sanding complete!" imgSrc={timbersSandedLandscapeImg} imgAlt="The timbers after grinding off the remaining plaster, then sanding with a random orbit sander.">
-        This picture shows the timbers after grinding off the remaining plaster, then sanding with a random orbit sander. I would later fill the gaps between the timbers and walls with plaster before painting.
-      </BentoCard>
+    <h3 class="mt-10 text-2xl">Oiling the timbers</h3>
 
-      <!-- Tools/Eli/Dust -->
-      <BentoCard classes="lg:col-span-3" title="Tools" imgSrc={timbersToolsImg} imgAlt="Angle grinder and PPE layed on the floor.">
-        I did the bulk of the timber refinishing with an angle grinder and flap disk attachment, which did a good job of quickly removing large amounts of combined plaster-wood material.
-        I experimented with the spray bottle to cut down on the plaster dust, but adding too much moisture would wet the underlying timbers and clog up the grinder disk with wet sawdust.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-3" title="Dust, dust dust!" imgClasses="max-w-md rounded-b" imgSrc={timbersEliImg} imgAlt="The fire-retardant high-impact polystyrene junction box replacing the original makeshift wooden box.">
-        Grinding the lingering plaster off the wooden beams kicked up a lot of dust in a small enclosed space.
-        Thankfully there was a small window for ventilation, but it still got pretty rough in there—the respirator proved invaluable.
-        You can vaguely see a bit of the haze in the picture.
-      </BentoCard>
+    <div class="mt-5">
+      <SimpleImagePanel
+        reverse={true}
+        img={oilCanImg}
+        imgAlt=""
+        imgCaption=""
+        imgClasses="h-96 w-full max-w-md mx-auto border border-gray-300"
+      >
+        <p>
+          I finished the timbers with a tung oil—I find the smell gentler than linseed oil (the other standard candidate for a finishing oil), which is particularly relevant in a small space where the smells are right in your face.
+          I happened to have a can of tung oil lying around waiting to be used, and these timbers were a perfect opportunity to use it.
+        </p>
+        <p class="mt-2">
+          There was nothing much to this step, one simply wets a rag with oil and applies to the timbers.
+          As hoped for, the color of the timbers deepened and the grain grew more visible. I'm pleased with the result!
+        </p>
+      </SimpleImagePanel>
+    </div>
 
-    </BentoWrapper>
-  </div>
+    <div class="mt-6">
+      <BentoWrapper>
+        <BentoCard classes="lg:col-span-2" title="Before..." imgSrc={timbersSandedLandscapeImg} imgAlt="The timbers after sanding off the original plaster coat but before oiling.">
+          The timbers after sanding off the original plaster coat but before oiling.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="...and after" imgSrc={oiledImg} imgAlt="The timbers after finishing with tung oil.">
+          The timbers after finishing with tung oil. (I also painted the walls and patched the gap between the timber brace member and the wall in the meantime.)
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="Close-up" imgSrc={oiledCloseUpImg} imgAlt="Close-up image of the timbers after oiling, showing deeper color and visible grain pattern.">
+          As hoped, the color of the timbers deepened and the grain of the wood grew more visible after oiling.
+        </BentoCard>
+      </BentoWrapper>
+    </div>
+  </section>
 
-  <h3 class="mt-10 text-2xl">Oiling the timbers</h3>
+  <section class="mt-16">
+    <h2 class="text-4xl text-left">Painting</h2>
 
-  <div class="mt-5">
-    <SimpleImagePanel
-      reverse={true}
-      img={oilCanImg}
-      imgAlt=""
-      imgCaption=""
-      imgClasses="h-96 w-full max-w-md mx-auto border border-gray-300"
-    >
-      <p>
-        I finished the timbers with a tung oil—I find the smell gentler than linseed oil (the other standard candidate for a finishing oil), which is particularly relevant in a small space where the smells are right in your face.
-        I happened to have a can of tung oil lying around waiting to be used, and these timbers were a perfect opportunity to use it.
-      </p>
-      <p class="mt-2">
-        There was nothing much to this step, one simply wets a rag with oil and applies to the timbers.
-        As hoped for, the color of the timbers deepened and the grain grew more visible. I'm pleased with the result!
-      </p>
-    </SimpleImagePanel>
-  </div>
+    <div class="mt-8">
+      <SimpleImagePanel
+        reverse={true}
+        img={coat2Img}
+        imgAlt="The room after the first coat of paint, with splotches and masking tape visible."
+        imgCaption="The room after the first coat of paint, with horizontal masking tape delineating the accent region."
+        imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
+      >
+        <p>
+          <span class="font-bold">Background:</span> 
+          I painted the room with a so-called "natural" limewash paint made by Kreidezeit GmbH, composed of marble lime hydrate, marble powder, sinter water, and methyl cellulose as a binding agent and thickener.
+        </p>
+        <p class="mt-2">
+          I chose a limewash paint for for its vapor diffusivity, natural composition (the lack of VOCs, organic solvents, synthetic resins, etc. made sense in a small, enclosed space), good bond to the masonry substrate, and because the high alkalinity dramaticaly reduces the risk of mold.
+        </p>
 
-  <div class="mt-6">
-    <BentoWrapper>
-      <BentoCard classes="lg:col-span-2" title="Before..." imgSrc={timbersSandedLandscapeImg} imgAlt="The timbers after sanding off the original plaster coat but before oiling.">
-        The timbers after sanding off the original plaster coat but before oiling.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-2" title="...and after" imgSrc={oiledImg} imgAlt="The timbers after finishing with tung oil.">
-        The timbers after finishing with tung oil. (I also painted the walls and patched the gap between the timber brace member and the wall in the meantime.)
-      </BentoCard>
-      <BentoCard classes="lg:col-span-2" title="Close-up" imgSrc={oiledCloseUpImg} imgAlt="Close-up image of the timbers after oiling, showing deeper color and visible grain pattern.">
-        As hoped, the color of the timbers deepened and the grain of the wood grew more visible after oiling.
-      </BentoCard>
-    </BentoWrapper>
-  </div>
+        <p class="mt-2">The process was more or less standard:</p>
 
-  <h2 class="mt-16 text-4xl text-left">Painting</h2>
+        <p class="mt-4 font-bold">Process</p>
+        <ul class="list-disc ml-5">
+          <li>I first patched cracks and gaps in the walls and ceiling using gypsum-based plaster, and went over particularly rough areas with a spackle-like filler compound to create a smoother surface to accept paint.</li>
+          <li>I protected the timbers, window and door trim, and utilities with masking tape—I'm not skilled enough to trust myself to cut in by hand around all the nooks and crannies!</li>
+          <li>I applied an initial base coat of paint over the entire room.</li>
+          <li>I finished the bottom third of the room with a pastel-yellow accent, and the remainder of the walls and ceiling with a second coat of white.</li>
+        </ul>
 
-  <div class="mt-8">
-    <SimpleImagePanel
-      reverse={true}
-      img={coat2Img}
-      imgAlt="The room after the first coat of paint, with splotches and masking tape visible."
-      imgCaption="The room after the first coat of paint, with horizontal masking tape delineating the accent region."
-      imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
-    >
-      <p>
-        <span class="font-bold">Background:</span> 
-        I painted the room with a so-called "natural" limewash paint made by Kreidezeit GmbH, composed of marble lime hydrate, marble powder, sinter water, and methyl cellulose as a binding agent and thickener.
-      </p>
-      <p class="mt-2">
-        I chose a limewash paint for for its vapor diffusivity, natural composition (the lack of VOCs, organic solvents, synthetic resins, etc. made sense in a small, enclosed space), good bond to the masonry substrate, and because the high alkalinity dramaticaly reduces the risk of mold.
-      </p>
+      </SimpleImagePanel>
+    </div>
 
-      <p class="mt-2">The process was more or less standard:</p>
+    <h3 class="mt-8 text-2xl">Gallery: Painting</h3>
 
-      <p class="mt-4 font-bold">Process</p>
-      <ul class="list-disc ml-5">
-        <li>I first patched cracks and gaps in the walls and ceiling using gypsum-based plaster, and went over particularly rough areas with a spackle-like filler compound to create a smoother surface to accept paint.</li>
-        <li>I protected the timbers, window and door trim, and utilities with masking tape—I'm not skilled enough to trust myself to cut in by hand around all the nooks and crannies!</li>
-        <li>I applied an initial base coat of paint over the entire room.</li>
-        <li>I finished the bottom third of the room with a pastel-yellow accent, and the remainder of the walls and ceiling with a second coat of white.</li>
-      </ul>
+    <div class="mt-6">
+      <BentoWrapper>
 
-    </SimpleImagePanel>
-  </div>
+        <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="Plaster for patching gaps" imgSrc={gipsImg} imgAlt="Plastering materials layed out on the floor: spackle knife, plaster, and bucket for mixing.">
+          I used fast-setting gypsum-based plaster (colloquially <span class="italic">gips</span> in Slovene) to patch gaps between the timbers and wall, and a finer spackle-like compound to patch fine cracks in the walls.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="Note the gap..." imgSrc={gapImg} imgAlt="A visible gap running between a brace in the timber framing and the masonry wall.">
+          Note the gap running between the wall and the brace of the timber frame structure, which required patching before painting.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="...now patched with plaster" imgSrc={gapPatchedImg} imgAlt="The gaps between timber members and wall patched with plaster.">
+          The gap is now patched and ready to be painted over.
+          I smoothed over the various other cracks and flakes on the walls and ceilings with a combination of sanding and plaster.
+        </BentoCard>
 
-  <h3 class="mt-8 text-2xl">Gallery: Painting</h3>
+        <BentoCard classes="lg:col-span-3" title="Protective masking tape on" imgSrc={maskedImg} imgAlt="Masking tape applied to timbers and window trim.">
+          I protected the timbers, window and door trim, and utilities with masking tape—a skilled painter might have cut these areas in freehand, but I'm not skilled!
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="Mixing paint" imgSrc={mixingPaintImg} imgAlt="Mixing pastel yellow pigment into paint with a paddle attachment and corded electric drill.">
+          The limewash paint I used did not come colored—you color it by mixing mineral-based pigment into a generic white "base" paint. I opted for a pastel yellow accent color, which I felt would cheer up the space.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="First coat complete" imgSrc={coat2DoorImg} imgAlt="A zoomed-out view of the office with the first coat of paint applied.">
+          Here is the first coat, which I applied uniformly over walls and ceilings. It looks white, though is in fact slightly yellow-tinted.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="Laying out accent area" imgSrc={laserImg} imgAlt="A laser level being used to lay out a level line around the room for the yellow accent.">
+          I used a laser level to lay out a level line around the room to define the region for the yellow accent—I chose the height at which the brace meets the post in the timber framing. A laser level is perhaps overkill for this small space, but why not use the toy if you're lucky enough to have it?
+        </BentoCard>
 
-  <div class="mt-6">
-    <BentoWrapper>
+        <BentoCard classes="lg:col-span-3" title="Rolling on paint" imgSrc={rollerImg} imgAlt="Rolling on the yellow paint for the accent region.">
+          I painted most of the room with a roller (and used a brush where the roller could not reach).
+          Here I am rolling on the yellow for the accent area.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="All done with painting!" imgSrc={paintedOiledImg} imgAlt="The painted room with masking tape removed.">
+          Here is the painted room with paint dry and masking tape removed.
+          The lower pastel-yellow accent region came out more subtle than I envisioned, partly because the warm-yellow light bulb illuminating the room tints the upper, nominally white, region yellow too, lowering the contrast with the yellow bottom. 
+          But I think the subtleness works—it's not too overbearing and brings out the color and grain of the wood timbers.
+        </BentoCard>
+      </BentoWrapper>
+    </div>
+  </section>
 
-      <BentoCard classes="sm:hidden lg:block lg:col-span-2" title="Plaster for patching gaps" imgSrc={gipsImg} imgAlt="Plastering materials layed out on the floor: spackle knife, plaster, and bucket for mixing.">
-        I used fast-setting gypsum-based plaster (colloquially <span class="italic">gips</span> in Slovene) to patch gaps between the timbers and wall, and a finer spackle-like compound to patch fine cracks in the walls.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-2" title="Note the gap..." imgSrc={gapImg} imgAlt="A visible gap running between a brace in the timber framing and the masonry wall.">
-        Note the gap running between the wall and the brace of the timber frame structure, which required patching before painting.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-2" title="...now patched with plaster" imgSrc={gapPatchedImg} imgAlt="The gaps between timber members and wall patched with plaster.">
-        The gap is now patched and ready to be painted over.
-        I smoothed over the various other cracks and flakes on the walls and ceilings with a combination of sanding and plaster.
-      </BentoCard>
+  <section class="mt-16">
+    <h2 class="text-4xl text-left">Desk and finishing touches</h2>
 
-      <BentoCard classes="lg:col-span-3" title="Protective masking tape on" imgSrc={maskedImg} imgAlt="Masking tape applied to timbers and window trim.">
-        I protected the timbers, window and door trim, and utilities with masking tape—a skilled painter might have cut these areas in freehand, but I'm not skilled!
-      </BentoCard>
-      <BentoCard classes="lg:col-span-3" title="Mixing paint" imgSrc={mixingPaintImg} imgAlt="Mixing pastel yellow pigment into paint with a paddle attachment and corded electric drill.">
-        The limewash paint I used did not come colored—you color it by mixing mineral-based pigment into a generic white "base" paint. I opted for a pastel yellow accent color, which I felt would cheer up the space.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-3" title="First coat complete" imgSrc={coat2DoorImg} imgAlt="A zoomed-out view of the office with the first coat of paint applied.">
-        Here is the first coat, which I applied uniformly over walls and ceilings. It looks white, though is in fact slightly yellow-tinted.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-3" title="Laying out accent area" imgSrc={laserImg} imgAlt="A laser level being used to lay out a level line around the room for the yellow accent.">
-        I used a laser level to lay out a level line around the room to define the region for the yellow accent—I chose the height at which the brace meets the post in the timber framing. A laser level is perhaps overkill for this small space, but why not use the toy if you're lucky enough to have it?
-      </BentoCard>
-      
-      <BentoCard classes="lg:col-span-3" title="Rolling on paint" imgSrc={rollerImg} imgAlt="Rolling on the yellow paint for the accent region.">
-        I painted most of the room with a roller (and used a brush where the roller could not reach).
-        Here I am rolling on the yellow for the accent area.
-      </BentoCard>
-      <BentoCard classes="lg:col-span-3" title="All done with painting!" imgSrc={paintedOiledImg} imgAlt="The painted room with masking tape removed.">
-        Here is the painted room with paint dry and masking tape removed.
-        The lower pastel-yellow accent region came out more subtle than I envisioned, partly because the warm-yellow light bulb illuminating the room tints the upper, nominally white, region yellow too, lowering the contrast with the yellow bottom. 
-        But I think the subtleness works—it's not too overbearing and brings out the color and grain of the wood timbers.
-      </BentoCard>
-    </BentoWrapper>
-  </div>
+    <div class="mt-8">
+      <SimpleImagePanel
+        reverse={true}
+        img={bosuChairImg}
+        imgAlt=""
+        imgCaption=""
+        imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
+      >
+        <p>
+          <span class="font-bold">Background:</span> 
+          Blah blah
+        </p>
+        <p class="mt-2">
+          More blah
+        </p>
 
-  <div class="mt-10">
-    <span class="font-bold">More to come soon!</span>
-    <p class="mt-2">
-      (Installing a desk, a place for hanging coats/bags, setting up an external monitor, etc.)
-    </p>
-  </div>
+        <p class="mt-2">The process was more or less standard:</p>
+
+        <p class="mt-4 font-bold">Process</p>
+        <ul class="list-disc ml-5">
+          <li>blah</li>
+        </ul>
+
+      </SimpleImagePanel>
+    </div>
+
+    <h3 class="mt-8 text-2xl">Gallery: desk and finishing touches</h3>
+
+    <div class="mt-6">
+      <BentoWrapper>
+
+        <BentoCard classes="sm:hidden lg:block lg:col-span-3" title="Template" imgSrc={templateImg} imgAlt="Template">
+          Template
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="ledgersLaserImg" imgSrc={ledgersLaserImg} imgAlt="ledgersLaserImg">
+          Laying out position of ledgers to support table
+        </BentoCard>
+
+        <BentoCard classes="lg:col-span-3" title="ledgersRawImg" imgSrc={ledgersRawImg} imgAlt="ledgersRawImg">
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="ledgersProfiledImg" imgSrc={ledgersProfiledImg} imgAlt="ledgersProfiledImg">
+          ledgersProfiledImg
+        </BentoCard>
+
+        <BentoCard classes="lg:col-span-2" title="ledgersImg" imgSrc={ledgersImg} imgAlt="ledgersImg">
+          ledgersImg
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="deskInstalledImg" imgSrc={deskInstalledImg} imgAlt="deskInstalledImg">
+          deskInstalledImg
+        </BentoCard>
+        <BentoCard classes="lg:col-span-2" title="hangerBoardImg" imgSrc={hangerBoardImg} imgAlt="hangerBoardImg">
+          hangerBoardImg
+        </BentoCard>
+
+        <BentoCard classes="lg:col-span-3" title="bosuChairImg" imgSrc={bosuChairImg} imgAlt="bosuChairImg">
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="monitorImg" imgSrc={monitorImg} imgAlt="monitorImg">
+          monitorImg
+        </BentoCard>
+
+
+      </BentoWrapper>
+    </div>
+  </section>
 
 </BaseLayout>
