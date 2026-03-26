@@ -400,26 +400,14 @@ import templateImg from '@/assets/img/minioffice/desk/template.jpg'
     <div class="mt-8">
       <SimpleImagePanel
         reverse={true}
-        img={bosuChairImg}
+        img={monitorImg}
         imgAlt=""
         imgCaption=""
         imgClasses="h-96 w-full max-w-xs mx-auto border border-gray-300"
       >
         <p>
-          <span class="font-bold">Background:</span> 
-          Blah blah
+          I coompleted the project by installing a desk, monitor stand, and a small rack for e.g. coats or bags. For now the desk is rather crude OSB; I'll replace this with a proper glued-up pine board at some point when I have the pipe clamps and infrastructure for larger glue-ups.
         </p>
-        <p class="mt-2">
-          More blah
-        </p>
-
-        <p class="mt-2">The process was more or less standard:</p>
-
-        <p class="mt-4 font-bold">Process</p>
-        <ul class="list-disc ml-5">
-          <li>blah</li>
-        </ul>
-
       </SimpleImagePanel>
     </div>
 
@@ -428,33 +416,32 @@ import templateImg from '@/assets/img/minioffice/desk/template.jpg'
     <div class="mt-6">
       <BentoWrapper>
 
-        <BentoCard classes="sm:hidden lg:block lg:col-span-3" title="Template" imgSrc={templateImg} imgAlt="Template">
-          Template
+        <BentoCard classes="sm:hidden lg:block lg:col-span-3" title="A template for the desk" imgSrc={templateImg} imgAlt="Template for desk fitting around timbers and drain pipes.">
+          I used a scrap piece of easily-cut rigid foam board to make a template for the desk; I then traced this template onto a piece of OSB and cut it out with a jigsaw.
         </BentoCard>
-        <BentoCard classes="lg:col-span-3" title="ledgersLaserImg" imgSrc={ledgersLaserImg} imgAlt="ledgersLaserImg">
-          Laying out position of ledgers to support table
-        </BentoCard>
-
-        <BentoCard classes="lg:col-span-3" title="ledgersRawImg" imgSrc={ledgersRawImg} imgAlt="ledgersRawImg">
-        </BentoCard>
-        <BentoCard classes="lg:col-span-3" title="ledgersProfiledImg" imgSrc={ledgersProfiledImg} imgAlt="ledgersProfiledImg">
-          ledgersProfiledImg
+        <BentoCard classes="lg:col-span-3" title="Laying out level lines for desk ledgers" imgSrc={ledgersLaserImg} imgAlt="Using a laser level to Laying out level lines for the ledgers that will support the desk">
+          I used a laser level to lay out the position of the ledgers that would support the desk; once again, a laser is overkill in this small space, but might as well use the toy if you have it.
         </BentoCard>
 
-        <BentoCard classes="lg:col-span-2" title="ledgersImg" imgSrc={ledgersImg} imgAlt="ledgersImg">
-          ledgersImg
+        <BentoCard classes="lg:col-span-3" title="Ledgers to support the desk" imgSrc={ledgersRawImg} imgAlt="Ledgers laying on the workbench, cut to length but unfinished">
+          The desk will be supported by these three ledgers made from scrap construction lumber; I added the partial end bevel for visual interest. 
         </BentoCard>
-        <BentoCard classes="lg:col-span-2" title="deskInstalledImg" imgSrc={deskInstalledImg} imgAlt="deskInstalledImg">
-          deskInstalledImg
-        </BentoCard>
-        <BentoCard classes="lg:col-span-2" title="hangerBoardImg" imgSrc={hangerBoardImg} imgAlt="hangerBoardImg">
-          hangerBoardImg
+        <BentoCard classes="lg:col-span-3" title="Adding a beveled profile..." imgSrc={ledgersProfiledImg} imgAlt="Using a router with a bevel bit to add a beveled profile around the edges of the ledgers">
+          I used a router with a 45 degree bevel bit to add a decorative beveled profile along the edges of the ledgers. 
         </BentoCard>
 
-        <BentoCard classes="lg:col-span-3" title="bosuChairImg" imgSrc={bosuChairImg} imgAlt="bosuChairImg">
+        <BentoCard classes="lg:col-span-3" title="Ledgers installed!" imgSrc={ledgersImg} imgAlt="Ledgers installed in their final positions, ready for the desk to go on top...">
+          The ledgers in their final positions, ready for the desk to go on top.
         </BentoCard>
-        <BentoCard classes="lg:col-span-3" title="monitorImg" imgSrc={monitorImg} imgAlt="monitorImg">
-          monitorImg
+        <BentoCard classes="lg:col-span-3" title="Desk installed, too!" imgSrc={bosuChairImg} imgAlt="Desk installed on top of ledgers">
+          ...and here is the desk installed, resting on (and screwed into) the top of the ledgers. The chair, made from an inverted Bosu ball attached to the bottom of an office chair, is a story for another day.
+        </BentoCard>
+
+        <BentoCard classes="lg:col-span-3" title="A rack for clothes" imgSrc={hangerBoardImg} imgAlt="A rack for clothes">
+          This rack comes in handy now and then for hanging a sweatshirt or bag; the "hooks" are simply extra structural screws.
+        </BentoCard>
+        <BentoCard classes="lg:col-span-3" title="All done!" imgSrc={monitorImg} imgAlt="The completed office, with a monitor stand and monitor hooked up and ready for work!">
+          The completed office, with a monitor stand (a glorified wooden box from scrap pine) and monitor hooked up and ready for work!
         </BentoCard>
 
 
