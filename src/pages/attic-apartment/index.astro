@@ -1,0 +1,99 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import TmpImage from '@/components/TmpImage.astro'
+
+const title = "Attic Apartment"
+const description = "An apartment built in the attic of my Dad's home in the Slovene countryside."
+
+import beforeImage from '@/assets/img/attic-apartment/01-cleanup/before.jpg'
+
+import barrierImage from '@/assets/img/attic-apartment/01-cleanup/barrier.jpg'
+import cleanedImage from '@/assets/img/attic-apartment/01-cleanup/cleaned.jpg'
+import cleaned2Image from '@/assets/img/attic-apartment/01-cleanup/cleaned-2.jpg'
+import opazImage from '@/assets/img/attic-apartment/01-cleanup/opaz.jpg'
+import planksImage from '@/assets/img/attic-apartment/01-cleanup/planks.jpg'
+import starmixImage from '@/assets/img/attic-apartment/01-cleanup/starmix.jpg'
+
+import gridFancyImage from '@/assets/img/attic-apartment/02-subfloor/grid-fancy.jpg'
+import gridImage from '@/assets/img/attic-apartment/02-subfloor/grid.jpg'
+import laserImage from '@/assets/img/attic-apartment/02-subfloor/laser.jpg'
+import sleepers1Image from '@/assets/img/attic-apartment/02-subfloor/sleepers-1.jpg'
+import sleepers2Image from '@/assets/img/attic-apartment/02-subfloor/sleepers-2.jpg'
+
+import insulationAnzeImage from '@/assets/img/attic-apartment/03-insulation/anze.jpg'
+import crossBattensImage from '@/assets/img/attic-apartment/03-insulation/cross-battens.jpg'
+import rockwool100CuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-100-cured.jpg'
+import rockwool100Image from '@/assets/img/attic-apartment/03-insulation/rockwool-100.jpg'
+import rockwool50CuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-cured.jpg'
+import rockwool50OverlayCuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-overlay-cured.jpg'
+import rockwool50OverlayWithBoardsImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-overlay-with-boards.jpg'
+import rockwool50RoofImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-roof.jpg'
+import rockwool50WithBoardsImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-with-boards.jpg'
+import vaporBarrierImage from '@/assets/img/attic-apartment/03-insulation/vapor-barrier.jpg'
+import xpsFurringImage from '@/assets/img/attic-apartment/03-insulation/xps-furring.jpg'
+
+---
+
+<BaseLayout title={title} description={description}>
+  <h1 class="text-5xl">Attic Apartment</h1>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Clean-up</h2>
+    <div class="space-y-5">
+      <p>
+      Emptied attic of the residual junk that tends to accumulated in attics.
+      Removed existing tongue and groove finish ceiling and stored for future use.
+      Removed makeshift... vapor barrier(?) to expose rafters.
+      Cleaned area under rafters of residual construction waste from the roofing process, spiderwebs, etc.
+      Cleaned slab with shopvac.
+      </p>
+      <TmpImage src={opazImage} alt="The initial state of the project after emptying the attic: concrete slab and tongue and groove finish ceiling over uninsulated rafters."/>
+      <TmpImage src={barrierImage} alt="Finish ceiling removed, showing the makeshift vapor barrier over the rafters."/>
+      <TmpImage src={planksImage} alt="The bare, uninsulated rafters, with the exterior sheathing visible above the rafters."/>
+      <TmpImage src={cleaned2Image} alt="The cleaned floor after finishing the finish ceiling removal."/>
+      <TmpImage src={starmixImage} alt="Close-up image of the StarMix shopvac used to clean the floor."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Subfloor</h2>
+    <div class="space-y-5">
+      <p class="">
+      The subfloor is built on a grid of sleepers fastened to the concrete floor slab. The sleepers are leveled with a laser level and shims, creating a level, planar surface above the slab (which is far from planar). Polyurethane foam under the sleepers provides additional support from below.
+      A perpendicular of slats placed across the sleepers gives the floor improved elasticity/bounciness, which I find makes the floor more pleasant underfoot.
+      The grid was later covered with tounge and groove OSB subfloor.
+      </p>
+      <p class="mt-2">
+      Building the subfloor substructure this early was a mistake—in hindsight, I would have built it only after completing masonry work on walls and insulating the ceiling, in which case the subfloor wouldn't have gotten as dirty from construction waste nor gotten in the way underfoot.
+      </p>
+      <TmpImage src={sleepers1Image} alt="The first sleepers being attached to the concrete floor slab."/>
+      <TmpImage src={sleepers2Image} alt="A laser level and shims placed between the floor slab and sleepers were used to level the sleepers."/>
+      <TmpImage src={gridImage} alt="The completed subfloor substructure, with slats placed across the sleepers."/>
+      <TmpImage src={gridFancyImage} alt="Perspective image from floor height showing the subfloor's grid structure."/>
+      <TmpImage src={laserImage} alt="A laser level being used to lay out the grid's position on the floor slab."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Insulating the roof</h2>
+    <div class="space-y-5">
+      <p class="">
+      The roof is insulated with 200 mm of rock wool (Isover PLE MAX, made by Saint Gobain, conductivity 0.037 W/(m K))
+      </p>
+      <TmpImage src={rockwool100Image} alt=""/>
+      <TmpImage src={rockwool100CuredImage} alt=""/>
+      <TmpImage src={xpsFurringImage} alt=""/>
+      <TmpImage src={rockwool50WithBoardsImage} alt=""/>
+      <TmpImage src={rockwool50CuredImage} alt=""/>
+      <TmpImage src={rockwool50RoofImage} alt=""/>
+      <TmpImage src={insulationAnzeImage} alt=""/>
+      <TmpImage src={crossBattensImage} alt=""/>
+      <TmpImage src={rockwool50OverlayWithBoardsImage} alt=""/>
+      <TmpImage src={rockwool50OverlayCuredImage} alt=""/>
+      <TmpImage src={vaporBarrierImage} alt=""/>
+    </div>
+  </section>
+
+</BaseLayout>
