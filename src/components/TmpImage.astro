@@ -7,13 +7,15 @@ interface Props {
     width: number,
     height: number,
     format: string
-  },
-  alt: string 
+  };
+  alt: string;
+  caption?: string;
 }
 
-const { src, alt } = Astro.props as Props;
+const { src, alt, caption } = Astro.props as Props;
 ---
 
-<Image src={src} alt={alt} class="mx-auto max-w-lg rounded-lg"/>
-
-
+<div class="">
+  <Image src={src} alt={alt} class="mx-auto max-w-lg rounded-lg"/>
+  <p class="mt-2 text-center text-sm text-gray-600">{caption ? caption : alt}</p>
+</div>
