@@ -6,6 +6,7 @@ import atticGymImg from '@/assets/img/tv47-attic-gym/9-complete.jpg'
 import multimeterImg from '@/assets/img/lj16-panel/multimeter.jpg'
 import screwdriverImg from '@/assets/img/lj16-panel/screwdriver-cropped.jpg'
 import miniofficeImg from '@/assets/img/minioffice/monitor.jpg'
+import atticImg from '@/assets/img/attic-apartment/23-track-lights/07-night-lights.jpg'
 
 const title = "Home"
 const description = "EliProjects is a site created for documenting my building projects to share with friends, family, and acquaintances. You'll find write-ups, photos, CAD plans, and the occasional story or anecdote of things I've built."
@@ -31,6 +32,16 @@ const description = "EliProjects is a site created for documenting my building p
     <p class="mt-4">Here is the list of projects — small for now, to be expanded soon:</p>
 
     <ul class="mt-10 flex flex-col gap-y-20">
+
+      <!-- TV47 Attic -->
+      <Project
+        name="Attic apartment"
+        img={atticImg}
+        imgAlt="The sleeping nook in the attic apartment, lit by warm, cozy spotlights."
+        href="/attic-apartment/"
+      >
+        A roughly 35 m2 apartment built in the attic of my Dad's home in the Slovene countryside. (Write-up in progress.)
+      </Project>
 
       <!-- MiniOffice -->
       <Project
@@ -64,8 +75,6 @@ const description = "EliProjects is a site created for documenting my building p
       >
         Replacing the electrical panel in our family's Ljubljana apartment so as to install a residual current circuit breaker (RCCB), balance circuits, and clean up chaotic wiring.
       </Project>
-
-      <a href="/attic-apartment" class="">Attic apartment</a>
 
     </ul>
 
