@@ -9,30 +9,478 @@ const description = "An apartment built in the attic of my Dad's home in the Slo
 
 import beforeImage from '@/assets/img/attic-apartment/01-cleanup/before.jpg'
 
-import barrierImage from '@/assets/img/attic-apartment/01-cleanup/barrier.jpg'
-import cleanedImage from '@/assets/img/attic-apartment/01-cleanup/cleaned.jpg'
-import cleaned2Image from '@/assets/img/attic-apartment/01-cleanup/cleaned-2.jpg'
-import opazImage from '@/assets/img/attic-apartment/01-cleanup/opaz.jpg'
-import planksImage from '@/assets/img/attic-apartment/01-cleanup/planks.jpg'
-import starmixImage from '@/assets/img/attic-apartment/01-cleanup/starmix.jpg'
+// Prep
+import prepBarrierImage from '@/assets/img/attic-apartment/01-cleanup/barrier.jpg'
+import prepCleanedImage from '@/assets/img/attic-apartment/01-cleanup/cleaned.jpg'
+import prepCleaned2Image from '@/assets/img/attic-apartment/01-cleanup/cleaned-2.jpg'
+import prepOpazImage from '@/assets/img/attic-apartment/01-cleanup/opaz.jpg'
+import prepPlanksImage from '@/assets/img/attic-apartment/01-cleanup/planks.jpg'
+import prepStarmixImage from '@/assets/img/attic-apartment/01-cleanup/starmix.jpg'
 
-import gridFancyImage from '@/assets/img/attic-apartment/02-subfloor/grid-fancy.jpg'
-import gridImage from '@/assets/img/attic-apartment/02-subfloor/grid.jpg'
-import laserImage from '@/assets/img/attic-apartment/02-subfloor/laser.jpg'
-import sleepers1Image from '@/assets/img/attic-apartment/02-subfloor/sleepers-1.jpg'
-import sleepers2Image from '@/assets/img/attic-apartment/02-subfloor/sleepers-2.jpg'
+// Subfloor
+import subfloorGridFancyImage from '@/assets/img/attic-apartment/02-subfloor/grid-fancy.jpg'
+import subfloorGridImage from '@/assets/img/attic-apartment/02-subfloor/grid.jpg'
+import subfloorLaserImage from '@/assets/img/attic-apartment/02-subfloor/laser.jpg'
+import subfloorSleepers1Image from '@/assets/img/attic-apartment/02-subfloor/sleepers-1.jpg'
+import subfloorSleepers2Image from '@/assets/img/attic-apartment/02-subfloor/sleepers-2.jpg'
 
+// Insulation
 import insulationAnzeImage from '@/assets/img/attic-apartment/03-insulation/anze.jpg'
-import crossBattensImage from '@/assets/img/attic-apartment/03-insulation/cross-battens.jpg'
-import rockwool100CuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-100-cured.jpg'
-import rockwool100Image from '@/assets/img/attic-apartment/03-insulation/rockwool-100.jpg'
-import rockwool50CuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-cured.jpg'
-import rockwool50OverlayCuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-overlay-cured.jpg'
-import rockwool50OverlayWithBoardsImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-overlay-with-boards.jpg'
-import rockwool50RoofImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-roof.jpg'
-import rockwool50WithBoardsImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-with-boards.jpg'
-import vaporBarrierImage from '@/assets/img/attic-apartment/03-insulation/vapor-barrier.jpg'
-import xpsFurringImage from '@/assets/img/attic-apartment/03-insulation/xps-furring.jpg'
+import insulationCrossBattens from '@/assets/img/attic-apartment/03-insulation/cross-battens.jpg'
+import insulation100CuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-100-cured.jpg'
+import insulation100Image from '@/assets/img/attic-apartment/03-insulation/rockwool-100.jpg'
+import insulation50CuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-cured.jpg'
+import insulation50OverlayCuredImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-overlay-cured.jpg'
+import insulation50OverlayWithBoardsImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-overlay-with-boards.jpg'
+import insulation50RoofImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-roof.jpg'
+import insulation50WithBoardsImage from '@/assets/img/attic-apartment/03-insulation/rockwool-50-with-boards.jpg'
+import insulationVaporBarrierImage from '@/assets/img/attic-apartment/03-insulation/vapor-barrier.jpg'
+import insulationXpsFurringImage from '@/assets/img/attic-apartment/03-insulation/xps-furring.jpg'
+
+// Multipor NS
+import multiporInProgressImage from '@/assets/img/attic-apartment/04-multipor-ns/01-in-progress.jpg'
+import multiporBricksImage from '@/assets/img/attic-apartment/04-multipor-ns/02-bricks.jpg'
+import multiporMeshMortarImage from '@/assets/img/attic-apartment/04-multipor-ns/04-mesh-mortar.jpg'
+import multiporMeshMortarCloseupImage from '@/assets/img/attic-apartment/04-multipor-ns/05-mesh-mortar-closeup.jpg'
+import multiporFinishImage from '@/assets/img/attic-apartment/04-multipor-ns/07-finish.jpg'
+import multiporCompleteCloseupImage from '@/assets/img/attic-apartment/04-multipor-ns/08-complete-closeup.jpg'
+import multiporJubogletImage from '@/assets/img/attic-apartment/04-multipor-w/juboglet.jpg'
+import multiporMaterialsBricksImage from '@/assets/img/attic-apartment/04-multipor-ns/materials-bricks.jpg'
+import multiporMaterialsMortarImage from '@/assets/img/attic-apartment/04-multipor-ns/materials-mortar.jpg'
+
+// Plumbing rough-in
+import roughInAluplastCoilsImage from '@/assets/img/attic-apartment/05-plumbing-rough-in/aluplast-coils.jpg'
+import roughInCompleteImage from '@/assets/img/attic-apartment/05-plumbing-rough-in/complete.jpg'
+import roughInGeberitImage from '@/assets/img/attic-apartment/05-plumbing-rough-in/geberit.jpg'
+import roughInKitchenSinkImage from '@/assets/img/attic-apartment/05-plumbing-rough-in/kitchen-sink.jpg'
+import roughInSewerImage from '@/assets/img/attic-apartment/05-plumbing-rough-in/sewer.jpg'
+import roughInWestWallImage from '@/assets/img/attic-apartment/05-plumbing-rough-in/west-wall.jpg'
+
+// West wall planing
+import westWallPlaningWallpaperImage from '@/assets/img/attic-apartment/06-west-wall-planing/01-wallpaper.jpg'
+import westWallPlaningHammerDrillImage from '@/assets/img/attic-apartment/06-west-wall-planing/02-hammer-drill.jpg'
+import westWallPlaningCompleteImage from '@/assets/img/attic-apartment/06-west-wall-planing/complete.jpg'
+import westWallPlaningJubogletImage from '@/assets/img/attic-apartment/06-west-wall-planing/juboglet.jpg'
+import westWallPlaningLevelImage from '@/assets/img/attic-apartment/06-west-wall-planing/level.jpg'
+import westWallPlaningOutOfLevelImage from '@/assets/img/attic-apartment/06-west-wall-planing/out-of-level.jpg'
+import westWallPlaningWetImage from '@/assets/img/attic-apartment/06-west-wall-planing/wet.jpg'
+
+// Multipor W
+import multiporWestLayer1Image from '@/assets/img/attic-apartment/07-multipor-w/01-layer-1.jpg'
+import multiporWestLayer1WindowImage from '@/assets/img/attic-apartment/07-multipor-w/02-layer-1-window.jpg'
+import multiporWestLayer2Image from '@/assets/img/attic-apartment/07-multipor-w/03-layer-2.jpg'
+import multiporWestCuringImage from '@/assets/img/attic-apartment/07-multipor-w/04-curing.jpg'
+import multiporWestAnzeImage from '@/assets/img/attic-apartment/07-multipor-w/anze.jpg'
+import multiporWestPlumbingBathroomImage from '@/assets/img/attic-apartment/07-multipor-w/plumbing-bathroom.jpg'
+import multiporWestPlumbingKitchenImage from '@/assets/img/attic-apartment/07-multipor-w/plumbing-kitchen.jpg'
+
+// Multipor radiator concrete
+import radiatorConcreteTraceImage from '@/assets/img/attic-apartment/08-multipor-radiator-concrete/01-trace.jpg'
+import radiatorConcreteHolesImage from '@/assets/img/attic-apartment/08-multipor-radiator-concrete/02-holes.jpg'
+import radiatorConcreteRebarImage from '@/assets/img/attic-apartment/08-multipor-radiator-concrete/03-rebar.jpg'
+import radiatorConcreteConcreteBucketImage from '@/assets/img/attic-apartment/08-multipor-radiator-concrete/04-concrete-bucket.jpg'
+import radiatorConcreteFillingUpImage from '@/assets/img/attic-apartment/08-multipor-radiator-concrete/05-filling-up.jpg'
+import radiatorConcreteSawzallImage from '@/assets/img/attic-apartment/08-multipor-radiator-concrete/06-sawzall.jpg'
+import radiatorConcreteFormsClosedImage from '@/assets/img/attic-apartment/08-multipor-radiator-concrete/07-forms-closed.jpg'
+import radiatorConcreteCuredImage from '@/assets/img/attic-apartment/08-multipor-radiator-concrete/08-cured.jpg'
+
+// Multipor west finishing
+import multiporWestFinishingInProgressImage from '@/assets/img/attic-apartment/09-multipor-finishing/01-in-progress.jpg'
+import multiporWestFinishingLadderImage from '@/assets/img/attic-apartment/09-multipor-finishing/02-ladder.jpg'
+import multiporWestFinishingBendImage from '@/assets/img/attic-apartment/09-multipor-finishing/03-bend.jpg'
+import multiporWestFinishingBendMeshImage from '@/assets/img/attic-apartment/09-multipor-finishing/04-bend-mesh.jpg'
+import multiporWestFinishingProfileImage from '@/assets/img/attic-apartment/09-multipor-finishing/05-profile.jpg'
+import multiporWestFinishingBottomImage from '@/assets/img/attic-apartment/09-multipor-finishing/06-bottom.jpg'
+import multiporWestFinishingBaseCoatCompleteImage from '@/assets/img/attic-apartment/09-multipor-finishing/07-base-coat-complete.jpg'
+import multiporWestFinishingEliTrowelFinishCoatImage from '@/assets/img/attic-apartment/09-multipor-finishing/08-eli-trowel-finish-coat.jpg'
+import multiporWestFinishingTouchUpImage from '@/assets/img/attic-apartment/09-multipor-finishing/10-touch-up.jpg'
+import multiporWestFinishingTouchUpSandingImage from '@/assets/img/attic-apartment/09-multipor-finishing/11-touch-up-sanding.jpg'
+import multiporWestFinishingCompleteImage from '@/assets/img/attic-apartment/09-multipor-finishing/12-complete.jpg'
+import multiporWestFinishingEliPaintRollerImage from '@/assets/img/attic-apartment/09-multipor-finishing/13-eli-paint-roller.jpg'
+import multiporWestFinishingXpsAndPaintCansImage from '@/assets/img/attic-apartment/09-multipor-finishing/14-xps-and-paint-cans.jpg'
+import multiporWestFinishingMartinMaskingTapeImage from '@/assets/img/attic-apartment/09-multipor-finishing/15-martin-masking-tape.jpg'
+import multiporWestFinishingPaintedImage from '@/assets/img/attic-apartment/09-multipor-finishing/16-painted.jpg'
+import multiporWestFinishingutilityKnifeImage from '@/assets/img/attic-apartment/09-multipor-finishing/utility-knife.jpg'
+
+// Subfloor cleanup
+import subfloorCleanupDustpanImage from '@/assets/img/attic-apartment/10-subfloor-cleanup/01-dustpan.jpg'
+import subfloorCleanupPilesImage from '@/assets/img/attic-apartment/10-subfloor-cleanup/02-piles.jpg'
+import subfloorCleanupCleanVacuumImage from '@/assets/img/attic-apartment/10-subfloor-cleanup/03-clean-vacuum.jpg'
+import subfloorCleanupCompleteImage from '@/assets/img/attic-apartment/10-subfloor-cleanup/04-complete.jpg'
+
+// Subfloor insulation
+import subfloorInsulationMaterialsImage from '@/assets/img/attic-apartment/11-subfloor-insulation/01-materials.jpg'
+import subfloorInsulationBedCornerImage from '@/assets/img/attic-apartment/11-subfloor-insulation/02-bed-corner.jpg'
+import subfloorInsulationInProgressImage from '@/assets/img/attic-apartment/11-subfloor-insulation/03-in-progress.jpg'
+import subfloorInsulationInsulationCompleteImage from '@/assets/img/attic-apartment/11-subfloor-insulation/04-insulation-complete.jpg'
+import subfloorInsulationPaperInProgressImage from '@/assets/img/attic-apartment/11-subfloor-insulation/05-paper-in-progress.jpg'
+import subfloorInsulationPaperCompleteImage from '@/assets/img/attic-apartment/11-subfloor-insulation/06-paper-complete.jpg'
+
+// OSB subfloor
+import subfloorFirstBoardsImage from '@/assets/img/attic-apartment/12-subfloor-osb/01-first-boards.jpg'
+import subfloorInProgressImage from '@/assets/img/attic-apartment/12-subfloor-osb/02-in-progress.jpg'
+import subfloorDrillDriverImage from '@/assets/img/attic-apartment/12-subfloor-osb/03-drill-driver.jpg'
+import subfloorCompleteImage from '@/assets/img/attic-apartment/12-subfloor-osb/04-complete.jpg'
+import subfloorNotch1Image from '@/assets/img/attic-apartment/12-subfloor-osb/notch-1.jpg'
+import subfloorNotch2Image from '@/assets/img/attic-apartment/12-subfloor-osb/notch-2.jpg'
+
+// Framing
+import framingLaserLayoutImage from '@/assets/img/attic-apartment/13-framing/01-laser-layout.jpg'
+import framingBottomPlateImage from '@/assets/img/attic-apartment/13-framing/02-bottom-plate.jpg'
+import framingStudsImage from '@/assets/img/attic-apartment/13-framing/03-studs.jpg'
+import framingLevelImage from '@/assets/img/attic-apartment/13-framing/level.jpg'
+
+// Sanding beams
+import sandingBeamsInProgressImage from '@/assets/img/attic-apartment/14-sanding-beams/01-in-progress.jpg'
+import sandingBeamsInProgressLadderImage from '@/assets/img/attic-apartment/14-sanding-beams/02-in-progress-ladder.jpg'
+import sandingBeamsGrinderSandingDustImage from '@/assets/img/attic-apartment/14-sanding-beams/03-grinder-sanding-dust.jpg'
+import sandingBeamsMartinOilingImage from '@/assets/img/attic-apartment/14-sanding-beams/04-martin-oiling.jpg'
+
+// Sheathing
+import sheathingFirstPieceImage from '@/assets/img/attic-apartment/15-osb-sheathing/01-first-piece.jpg'
+import sheathingInProgressImage from '@/assets/img/attic-apartment/15-osb-sheathing/03-in-progress.jpg'
+import sheathingMartinDrillingImage from '@/assets/img/attic-apartment/15-osb-sheathing/04-martin-drilling.jpg'
+import sheathingJigsawImage from '@/assets/img/attic-apartment/15-osb-sheathing/05-jigsaw.jpg'
+import sheathingJigsawHoleImage from '@/assets/img/attic-apartment/15-osb-sheathing/06-jigsaw-hole.jpg'
+import sheathingCompleteImage from '@/assets/img/attic-apartment/15-osb-sheathing/07-complete.jpg'
+
+// Wall insulation
+import wallInsulationRollImage from '@/assets/img/attic-apartment/17-insulation-glasswool/01-roll.jpg'
+import wallInsulationLevelImage from '@/assets/img/attic-apartment/17-insulation-glasswool/02-level.jpg'
+import wallInsulationCuttingImage from '@/assets/img/attic-apartment/17-insulation-glasswool/03-cutting.jpg'
+import wallInsulationPanelImage from '@/assets/img/attic-apartment/17-insulation-glasswool/04-panel.jpg'
+import wallInsulationCompleteImage from '@/assets/img/attic-apartment/17-insulation-glasswool/05-complete.jpg'
+
+// Opaz
+import opazPortraitDozaImage from '@/assets/img/attic-apartment/16-opaz-walls/01-portrait-doza.jpg'
+import opazExteriorPerspectiveImage from '@/assets/img/attic-apartment/16-opaz-walls/02-exterior-perspective.jpg'
+import opazMiterSawLaserImage from '@/assets/img/attic-apartment/16-opaz-walls/03-miter-saw-laser.jpg'
+import opazExteriorLaserImage from '@/assets/img/attic-apartment/16-opaz-walls/04-exterior-laser.jpg'
+import opazConduitBeamImage from '@/assets/img/attic-apartment/16-opaz-walls/05-conduit-beam.jpg'
+import opazExteriorBeamConduitImage from '@/assets/img/attic-apartment/16-opaz-walls/05-exterior-beam-conduit.jpg'
+import opazPortraitCompleteImage from '@/assets/img/attic-apartment/16-opaz-walls/06-portrait-complete.jpg'
+
+// Electrical
+import electricalFloorConduitImage from '@/assets/img/attic-apartment/18-electrical-outlets/floor-conduit.jpg'
+// Ethernet...
+import electricalEthernetScrewdriverImage from '@/assets/img/attic-apartment/18-electrical-outlets/ethernet/01-ethernet-screwdriver.jpg'
+import electricalEthernetScrewdriverCloseImage from '@/assets/img/attic-apartment/18-electrical-outlets/ethernet/02-ethernet-screwdriver-close.jpg'
+import electricalEthernetOutletsPortraitImage from '@/assets/img/attic-apartment/18-electrical-outlets/ethernet/03-ethernet-outlets-portrait.jpg'
+import electricalEthernetFixturesImage from '@/assets/img/attic-apartment/18-electrical-outlets/ethernet/04-ethernet-fixtures.jpg'
+import electricalEthernetCompleteImage from '@/assets/img/attic-apartment/18-electrical-outlets/ethernet/05-ethernet-complete.jpg'
+// Junction box...
+import electricalJunctionHoleImage from '@/assets/img/attic-apartment/18-electrical-outlets/junction/01-junction-hole.jpg'
+import electricalJunctionBoxImage from '@/assets/img/attic-apartment/18-electrical-outlets/junction/02-junction-box.jpg'
+import electricalJunctionStuboutsImage from '@/assets/img/attic-apartment/18-electrical-outlets/junction/03-junction-stubouts.jpg'
+import electricalJunctionCompleteImage from '@/assets/img/attic-apartment/18-electrical-outlets/junction/04-junction-complete.jpg'
+// Multipor...
+import electricalMultiporStuboutsImage from '@/assets/img/attic-apartment/18-electrical-outlets/multipor/01-multipor-stubouts.jpg'
+import electricalMultiporFrameImage from '@/assets/img/attic-apartment/18-electrical-outlets/multipor/02-multipor-frame.jpg'
+import electricalMultiporOutletsImage from '@/assets/img/attic-apartment/18-electrical-outlets/multipor/03-multipor-outlets.jpg'
+import electricalMultiporFixturesImage from '@/assets/img/attic-apartment/18-electrical-outlets/multipor/04-multipor-fixtures.jpg'
+import electricalMultiporCompleteImage from '@/assets/img/attic-apartment/18-electrical-outlets/multipor/05-multipor-complete.jpg'
+
+// Opaz...
+import electricalOpazStuboutsImage from '@/assets/img/attic-apartment/18-electrical-outlets/opaz/01-opaz-stubouts.jpg'
+import electricalOpazFrameImage from '@/assets/img/attic-apartment/18-electrical-outlets/opaz/02-opaz-frame.jpg'
+import electricalOpazCompleteImage from '@/assets/img/attic-apartment/18-electrical-outlets/opaz/03-opaz-complete.jpg'
+import electricalOpazMartinCoverImage from '@/assets/img/attic-apartment/18-electrical-outlets/opaz/martin-cover.jpg'
+
+// Electrical panel
+import electricalPanelPreparationImage from '@/assets/img/attic-apartment/19-electrical-panel/01-preparation.jpg'
+import electricalPanelCablesRoutedImage from '@/assets/img/attic-apartment/19-electrical-panel/02-cables-routed.jpg'
+import electricalPanelInsulationImage from '@/assets/img/attic-apartment/19-electrical-panel/03-insulation.jpg'
+import electricalPanelOpazInProgressImage from '@/assets/img/attic-apartment/19-electrical-panel/04-opaz-in-progress.jpg'
+import electricalPanelOpazCompleteImage from '@/assets/img/attic-apartment/19-electrical-panel/05-opaz-complete.jpg'
+import electricalPanelPanelLevelImage from '@/assets/img/attic-apartment/19-electrical-panel/06-panel-level.jpg'
+import electricalPanelConduitImage from '@/assets/img/attic-apartment/19-electrical-panel/07-conduit.jpg'
+import electricalPanelWiresSeparatedImage from '@/assets/img/attic-apartment/19-electrical-panel/08-wires-separated.jpg'
+import electricalPanelServiceLoopsImage from '@/assets/img/attic-apartment/19-electrical-panel/09-service-loops.jpg'
+import electricalPanelGroundsImage from '@/assets/img/attic-apartment/19-electrical-panel/10-grounds.jpg'
+import electricalPanelLoopFidImage from '@/assets/img/attic-apartment/19-electrical-panel/12-loop-fid.jpg'
+import electricalPanelBreakersRailWithNotchImage from '@/assets/img/attic-apartment/19-electrical-panel/13-breakers-rail-with-notch.jpg'
+import electricalPanelCompleteImage from '@/assets/img/attic-apartment/19-electrical-panel/14-complete.jpg'
+import electricalPanelCoverOpenImage from '@/assets/img/attic-apartment/19-electrical-panel/15-cover-open.jpg'
+import electricalPanelCoverClosedImage from '@/assets/img/attic-apartment/19-electrical-panel/16-cover-closed.jpg'
+
+// Ceiling opaz
+import ceilingOpazMaterialsImage from '@/assets/img/attic-apartment/21-ceiling-opaz/01-materials.jpg'
+import ceilingOpazMartinNailgunImage from '@/assets/img/attic-apartment/21-ceiling-opaz/02-martin-nailgun.jpg'
+import ceilingOpazNailgunImage from '@/assets/img/attic-apartment/21-ceiling-opaz/02-nailgun.jpg'
+import ceilingOpazHammerJigImage from '@/assets/img/attic-apartment/21-ceiling-opaz/03-hammer-jig.jpg'
+import ceilingOpazBottomCompleteImage from '@/assets/img/attic-apartment/21-ceiling-opaz/04-bottom-complete.jpg'
+import ceilingOpazCeilingNailgunImage from '@/assets/img/attic-apartment/21-ceiling-opaz/05-ceiling-nailgun.jpg'
+import ceilingOpazOshaLadderImage from '@/assets/img/attic-apartment/21-ceiling-opaz/05-osha-ladder.jpg'
+import ceilingOpazSector2InProgressImage from '@/assets/img/attic-apartment/21-ceiling-opaz/05-sector-2-in-progress.jpg'
+import ceilingOpazSector1CompleteImage from '@/assets/img/attic-apartment/21-ceiling-opaz/06-sector-1-complete.jpg'
+import ceilingOpazFinalStripBevelImage from '@/assets/img/attic-apartment/21-ceiling-opaz/07-final-strip-bevel.jpg'
+import ceilingOpazCompleteImage from '@/assets/img/attic-apartment/21-ceiling-opaz/08-complete.jpg'
+import ceilingOpazSawImage from '@/assets/img/attic-apartment/21-ceiling-opaz/saw-2.jpg'
+
+// Ridge lights
+import ridgeLightsRidgeSoffitImage from '@/assets/img/attic-apartment/22-ceiling-lights/01-ridge-soffit.jpg'
+import ridgeLightsRidgeSoffitDriverImage from '@/assets/img/attic-apartment/22-ceiling-lights/02-ridge-soffit-driver.jpg'
+import ridgeLightsMartinWithDrillImage from '@/assets/img/attic-apartment/22-ceiling-lights/03-martin-with-drill.jpg'
+import ridgeLightsCablesImage from '@/assets/img/attic-apartment/22-ceiling-lights/04-cables.jpg'
+import ridgeLightsStuboutsImage from '@/assets/img/attic-apartment/22-ceiling-lights/05-stubouts.jpg'
+import ridgeLightsMartinNailgunImage from '@/assets/img/attic-apartment/22-ceiling-lights/06-martin-nailgun.jpg'
+import ridgeLightsWiringImage from '@/assets/img/attic-apartment/22-ceiling-lights/07-wiring.jpg'
+import ridgeLightsWiring2Image from '@/assets/img/attic-apartment/22-ceiling-lights/08-wiring-2.jpg'
+import ridgeLightsCompleteImage from '@/assets/img/attic-apartment/22-ceiling-lights/09-complete.jpg'
+
+// Track lights
+import trackLightsLightsInBoxImage from '@/assets/img/attic-apartment/23-track-lights/00-lights-in-box.jpg'
+import trackLightsStuboutImage from '@/assets/img/attic-apartment/23-track-lights/01-stubout.jpg'
+import trackLightsPigtailImage from '@/assets/img/attic-apartment/23-track-lights/02-pigtail.jpg'
+import trackLightsGroundImage from '@/assets/img/attic-apartment/23-track-lights/03-ground.jpg'
+import trackLightsCoverImage from '@/assets/img/attic-apartment/23-track-lights/04-cover.jpg'
+import trackLightsDriverImage from '@/assets/img/attic-apartment/23-track-lights/05-driver.jpg'
+import trackLightsCompleteImage from '@/assets/img/attic-apartment/23-track-lights/06-complete.jpg'
+import trackLightsNightLightsImage from '@/assets/img/attic-apartment/23-track-lights/07-night-lights.jpg'
+
+// Bathroom Geberit Siporex
+import bathroomGeberitSiporexEliMortarImage from '@/assets/img/attic-apartment/24-bathroom-geberit-siporex/01-eli-mortar.jpg'
+import bathroomGeberitSiporexDrainBricksImage from '@/assets/img/attic-apartment/24-bathroom-geberit-siporex/02-drain-bricks.jpg'
+import bathroomGeberitSiporexTapTapImage from '@/assets/img/attic-apartment/24-bathroom-geberit-siporex/03-tap-tap.jpg'
+import bathroomGeberitSiporexFinishingImage from '@/assets/img/attic-apartment/24-bathroom-geberit-siporex/04-finishing.jpg'
+import bathroomGeberitSiporexDoneImage from '@/assets/img/attic-apartment/24-bathroom-geberit-siporex/05-done.jpg'
+
+// Bathroom screed
+import bathroomScreedFloorDrainImage from '@/assets/img/attic-apartment/25-bathroom-screed/0-floor-drain.jpg'
+import bathroomScreedXpsImage from '@/assets/img/attic-apartment/25-bathroom-screed/1-xps.jpg'
+import bathroomScreedScreed1Image from '@/assets/img/attic-apartment/25-bathroom-screed/2-screed-1.jpg'
+import bathroomScreedAnzeImage from '@/assets/img/attic-apartment/25-bathroom-screed/3-anze.jpg'
+import bathroomScreedScreed2Image from '@/assets/img/attic-apartment/25-bathroom-screed/4-screed-2.jpg'
+import bathroomScreedCompleteImage from '@/assets/img/attic-apartment/25-bathroom-screed/5-complete.jpg'
+
+// Bathroom framing
+import bathroomFramingFramedImage from '@/assets/img/attic-apartment/26-bathroom-framing-sheathing/01-framed.jpg'
+import bathroomFramingHolesCompassImage from '@/assets/img/attic-apartment/26-bathroom-framing-sheathing/02-holes-compass.jpg'
+import bathroomFramingOsbImage from '@/assets/img/attic-apartment/26-bathroom-framing-sheathing/03-osb.jpg'
+import bathroomFramingMartinDrillingImage from '@/assets/img/attic-apartment/26-bathroom-framing-sheathing/04-martin-drilling.jpg'
+import bathroomFramingSheathedInteriorImage from '@/assets/img/attic-apartment/26-bathroom-framing-sheathing/05-sheathed-interior.jpg'
+import bathroomFramingHappyMartinImage from '@/assets/img/attic-apartment/26-bathroom-framing-sheathing/06-happy-martin.jpg'
+import bathroomFramingOpazInProgressImage from '@/assets/img/attic-apartment/26-bathroom-framing-sheathing/07-opaz-in-progress.jpg'
+import bathroomFramingOpazCompleteIshImage from '@/assets/img/attic-apartment/26-bathroom-framing-sheathing/08-opaz-complete-ish.jpg'
+
+// Bathroom pony wall
+import bathroomPonyWallCompleteImage from '@/assets/img/attic-apartment/28-bathroom-pony-wall/complete.jpg'
+
+// Bathroom drywall
+import bathroomDrywallSlatsImage from '@/assets/img/attic-apartment/27-bathroom-drywall/01-slats.jpg'
+import bathroomDrywallSlatsLevelImage from '@/assets/img/attic-apartment/27-bathroom-drywall/02-slats-level.jpg'
+import bathroomDrywallEliBackImage from '@/assets/img/attic-apartment/27-bathroom-drywall/03-eli-back.jpg'
+import bathroomDrywallEliAnzeImage from '@/assets/img/attic-apartment/27-bathroom-drywall/04-eli-anze.jpg'
+import bathroomDrywallDrywallInstalledImage from '@/assets/img/attic-apartment/27-bathroom-drywall/05-drywall-installed.jpg'
+import bathroomDrywallCementboardHoleImage from '@/assets/img/attic-apartment/27-bathroom-drywall/06-cementboard-hole.jpg'
+import bathroomDrywallCementboardInProgressImage from '@/assets/img/attic-apartment/27-bathroom-drywall/07-cementboard-in-progress.jpg'
+import bathroomDrywallCementboardInstalledImage from '@/assets/img/attic-apartment/27-bathroom-drywall/08-cementboard-installed.jpg'
+import bathroomDrywallCompleteImage from '@/assets/img/attic-apartment/27-bathroom-drywall/09-complete-boards.jpg'
+import bathroomDrywallCompleteFinishedImage from '@/assets/img/attic-apartment/27-bathroom-drywall/10-complete-finished.jpg'
+
+// Bathroom waterproofing
+import bathroomWaterproofingReadyImage from '@/assets/img/attic-apartment/29-bathroom-waterproofing/01-ready.jpg'
+import bathroomWaterproofingPrimerPortraitImage from '@/assets/img/attic-apartment/29-bathroom-waterproofing/02-primer-portrait.jpg'
+import bathroomWaterproofingPrimerImage from '@/assets/img/attic-apartment/29-bathroom-waterproofing/03-primer.jpg'
+import bathroomWaterproofingTapeImage from '@/assets/img/attic-apartment/29-bathroom-waterproofing/04-tape.jpg'
+import bathroomWaterproofingCl51Image from '@/assets/img/attic-apartment/29-bathroom-waterproofing/05-cl51.jpg'
+import bathroomWaterproofingTapeBrushImage from '@/assets/img/attic-apartment/29-bathroom-waterproofing/06-tape-brush.jpg'
+import bathroomWaterproofingCompleteImage from '@/assets/img/attic-apartment/29-bathroom-waterproofing/07-complete.jpg'
+
+// Bathroom lights
+import bathroomLightsBoxLevelImage from '@/assets/img/attic-apartment/31-bathroom-lights/box-level.jpg'
+import bathroomLightsBoxWiredImage from '@/assets/img/attic-apartment/31-bathroom-lights/box-wired.jpg'
+import bathroomLightsCompleteImage from '@/assets/img/attic-apartment/31-bathroom-lights/complete.jpg'
+
+// Bathroom fan
+import bathroomFanStuboutsImage from '@/assets/img/attic-apartment/31-bathroom-fan/01-stubouts.jpg'
+import bathroomFanFrameImage from '@/assets/img/attic-apartment/31-bathroom-fan/02-frame.jpg'
+import bathroomFanWiredImage from '@/assets/img/attic-apartment/31-bathroom-fan/03-wired.jpg'
+import bathroomFanCompleteImage from '@/assets/img/attic-apartment/31-bathroom-fan/04-complete.jpg'
+
+// Bathroom cabinet
+import bathroomCabinetDisassembledImage from '@/assets/img/attic-apartment/32-bathroom-cabinets/01-disassembled.jpg'
+import bathroomCabinetBackHangersImage from '@/assets/img/attic-apartment/32-bathroom-cabinets/02-back-hangers.jpg'
+import bathroomCabinetAdhesiveImage from '@/assets/img/attic-apartment/32-bathroom-cabinets/03-adhesive.jpg'
+import bathroomCabinetMirrorAttachedImage from '@/assets/img/attic-apartment/32-bathroom-cabinets/04-mirror-attached.jpg'
+import bathroomCabinetInstalledImage from '@/assets/img/attic-apartment/32-bathroom-cabinets/05-installed.jpg'
+
+// Bathroom Siporex
+import bathroomSiporexLaserImage from '@/assets/img/attic-apartment/33-bathroom-siporex/01-laser.jpg'
+import bathroomSiporexBackRowImage from '@/assets/img/attic-apartment/33-bathroom-siporex/02-back-row.jpg'
+import bathroomSiporexSawImage from '@/assets/img/attic-apartment/33-bathroom-siporex/03-saw.jpg'
+import bathroomSiporexLevelImage from '@/assets/img/attic-apartment/33-bathroom-siporex/04-level.jpg'
+import bathroomSiporexFinalBrickImage from '@/assets/img/attic-apartment/33-bathroom-siporex/05-final-brick.jpg'
+import bathroomSiporexCompleteImage from '@/assets/img/attic-apartment/33-bathroom-siporex/06-complete.jpg'
+
+// Bathroom bathtub screed
+import bathtubScreedFormsImage from '@/assets/img/attic-apartment/34-bathroom-siporex-screed/01-forms.jpg'
+import bathtubScreedLevelImage from '@/assets/img/attic-apartment/34-bathroom-siporex-screed/02-level.jpg'
+import bathtubScreedConcreteReadyImage from '@/assets/img/attic-apartment/34-bathroom-siporex-screed/03-concrete-ready.jpg'
+import bathtubScreedConcreteInProgressImage from '@/assets/img/attic-apartment/34-bathroom-siporex-screed/04-concrete-in-progress.jpg'
+import bathtubScreedCompleteImage from '@/assets/img/attic-apartment/34-bathroom-siporex-screed/05-complete.jpg'
+
+// Bathtub
+import bathtubLegsImage from '@/assets/img/attic-apartment/35-bathroom-bathtub/01-legs.jpg'
+import bathtubTestFitImage from '@/assets/img/attic-apartment/35-bathroom-bathtub/02-test-fit.jpg'
+import bathtubWallInProgressImage from '@/assets/img/attic-apartment/35-bathroom-bathtub/03-wall-in-progress.jpg'
+import bathtubCompleteImage from '@/assets/img/attic-apartment/35-bathroom-bathtub/04-complete.jpg'
+
+// Bathroom leveling compound
+import bathroomLevelingCompoundReadyImage from '@/assets/img/attic-apartment/36-bathroom-leveling-compound/01-ready.jpg'
+import bathroomLevelingCompoundMaterialsImage from '@/assets/img/attic-apartment/36-bathroom-leveling-compound/02-materials.jpg'
+import bathroomLevelingCompoundInProgressImage from '@/assets/img/attic-apartment/36-bathroom-leveling-compound/03-in-progress.jpg'
+import bathroomLevelingCompoundPouredImage from '@/assets/img/attic-apartment/36-bathroom-leveling-compound/04-poured.jpg'
+
+// Tiling (floor)
+import tilingFloorZdravkoLayoutImage from '@/assets/img/attic-apartment/37-bathroom-tiling/01-floor/1-zdravko-layout.jpg'
+import tilingFloorDrainHoleImage from '@/assets/img/attic-apartment/37-bathroom-tiling/01-floor/2-drain-hole.jpg'
+import tilingFloorZdravkoSawImage from '@/assets/img/attic-apartment/37-bathroom-tiling/01-floor/3-zdravko-saw.jpg'
+import tilingFloorPhase1CompleteImage from '@/assets/img/attic-apartment/37-bathroom-tiling/01-floor/4-phase-1-complete.jpg'
+import tilingFloorPhase2InProgressImage from '@/assets/img/attic-apartment/37-bathroom-tiling/01-floor/5-phase-2-in-progress.jpg'
+
+// Tiling (bathtub)
+import tilingBathtubTrowelLinesImage from '@/assets/img/attic-apartment/37-bathroom-tiling/02-bathtub-wall/02-trowel-lines.jpg'
+import tilingBathtubBaseboadToiletImage from '@/assets/img/attic-apartment/37-bathroom-tiling/02-bathtub-wall/03-baseboad-toilet.jpg'
+import tilingBathtubMartin3Image from '@/assets/img/attic-apartment/37-bathroom-tiling/02-bathtub-wall/04-martin-3.jpg'
+import tilingBathtubBaseboardCompleteImage from '@/assets/img/attic-apartment/37-bathroom-tiling/02-bathtub-wall/05-baseboard-complete.jpg'
+import tilingBathtubCompleteIshImage from '@/assets/img/attic-apartment/37-bathroom-tiling/02-bathtub-wall/06-complete-ish.jpg'
+
+// Tiling (access hatch)
+import tilingAccessHatchReadyImage from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/01-ready.jpg'
+import tilingAccessHatchScrewAnchorsImage from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/02-screw-anchors.jpg'
+import tilingAccessHatchSpacerImage from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/03-spacer.jpg'
+import tilingAccessHatchClipsAttachedImage from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/04-clips-attached.jpg'
+import tilingAccessHatchTileLayoutImage from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/05-tile-layout.jpg'
+import tilingAccessHatchMagnetsAttachedImage from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/06-magnets-attached.jpg'
+import tilingAccessHatchCompleteImage from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/07-complete.jpg'
+import tilingAccessHatchDemo1Image from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/08-demo-1.jpg'
+import tilingAccessHatchDemo2Image from '@/assets/img/attic-apartment/37-bathroom-tiling/03-access-hatch/08-demo-2.jpg'
+
+// Tiling (general)
+import tilingCompleteImage from '@/assets/img/attic-apartment/37-bathroom-tiling/complete.jpg'
+import tilingCompleteWithAccessHatchImage from '@/assets/img/attic-apartment/37-bathroom-tiling/complete-with-access-hatch.jpg'
+import tilingGroutedImage from '@/assets/img/attic-apartment/37-bathroom-tiling/grouted.jpg'
+import tilingGroutMaterialsImage from '@/assets/img/attic-apartment/37-bathroom-tiling/grout-materials.jpg'
+
+// Bathroom finish plumbing
+import bathroomFaucetMaterialsImage from '@/assets/img/attic-apartment/38-bathtub-faucet/01-materials.jpg'
+import bathroomFaucetWrenchImage from '@/assets/img/attic-apartment/38-bathtub-faucet/02-wrench.jpg'
+import bathroomFaucetFittingsAttachedImage from '@/assets/img/attic-apartment/38-bathtub-faucet/03-fittings-attached.jpg'
+import bathroomFaucetCompleteImage from '@/assets/img/attic-apartment/38-bathtub-faucet/04-complete.jpg'
+
+// Bathroom Sink
+import bathroomSinkMaskingTapePortraitImage from '@/assets/img/attic-apartment/39-bathroom-sink/01-masking-tape-portrait.jpg'
+import bathroomSinkDryFitImage from '@/assets/img/attic-apartment/39-bathroom-sink/02-dry-fit.jpg'
+
+// Bathroom shelf
+import bathroomShelfDryFitImage from '@/assets/img/attic-apartment/40-bathroom-top-board/01-dry-fit.jpg'
+import bathroomShelfWaterproofingImage from '@/assets/img/attic-apartment/40-bathroom-top-board/02-waterproofing.jpg'
+import bathroomShelfCompleteImage from '@/assets/img/attic-apartment/40-bathroom-top-board/03-complete.jpg'
+import bathroomShelfInstalledImage from '@/assets/img/attic-apartment/40-bathroom-top-board/04-installed.jpg'
+
+// Flooring installation
+import floorInstallationReadyImage from '@/assets/img/attic-apartment/41-flooring-installation/01-ready.jpg'
+import floorInstallationTapeImage from '@/assets/img/attic-apartment/41-flooring-installation/02-tape.jpg'
+import floorInstallationJigImage from '@/assets/img/attic-apartment/41-flooring-installation/03-jig.jpg'
+import floorInstallationDriverImage from '@/assets/img/attic-apartment/41-flooring-installation/04-driver.jpg'
+import floorInstallationSawImage from '@/assets/img/attic-apartment/41-flooring-installation/05-saw.jpg'
+import floorInstallationProgressImage from '@/assets/img/attic-apartment/41-flooring-installation/06-progress.jpg'
+import floorInstallationBedroomImage from '@/assets/img/attic-apartment/41-flooring-installation/07-bedroom.jpg'
+import floorInstallationPuttyImage from '@/assets/img/attic-apartment/41-flooring-installation/08-putty.jpg'
+import floorInstallationFilledHolesImage from '@/assets/img/attic-apartment/41-flooring-installation/09-filled-holes.jpg'
+import floorInstallationSanderImage from '@/assets/img/attic-apartment/41-flooring-installation/10-sander.jpg'
+import floorInstallationCompleteFloorImage from '@/assets/img/attic-apartment/41-flooring-installation/11-complete-floor.jpg'
+
+// Floor finishing
+import floorFinishReadyImage from '@/assets/img/attic-apartment/42-flooring-finishing/01-ready.jpg'
+import floorFinishMaterialsSealerImage from '@/assets/img/attic-apartment/42-flooring-finishing/02-materials-sealer.jpg'
+import floorFinishRollerSealerImage from '@/assets/img/attic-apartment/42-flooring-finishing/03-roller-sealer.jpg'
+import floorFinishSealedImage from '@/assets/img/attic-apartment/42-flooring-finishing/04-sealed.jpg'
+import floorFinishSandingImage from '@/assets/img/attic-apartment/42-flooring-finishing/05-sanding.jpg'
+import floorFinishCleaningPortraitImage from '@/assets/img/attic-apartment/42-flooring-finishing/06-cleaning-portrait.jpg'
+import floorFinishAirgunImage from '@/assets/img/attic-apartment/42-flooring-finishing/07-airgun.jpg'
+import floorFinishMaterialsFinishImage from '@/assets/img/attic-apartment/42-flooring-finishing/08-materials-finish.jpg'
+import floorFinishRollerCloseupImage from '@/assets/img/attic-apartment/42-flooring-finishing/09-roller-closeup.jpg'
+import floorFinishRollerFinishImage from '@/assets/img/attic-apartment/42-flooring-finishing/10-roller-finish.jpg'
+import floorFinishFinishWetImage from '@/assets/img/attic-apartment/42-flooring-finishing/11-finish-wet.jpg'
+import floorFinishCompleteImage from '@/assets/img/attic-apartment/42-flooring-finishing/12-complete.jpg'
+
+// Baseboards
+import baseboardsRdImage from '@/assets/img/attic-apartment/43-baseboards/00-rd.jpg'
+import baseboardsRippingImage from '@/assets/img/attic-apartment/43-baseboards/01-ripping.jpg'
+import baseboardsRouterImage from '@/assets/img/attic-apartment/43-baseboards/02-router.jpg'
+import baseboardsMilledBoardsImage from '@/assets/img/attic-apartment/43-baseboards/03-milled-boards.jpg'
+import baseboardsCopeImage from '@/assets/img/attic-apartment/43-baseboards/04-cope.jpg'
+import baseboardsCopeDryFitImage from '@/assets/img/attic-apartment/43-baseboards/05-cope-dry-fit.jpg'
+import baseboardsNailgunImage from '@/assets/img/attic-apartment/43-baseboards/06-nailgun.jpg'
+import baseboardsAdhesiveImage from '@/assets/img/attic-apartment/43-baseboards/07-adhesive.jpg'
+import baseboardsWeightsImage from '@/assets/img/attic-apartment/43-baseboards/08-weights.jpg'
+import baseboardsCompleteBathroomImage from '@/assets/img/attic-apartment/43-baseboards/10-complete-bathroom.jpg'
+import baseboardsCompleteCornerImage from '@/assets/img/attic-apartment/43-baseboards/10-complete-corner.jpg'
+
+// Door hinge prep
+import doorHingePrepOldHoleImage from '@/assets/img/attic-apartment/44-door-hinge-prep/01-old-hole.jpg'
+import doorHingePrepDowelImage from '@/assets/img/attic-apartment/44-door-hinge-prep/02-dowel.jpg'
+import doorHingePrepFlushImage from '@/assets/img/attic-apartment/44-door-hinge-prep/03-flush.jpg'
+import doorHingePrepPilotHoleImage from '@/assets/img/attic-apartment/44-door-hinge-prep/04-pilot-hole.jpg'
+import doorHingePrepHoleImage from '@/assets/img/attic-apartment/44-door-hinge-prep/05-hole.jpg'
+import doorHingePrepHingeImage from '@/assets/img/attic-apartment/44-door-hinge-prep/06-hinge.jpg'
+import doorHingePrepHingeInImage from '@/assets/img/attic-apartment/44-door-hinge-prep/07-hinge-in.jpg'
+
+// Door installation
+import doorInstallationReadyImage from '@/assets/img/attic-apartment/45-door-installation/01-ready.jpg'
+import doorInstallationJambsRoughStockImage from '@/assets/img/attic-apartment/45-door-installation/02-jambs-rough-stock.jpg'
+import doorInstallationJambsInCarImage from '@/assets/img/attic-apartment/45-door-installation/03-jambs-in-car.jpg'
+import doorInstallationMiterSawImage from '@/assets/img/attic-apartment/45-door-installation/04-miter-saw.jpg'
+import doorInstallationLayoutImage from '@/assets/img/attic-apartment/45-door-installation/05-layout.jpg'
+import doorInstallationDryFitImage from '@/assets/img/attic-apartment/45-door-installation/06-dry-fit.jpg'
+import doorInstallationLevelImage from '@/assets/img/attic-apartment/45-door-installation/07-level.jpg'
+import doorInstallationShimsMiterSawImage from '@/assets/img/attic-apartment/45-door-installation/08-shims-miter-saw.jpg'
+import doorInstallationShimsImage from '@/assets/img/attic-apartment/45-door-installation/09-shims.jpg'
+import doorInstallationPilotHolesImage from '@/assets/img/attic-apartment/45-door-installation/10-pilot-holes.jpg'
+import doorInstallationDriverImage from '@/assets/img/attic-apartment/45-door-installation/11-driver.jpg'
+import doorInstallationFillingScrewHolesImage from '@/assets/img/attic-apartment/45-door-installation/12-filling-screw-holes.jpg'
+import doorInstallationJambsCompleteImage from '@/assets/img/attic-apartment/45-door-installation/13-jambs-complete.jpg'
+import doorInstallationCuttingShimsImage from '@/assets/img/attic-apartment/45-door-installation/15-cutting-shims.jpg'
+import doorInstallationHingeImage from '@/assets/img/attic-apartment/45-door-installation/16-hinge.jpg'
+import doorInstallationHungImage from '@/assets/img/attic-apartment/45-door-installation/17-hung.jpg'
+import doorInstallationHungOpenImage from '@/assets/img/attic-apartment/45-door-installation/18-hung-open.jpg'
+import doorInstallationEntryOpeningImage from '@/assets/img/attic-apartment/45-door-installation/19-entry-opening.jpg'
+import doorInstallationEntryHungImage from '@/assets/img/attic-apartment/45-door-installation/20-entry-hung.jpg'
+
+// Door casings
+import doorCasingsStockImage from '@/assets/img/attic-apartment/46-door-casings/01-stock.jpg'
+import doorCasingsRouterImage from '@/assets/img/attic-apartment/46-door-casings/02-router.jpg'
+import doorCasingsInProgressImage from '@/assets/img/attic-apartment/46-door-casings/03-in-progress.jpg'
+import doorCasingsCornerImage from '@/assets/img/attic-apartment/46-door-casings/05-corner.jpg'
+import doorCasingsTopImage from '@/assets/img/attic-apartment/46-door-casings/05-top.jpg'
+import doorCasingsNailHolesImage from '@/assets/img/attic-apartment/46-door-casings/06-nail-holes.jpg'
+import doorCasingsSandingImage from '@/assets/img/attic-apartment/46-door-casings/07-sanding.jpg'
+import doorCasingsSandedImage from '@/assets/img/attic-apartment/46-door-casings/08-sanded.jpg'
+import doorCasingsCompleteImage from '@/assets/img/attic-apartment/46-door-casings/09-complete.jpg'
+
+// Thresholds
+import thresholdsGapBed1Image from '@/assets/img/attic-apartment/47-thresholds/00-gap-bed-1.jpg'
+import thresholdsGapBed2Image from '@/assets/img/attic-apartment/47-thresholds/00-gap-bed-2.jpg'
+import thresholdsGapBed3Image from '@/assets/img/attic-apartment/47-thresholds/00-gap-bed-3.jpg'
+import thresholdsBevelSaw2Image from '@/assets/img/attic-apartment/47-thresholds/01-bevel-saw-2.jpg'
+import thresholdsBevelSawImage from '@/assets/img/attic-apartment/47-thresholds/01-bevel-saw.jpg'
+import thresholdsShapingRoughImage from '@/assets/img/attic-apartment/47-thresholds/02-shaping-rough.jpg'
+import thresholdsShapingSanderImage from '@/assets/img/attic-apartment/47-thresholds/02-shaping-sander.jpg'
+import thresholdsDoorGapImage from '@/assets/img/attic-apartment/47-thresholds/03-door-gap.jpg'
+import thresholdsDoorReady1Image from '@/assets/img/attic-apartment/47-thresholds/04-door-ready-1.jpg'
+import thresholdsDoorReady2Image from '@/assets/img/attic-apartment/47-thresholds/04-door-ready-2.jpg'
+import thresholdsDoorIn1Image from '@/assets/img/attic-apartment/47-thresholds/05-door-in-1.jpg'
+import thresholdsDoorIn2Image from '@/assets/img/attic-apartment/47-thresholds/05-door-in-2.jpg'
+import thresholdsMaskedEntryImage from '@/assets/img/attic-apartment/47-thresholds/06-masked-entry.jpg'
+import thresholdsCompleteBedImage from '@/assets/img/attic-apartment/47-thresholds/07-complete-bed.jpg'
+import thresholdsCompleteEntry1Image from '@/assets/img/attic-apartment/47-thresholds/08-complete-entry-1.jpg'
+import thresholdsCompleteEntry2Image from '@/assets/img/attic-apartment/47-thresholds/08-complete-entry-2.jpg'
+
+// Radiators
+import andrejAndrejEliImage from '@/assets/img/attic-apartment/radiators/andrej-andrej-eli.jpg'
+import andrejEliImage from '@/assets/img/attic-apartment/radiators/andrej-eli.jpg'
 
 ---
 
@@ -40,60 +488,826 @@ import xpsFurringImage from '@/assets/img/attic-apartment/03-insulation/xps-furr
   <h1 class="text-5xl">Attic Apartment</h1>
 
   <section class="mt-20">
-    <h2 class="text-3xl">Clean-up</h2>
-    <div class="space-y-5">
+    <h2 class="text-3xl">Clean-up and prep</h2>
+    <div class="mt-5">
       <p>
-      Emptied attic of the residual junk that tends to accumulated in attics.
-      Removed existing tongue and groove finish ceiling and stored for future use.
-      Removed makeshift... vapor barrier(?) to expose rafters.
-      Cleaned area under rafters of residual construction waste from the roofing process, spiderwebs, etc.
-      Cleaned slab with shopvac.
+      The job began by emptying the attic the residual junk that tends to accumulated in attics.
+      We then removed the existing tongue and groove finish ceiling and stored it for future use and then removed the underlying foam sheet material (a makeshift weather barrier?) to expose rafters.
+      We then cleaned the area between the rafters of spiderwebs, residual construction waste from the roofing process, and all manner of other dirt, and cleaned the concrete floor slab with a shopvac.
       </p>
-      <TmpImage src={opazImage} alt="The initial state of the project after emptying the attic: concrete slab and tongue and groove finish ceiling over uninsulated rafters."/>
-      <TmpImage src={barrierImage} alt="Finish ceiling removed, showing the makeshift vapor barrier over the rafters."/>
-      <TmpImage src={planksImage} alt="The bare, uninsulated rafters, with the exterior sheathing visible above the rafters."/>
-      <TmpImage src={cleaned2Image} alt="The cleaned floor after finishing the finish ceiling removal."/>
-      <TmpImage src={starmixImage} alt="Close-up image of the StarMix shopvac used to clean the floor."/>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={prepOpazImage} alt="The initial state of the project after emptying the attic: a concrete slab floor, and a tongue and groove finish ceiling over uninsulated rafters."/>
+      <TmpImage src={prepBarrierImage} alt="The finish ceiling removed, showing the foam-like sheet material placed between the finisih ceiling and rafters (perhaps this was a makeshift air or moisture barrier?)."/>
+      <TmpImage src={prepPlanksImage} alt="The bare, uninsulated rafters, with the exterior board sheathing visible above the rafters."/>
+      <TmpImage src={prepStarmixImage} alt="The StarMix shopvac used to clean the floor."/>
+      <TmpImage src={prepCleaned2Image} alt="The cleaned floor after finishing the finish ceiling removal. The tripod will later hold a laser level."/>
     </div>
   </section>
 
   <section class="mt-20">
     <h2 class="text-3xl">Subfloor</h2>
-    <div class="space-y-5">
-      <p class="">
-      The subfloor is built on a grid of sleepers fastened to the concrete floor slab. The sleepers are leveled with a laser level and shims, creating a level, planar surface above the slab (which is far from planar). Polyurethane foam under the sleepers provides additional support from below.
-      A perpendicular of slats placed across the sleepers gives the floor improved elasticity/bounciness, which I find makes the floor more pleasant underfoot.
-      The grid was later covered with tounge and groove OSB subfloor.
+    <div class="mt-5">
+      <p>
+      The subfloor is built on a substructure of sleepers fastened to the concrete floor slab. The sleepers are leveled with a laser level and shims, creating a level, planar surface above the slab (which was rather roughly poored and is far from planar!). Polyurethane foam under the sleepers provides additional support from below.
+      A perpendicular layer of slats placed across the sleepers gives the floor improved elasticity/bounciness, making the floor more pleasant underfoot.
+      The grid was later covered with tongue and groove OSB subfloor.
       </p>
       <p class="mt-2">
-      Building the subfloor substructure this early was a mistake—in hindsight, I would have built it only after completing masonry work on walls and insulating the ceiling, in which case the subfloor wouldn't have gotten as dirty from construction waste nor gotten in the way underfoot.
+      In hindsight, building the subfloor substructure this early was a mistake.
+      We should have built it only after completing masonry work on walls and insulating the ceiling, in which case the subfloor wouldn't have gotten as dirty from construction waste nor gotten in the way underfoot.
       </p>
-      <TmpImage src={sleepers1Image} alt="The first sleepers being attached to the concrete floor slab."/>
-      <TmpImage src={sleepers2Image} alt="A laser level and shims placed between the floor slab and sleepers were used to level the sleepers."/>
-      <TmpImage src={gridImage} alt="The completed subfloor substructure, with slats placed across the sleepers."/>
-      <TmpImage src={gridFancyImage} alt="Perspective image from floor height showing the subfloor's grid structure."/>
-      <TmpImage src={laserImage} alt="A laser level being used to lay out the grid's position on the floor slab."/>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={subfloorLaserImage} alt="We used a laser level and chalkline to lay out the grid's position on the floor slab."/>
+      <TmpImage src={subfloorSleepers1Image} alt='The first sleepers being attached to the concrete floor slab. The sleepers are attached with the Slovene equivalent of TapCon screws ("Turbo vijaki") drilled directly into the concrete, with shims used to level the sleepers. Polyurethane spray foam under the sleepers provides additional support.'/>
+      <TmpImage src={subfloorSleepers2Image} alt="Nearing completion of the sleepers. The tripod held the laser level that we used to level the sleepers."/>
+      <TmpImage src={subfloorGridImage} alt="The completed subfloor substructure, with slats placed perpendicularly across the sleepers for added springiness. Spray foam has been added under the sleepers for additional support from below."/>
+      <TmpImage src={subfloorGridFancyImage} alt="Perspective image from floor height showing the subfloor's grid substructure."/>
     </div>
   </section>
 
   <section class="mt-20">
     <h2 class="text-3xl">Insulating the roof</h2>
-    <div class="space-y-5">
-      <p class="">
-      The roof is insulated with 200 mm of rock wool (Isover PLE MAX, made by Saint Gobain, conductivity 0.037 W/(m K))
+    <div class="mt-5">
+      <p>
+      The roof is insulated with 200 mm of rock wool (Isover PLE MAX, made by Saint Gobain, with thermal conductivity 0.037 W/(m K)).
+      The rock wool is placed in two layers—one 150 mm between the rafters, with an additional 50 mm placed continuously over the rafters to eliminate thermal bridging.
+      The rock wool between the rafters is nominally attached with a friction fit, but we also used polyurethane spray foam as an adhesive for insurance.
       </p>
-      <TmpImage src={rockwool100Image} alt=""/>
-      <TmpImage src={rockwool100CuredImage} alt=""/>
-      <TmpImage src={xpsFurringImage} alt=""/>
-      <TmpImage src={rockwool50WithBoardsImage} alt=""/>
-      <TmpImage src={rockwool50CuredImage} alt=""/>
-      <TmpImage src={rockwool50RoofImage} alt=""/>
-      <TmpImage src={insulationAnzeImage} alt=""/>
-      <TmpImage src={crossBattensImage} alt=""/>
-      <TmpImage src={rockwool50OverlayWithBoardsImage} alt=""/>
-      <TmpImage src={rockwool50OverlayCuredImage} alt=""/>
-      <TmpImage src={vaporBarrierImage} alt=""/>
+      <p class="mt-2">
+      Details: the rafters are 140 mm deep, and our building materials supplier did not have 140 mm thick rock wool in stock to match the depth of the rafters.
+      We worked around this by placing 150 mm of rock wool (the closest match to 140 mm) between the rafters (the 150 mm layer was made in turn of separate 100 mm and 50 mm layers, because 150 mm was also not in stock), then furred out the rafters with 10 mm of XPS, to match the depth of the 150 mm insulation.
+      </p>
+    </div>
+    <div class="mt-8 space-y-8">
+
+      <TmpImage src={insulation100Image} alt="The first layer of rock wool batts (100 mm thick) going in between the rafters. The boards temporarily hold the rock wool batts in place until the polyurethane adhesive on the back cures."/>
+      <TmpImage src={insulation100CuredImage} alt="The first layer of rock wool continuing up the ceiling."/>
+      <TmpImage src={insulationXpsFurringImage} alt="We furred out the 140 mm rafters with 10 mm of XPS to match the final thickness of the rock wool; besides equalizing depths of rafters and insulation, the XPS has the additional benefit of decreasing thermal bridging."/>
+      <TmpImage src={insulation50WithBoardsImage} alt="The second layer of rock wool batts (50 mm thick) placed between the rafters, flush with the XPS furring over the rafters. The wooden boards temporarily hold the batts in place until the polyurethane adhesive on the back cures (the adhesive supplements the friction fit)."/>
+      <TmpImage src={insulation50RoofImage} alt="The second layer of rock wool batts continuing up the ceiling."/>
+      <TmpImage src={insulation50CuredImage} alt="The boards removed after the adhesive has cured."/>
+      <TmpImage src={insulationCrossBattens} alt="A grid of 50 mm thick wooden cross battens placed over the rafters will hold the final layer of rock wool in place."/>
+      <TmpImage src={insulationAnzeImage} alt="The final layer of rock wool (50 mm thick, placed continuously over the rafters) making its way up the ceiling."/>
+      <TmpImage src={insulation50OverlayWithBoardsImage} alt="Ditto"/>
+      <TmpImage src={insulation50OverlayCuredImage} alt="The final layer of rock wool installed. This layer is placed continuously over the entire surface of the ceiling, eliminating thermal bridging through the rafters."/>
+      <TmpImage src={insulationVaporBarrierImage} alt="The vapor barrier placed over the insulation, with seams taped. The roof is now ready for the finish ceiling."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Multipor part 1: North and South walls</h2>
+    <div class="mt-5">
+      <p class="">
+      We insulated the exterior walls with 200 mm of an insulative masonry material called <span class="italic">Multipor</span> made by the Slovenian company Xella Porobeton, placed in two wythes (layers), to the inside of the existing loadbearing walls, which are made of concrete block (CMUs).
+      </p>
+      <p class="mt-2">
+      Multipor is similar to aerated autoclaved concrete, just lighter, softer, more insulative, and nonstructural.
+
+      It is loosely reminiscent of pumice and has a thermal conductivity of 0.045 W/(m K) (just slightly less insulative than low-quality glass wool, i.e. excellent for a masonry material).
+      It is vapor permeable and (unlike mineral wool) insensitive to water vapor, and is meant to be used without an interior vapor barrier.
+      </p>
+
+      <p class="mt-2">
+      Multipor is laid with a mortar-like adhesive like regular aerated autoclaved concrete blocks, and finished with a base coat of mortar embedded in a fiberglass mash, followed by a trowelled finish coat (similar to standard lime-cement render). It is soft and can be easily cut with a hand saw.
+      </p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={multiporMaterialsMortarImage} alt="The Multipor blocks and adhesive mortar used to bind them."/>
+      <TmpImage src={multiporInProgressImage} alt="The second layer of Multipor being installed along the south wall. We installed two 100 mm layers for a total thickness of 200 mm."/>
+      <TmpImage src={multiporBricksImage} alt="The completed Multipor installation along the south wall."/>
+      <TmpImage src={multiporMeshMortarCloseupImage} alt="The Multipor blocks are finished similarly to how the process for rendering a masonry wall — first with a base coat of mortar embedded in fiberglass mesh, followed by a trowelled-on finish coat."/>
+      <TmpImage src={multiporMeshMortarImage} alt="The base coat progressing along the south wall."/>
+      <TmpImage src={multiporFinishImage} alt="The finish coat progressing along the south wall."/>
+      <TmpImage src={multiporCompleteCloseupImage} alt="The finished south wall, which will later be painted."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Plumbing rough-in (subcontracted)</h2>
+    <div class="mt-5">
+      <p>
+      Plumbing and heating was the only portion of the job we subcontracted—I had neither the experience nor tools required for the job.
+      We installed supply lines for cold and hot water, drain/waste pipes for a future bathroom, and supply and return lines for central heating with radiators.
+      The water supply and heating lines are made of a material called <span class="italic">Aluplast</span>, which is similar to the PEX tubing used in the USA, but with an additional thin aluminum layer around the polyethylene for added mechanical strength.
+      The drain lines are polypropylene (similar to the PVC DWV lines used in the USA).
+      </p>
+      <p class="mt-2">
+      We ran the supply and drain lines up through the concrete floor slab from the downstairs bathroom (the attic bathroom was intentionally placed over the existing downstairs bathroom to simplify plumbing runs).
+      Heating lines had already been conveniently run to the attic, so we simply hooked into the existing lines.
+      </p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={roughInAluplastCoilsImage} alt="Supply lines (made of Aluplast, similar to the PEX used in the USA) come in large coils, conveniently coming in both a red and blue color to indicate hot and cold lines."/>
+      <TmpImage src={roughInSewerImage} alt="We ran the main drain and supply lines from the downstairs bathroom through the floor slab."/>
+      <TmpImage src={roughInCompleteImage} alt="The far corner will hold the bathroom—you can make out the drain lines on the floor for the future bath and sink. (The tubing in the foreground is electrical conduit, unrelated to the plumbing job.)"/>
+      <TmpImage src={roughInGeberitImage} alt="The drain and supply lines for the toilet and bath. The Geberit piece is the substructure that will hold the suspended toilet."/>
+      <TmpImage src={roughInKitchenSinkImage} alt="Drain and supply lines for a future kitchenette."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Leveling the west wall (prep for Multipor)</h2>
+    <div class="mt-5">
+      The existing concrete block exterior wall was bowed, as might be expected for an old farmhouse.
+      Before covering the west exterior wall in insulating Multipor blocks, we leveled the worst parts with a gypsum-based leveling compound so that the wall would be at least approximately planar and ready to accept the Multipor blocks.
+      (The bow in the wall was too large, in my assessment, to simply pad out with extra Multipor adhesive.)
+      <p class="mt-2">Aside: a lime-cement render would probably have been preferable to the gypsum-based compound. Gypsum can soften in contact with water or weather, while lime-cement render is more robust and arguably more compatible with the concrete block.
+      But we had the gypsum-based compound on hand, and given that it is inside, protected from the elements, it should work just fine.
+      It is also a bit easier to apply and work than lime-cement render.
+      </p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={westWallPlaningOutOfLevelImage} alt="The existing wall is bowed outward—note the large gap under the straight level. We leveled this bow so as to create an approximately planar surface before applying Multipor"/>
+      <TmpImage src={westWallPlaningHammerDrillImage} alt="Prep work: there was an unfinished, crumbling layer of render on the west wall around the window, which we first removed with a hammer drill before addressing the bow in the wall."/>
+      <TmpImage src={westWallPlaningJubogletImage} alt="We leveled the wall with a gypsum-based leveling compound, which comes in dry form and is mixed with water to a workable consistency."/>
+      <TmpImage src={westWallPlaningWetImage} alt="The leveling compound is applied with a trowel—this is the base coat—more coats will follow."/>
+      <TmpImage src={westWallPlaningLevelImage} alt="The wall after rough leveling—note that the gaps under the straight level are now minimal compared to the original state."/>
+      <TmpImage src={westWallPlaningCompleteImage} alt="The now mostly-planar west wall, ready for application of Multipor blocks."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Multipor part 2: West wall</h2>
+    <div class="mt-5">
+      <p>Like the north and south walls, we covered the west wall with 200 mm of Multipor, an insulative masonry material. For more on Multipor, see part 1, covering the north and south wall installation.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={multiporWestLayer1Image} alt="The first layer of Multipor blocks progressing up the wall."/>
+      <TmpImage src={multiporWestLayer1WindowImage} alt="We used wood studs to temporarily support the Multipor above the window until the adhesive cured. The Multipor is light enough that no lintel is needed."/>
+      <TmpImage src={multiporWestLayer2Image} alt="The second layer of Multipor making its way up the towards the ridge."/>
+      <TmpImage src={multiporWestCuringImage} alt="The second layer of Multipor freshly installed, with adhesive still curing."/>
+      <TmpImage src={multiporWestPlumbingBathroomImage} alt="We carved out the Multipor blocks to fit around the plumbing installation—luckily the material is quite soft and easily worked."/>
+      <TmpImage src={multiporWestPlumbingKitchenImage} alt="Details around the plumbing installation for the kitchenette."/>
+      <TmpImage src={multiporWestAnzeImage} alt="My cousin Anže, who was a crucial help during a few critical phases of the project, including the Multipor installation along the west wall. Here he is holding a block with grooves carved in to fit around water supply lines."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Multipor part 3: concrete blocking for radiators</h2>
+    <div class="mt-5">
+      <p>Multipor is nonstructural and too soft and crumbly to anchor meaningful loads to. So before installing radiators into the Multipor wall, I poured two concrete columns to support the radiator. Overkill perhaps, but they definitely got the job done.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={radiatorConcreteHolesImage} alt="These two vertical channels cut into the Multipor wall will hold concrete columns supporting a radiator (Multipor is nonstructural and can't hold the radiator). The holes are keyed outward for a better mechanical bond between Multipor and concrete."/>
+      <TmpImage src={radiatorConcreteRebarImage} alt="I added rebar stakes into the exterior wall and concrete floor slab as additional structural support, so as to (hopefully) lessen the Multipor's structural role."/>
+      <TmpImage src={radiatorConcreteConcreteBucketImage} alt="Concrete, ready for pouring."/>
+      <TmpImage src={radiatorConcreteSawzallImage} alt="A sawzall with the blade removed makes for a great concrete vibrator."/>
+      <TmpImage src={radiatorConcreteFormsClosedImage} alt="The forms holding the concrete, made of OSB with bracing fastened to the wooden sleepers in the subfloor's substructure."/>
+      <TmpImage src={radiatorConcreteCuredImage} alt="The cured concrete support posts, ready to support a future radiator."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Multipor part 4: finishing the west wall</h2>
+    <div class="mt-5">
+      <p>We finished the west Multipor wall like the north and south walls: a base coat of Multipor adhesive embedded in fiberglass mesh, followed by a finish coat, followed by some touch-up with leveling compound and then paint. For more on Multipor, see part 1, covering the north and south wall installation.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={multiporWestFinishingInProgressImage} alt="The beginning of the base coat, which is embedded in a fiberglass mesh, like for a classic lime-cement render finish."/>
+      <TmpImage src={multiporWestFinishingLadderImage} alt="The base coat progressing along the wall"/>
+      <TmpImage src={multiporWestFinishingutilityKnifeImage} alt="The fiberglass reinforcing mesh embedded in the base coat helps prevent cracking."/>
+      <TmpImage src={multiporWestFinishingBendImage} alt="Details around the windows, where the wall is shaped into a rounded reveal."/>
+      <TmpImage src={multiporWestFinishingProfileImage} alt="A metal reinforcing bead is placed on along corners, and embedded into the base coat."/>
+      <TmpImage src={multiporWestFinishingBaseCoatCompleteImage} alt="The completed base coat. (Careful readers might notice the OSB subfloor is suddenly installed—I'm jumping around a bit chronologically for logical consistency, and will cover the subfloor installation in a later section.)"/>
+      <TmpImage src={multiporWestFinishingEliTrowelFinishCoatImage} alt="Trowelling on the finish coat—the transport dolly makes for a convenient mobile chair."/>
+      <TmpImage src={multiporWestFinishingTouchUpImage} alt="Patching a few low spots I missed during the finish coat—the patches are fresh and visible, but will dry to the same color as the rest of the finish."/>
+      <TmpImage src={multiporWestFinishingTouchUpSandingImage} alt="Sanding down rough spots with a drywall sanding block."/>
+      <TmpImage src={multiporWestFinishingCompleteImage} alt="The completed finish coat."/>
+      <TmpImage src={multiporWestFinishingEliPaintRollerImage} alt="Painting the wall—the roller and extension pole come in handy for the high areas."/>
+      <TmpImage src={multiporWestFinishingXpsAndPaintCansImage} alt="We painted the north and south walls together with the west wall."/>
+      <TmpImage src={multiporWestFinishingMartinMaskingTapeImage} alt="All done! Martin, who helped throughout the painting process, is removing masking tape after we finished painting."/>
+      <TmpImage src={multiporWestFinishingPaintedImage} alt="The painted west wall."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Interlude: cleaning up the subfloor substructure</h2>
+    <div class="mt-5">
+      <p>We built the subfloor substructure far earlier than necessary. Result: tons of construction waste accumulating around and under the substructure, which needed to be cleaned up before installing the subfloor.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={subfloorCleanupDustpanImage} alt="Lost of construction waste accumulated under and around the subfloor substructure."/>
+      <TmpImage src={subfloorCleanupPilesImage} alt="We first collected the waste in rough piles, which we removed with a dust pan..."/>
+      <TmpImage src={subfloorCleanupCleanVacuumImage} alt="...followed by a second pass with a shop vac."/>
+      <TmpImage src={subfloorCleanupCompleteImage} alt="Done! The cleaned-out subfloor, ready for insulation and the subfloor."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Insulating the subfloor</h2>
+    <div class="mt-5">
+      <p>We insulated the subfloor with scraps of mineral wool we had lying around from insulating the ceiling and previous work on the property. This step was not particularly necessary from a building physics perspective because the living space below is heated—but it was a great way to dispose of all of the scraps we had lying around in an at least marginally useful manner, rather than hauling them to the dump.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={subfloorInsulationMaterialsImage} alt="The mineral wool scraps we would use to insulate the subfloor. This is a mixture of glass and rock wool from insulating the ceiling and previous work on the property."/>
+      <TmpImage src={subfloorInsulationBedCornerImage} alt="The first pieces of glass wool packed into the subfloor substructure."/>
+      <TmpImage src={subfloorInsulationInProgressImage} alt="The subfloor insulation 80% complete."/>
+      <TmpImage src={subfloorInsulationInsulationCompleteImage} alt="All done! The completed subfloor insulation."/>
+      <TmpImage src={subfloorInsulationPaperInProgressImage} alt="We added a layer of heavy-duty construction paper over the insulation to contain the glass wool, and as an underlayment for the subfloor."/>
+      <TmpImage src={subfloorInsulationPaperCompleteImage} alt="The insulated subfloor covered with construction paper, ready for the OSB subfloor."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Installing the OSB subfloor</h2>
+    <div class="mt-5">
+      <p>We used a single layer of 22 mm (a bit under 1 inch) tongue and groove OSB for the subfloor. 
+      The sleepers in the subfloor substructure an spaced to match the factor dimensions of the OSB boards.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={subfloorFirstBoardsImage} alt="Test-fitting the first few subfloor boards."/>
+      <TmpImage src={subfloorInProgressImage} alt="The installation of the OSB subfloor in progress."/>
+      <TmpImage src={subfloorDrillDriverImage} alt="We fastened the subfloor to the substructure with screws. (Nails fired from a pneumatic nailgun are more conventional and faster, but I didn't own a framing nailgun at the time of this job. I did own an 18 gauge brad nailer, which will feature prominently when we get to finish work, but a brad nailer is not strong enough to attach the subfloor—you'd want a 15 or 16 gauge framing nailer.)"/>
+      <TmpImage src={subfloorCompleteImage} alt="The completed OSB subfloor."/>
+      <TmpImage src={subfloorNotch1Image} alt="Detail showing the process of notching the subfloor to fit around electrical conduit coming up out of the floor."/>
+      <TmpImage src={subfloorNotch2Image} alt="The notched board fitting nicely around the conduit."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Installing radiators (subcontracted)</h2>
+    <div class="mt-5">
+      <p>As mentioned in an earlier section, we subcontracted the plumbing and heating work. The living space is heated with two radiators—one on each side of the space—supplied by a central heating system.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+    <TmpImage src={andrejAndrejEliImage} alt=""/>
+    <TmpImage src={andrejEliImage} alt=""/>
+    </div>
+  </section>
+
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Framing</h2>
+    <div class="mt-5">
+      <p>The partition wall (between the finished living space and the rest of the unfinished attic) is framed using standard stud framing techniques, with three nuances:</p>
+      <ul class="mt-2 ml-5 list-disc">
+        <li>We used 50 mm x 80 mm studs—the closest commonly available dimension in Slovenia to the USA's ubiquitous 2 x 4.</li>
+        <li>The studs are placed 625 mm on center (about 24 inches) to match the standard width of sheet goods in the EU.</li>
+        <li>We built the walls in place (rather than building on the floor and tilting them up into place, as is common in commercial platform frame construction) for two reasons: (1) building in place made it easer to match the slopped roof; and (2) I'm a one-man crew and would struggle to lift a full wall into place.</li>
+      </ul>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={framingLaserLayoutImage} alt="Using a laser level to lay out the position of the top and bottom plates."/>
+      <TmpImage src={framingBottomPlateImage} alt="Installing the top and bottom plates (the bottom plate is notched to allow conduit to come up into the wall)."/>
+      <TmpImage src={framingLevelImage} alt="Verifying the studs are level."/>
+      <TmpImage src={framingStudsImage} alt="The studs installed."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Interlude: refinishing timber beams</h2>
+    <div class="mt-5">
+      <p>The roof is built with heavy timber framing, and we chose to leave the heavy timber beams exposed as an intentional design detail. We made the beams presentable by first sanding down the rough-sawn surface with a flap disk attached to an angle grinder, then finishing the beams with linseed oil.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={sandingBeamsInProgressImage} alt="Sanding the beams in progress—the sanded surface is on the left, and the original rough-sawn surface on the right."/>
+      <TmpImage src={sandingBeamsInProgressLadderImage} alt="Most of the sanding was done on a ladder, so as to reach the beams."/>
+      <TmpImage src={sandingBeamsGrinderSandingDustImage} alt="We addressed this relatively heavy-duty job using an angle grinder and flap disks, which are far more aggressive than a orbital sander. You can see all the flap disks we burned through on the job."/>
+      <TmpImage src={sandingBeamsMartinOilingImage} alt="Here is Martin finishing the beams with linseed oil—he took care of almost all oil-based finishing on the job-both the beams and the later tongue and groove wall finish." />
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Sheathing interior walls</h2>
+    <div class="mt-5">
+      <p>We sheathed interior walls on one side with 12.5 mm tongue-and-groove OSB. This helps tie the wall together structurally, even if it is not a load-bearing wall, is a convenient nailing and mounting surface, and makes it easier to install electrical outlets.</p>
+      <p class="mt-2">We fastened the sheathing to the studs with screws (nails fired from a pneumatic nailgun are more conventional and faster, but I didn't own a framing nailgun at the time of this job).</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={sheathingFirstPieceImage} alt="The first piece of sheathing going up on the main partition wall."/>
+      <TmpImage src={sheathingInProgressImage} alt="Sheathing of the main partition wall halfway complete."/>
+      <TmpImage src={sheathingMartinDrillingImage} alt="Martin fastening the OSB to the studs—we worked together on the sheathing—I did the cutting and he did the fastening."/>
+      <TmpImage src={sheathingJigsawImage} alt="Using a jigsaw to cut a hole for electrical outlets."/>
+      <TmpImage src={sheathingJigsawHoleImage} alt="A hole cut in the OSB sheathing for an electrical box that will hold outlets and switches."/>
+      <TmpImage src={sheathingCompleteImage} alt="The completed sheathing of the main partition wall."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Insulating the main partition wall</h2>
+    <div class="mt-5">
+      <p>We insulated the main partition wall between the finished living space and the rest of the unfinished attic with glass wool placed between the wall studs.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={wallInsulationRollImage} alt="A batt of glass wool, rolled out and ready for installation."/>
+      <TmpImage src={wallInsulationLevelImage} alt="Using a straightedge to cut the glass wool to width."/>
+      <TmpImage src={wallInsulationCuttingImage} alt="Ditto."/>
+      <TmpImage src={wallInsulationPanelImage} alt="Installing insulation around the conduit near the future electrical panel."/>
+      <TmpImage src={wallInsulationCompleteImage} alt="All done! The insulation installed in the main partition wall, which is now ready for the tongue and groove wall finish, installed next."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Tounge and groove wall finish</h2>
+    <div class="mt-5">
+      <p>We finished the interior walls with 12 mm spruce tongue and grove boards. We're lucky to have a supplier just a few kilometers from us! The boards were installed with 18 gauge brad nails fired from a pneumatic brad nailer and finished with linseed oil.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={opazPortraitDozaImage} alt="The first boards going up on the main partition wall. The natural wood grain makes for a warm, cozy interior."/>
+      <TmpImage src={opazExteriorPerspectiveImage} alt="We used the same tongue and groove sheathing for the exterior of the main partition wall."/>
+      <TmpImage src={opazMiterSawLaserImage} alt="The miter saw proved invaluable for making the angled cuts needed to match the slope of the roof. (I didn't own a miter saw before, and bought one specifically for this job.)"/>
+      <TmpImage src={opazExteriorLaserImage} alt="We used a laser level to ensure the boards were aligned on either side of the doorway."/>
+      <TmpImage src={opazConduitBeamImage} alt="It took some scribing and jigsaw heroics to match the tongue and groove boards to the contours of the main structural beams."/>
+      <TmpImage src={opazPortraitCompleteImage} alt="The completed tongue and groove finish on the interior wall."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Electrical part 1: Outlets and switches</h2>
+    <div class="mt-5">
+      <p>Earlier in the job I first installed conduit and pulled cable to all of the electrical boxes and fixtures. The conduit runs along and is attached to the grid of wooden sleepers in the subfloor substructure. I apparently forgot to take pictures of the process of laying conduit, but you can see the finished job below.</p>
+      <p class="mt-2">We then installed the outlets and switches and made the necessary connections in intermediate junction boxes. Electrical boxes are installed differently in the Multipor walls and wood-framed walls, and I show examples of both below.</p>
+      <p class="mt-2">See the next section for the wiring of the panel.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={electricalFloorConduitImage} alt="Electrical cable is run in conduit along the grid of wooden sleepers in the subfloor substructure. The large bundle of cables in the foreground will enter the attic subpanel."/>
+
+      <h3 class="!mt-16 text-2xl text-center">Outlets and switches in a Multipor wall</h3>
+      <TmpImage src={electricalMultiporStuboutsImage} alt="An electrical box in the Multipor wall to hold future outlets and switches. The box is fixed with gypsum-based plaster into a larger keyed hole cut into the Multipor wall. The Multipor itself is too brittle to reliably hold the box."/>
+      <TmpImage src={electricalMultiporFrameImage} alt="Making the electrical connections for the switch controlling the ridge light."/>
+      <TmpImage src={electricalMultiporOutletsImage} alt="Switches installed, on to the outlets."/>
+      <TmpImage src={electricalMultiporFixturesImage} alt="The outlets and switches click into the gray mounting frame with a (in my opinion) delightful modular clip/tab click-in system made by TEM Čatež, a local Slovenian electrical manufacturer. The system is modular, with an outlet taking up the width of two switches."/>
+      <TmpImage src={electricalMultiporCompleteImage} alt="The completed outlet and switch box, with the cover plate installed."/>
+
+      <h3 class="!mt-16 text-2xl text-center">Junction box in a wood-framed wall</h3>
+      <TmpImage src={electricalJunctionHoleImage} alt="A hole matching the profile of the junction box is first cut into the wall's surface."/>
+      <TmpImage src={electricalJunctionBoxImage} alt="The box is held in place by mounting clips at the back, which are tensioned with screws at the front of the box to accommodate walls of varying thickness."/>
+      <TmpImage src={electricalJunctionStuboutsImage} alt="Pre-formed holes in the box make it easy to lead in electrical wiring from any direction. Above goes to the panel, down goes into the floor and on to the loads."/>
+      <TmpImage src={electricalJunctionCompleteImage} alt="The wired junction box, which serves as a secondary distribution box from the main panel. The circuits from the main panel split off in this box and travel through the attic living space."/>
+
+      <h3 class="!mt-16 text-2xl text-center">Wiring Ethernet jacks</h3>
+      <TmpImage src={electricalEthernetScrewdriverImage} alt="We also ran Ethernet cables to the apartment."/>
+      <TmpImage src={electricalEthernetScrewdriverCloseImage} alt="The Ethernet jacks have terminals for each of the eight conductors in standard Ethernet cable. Here I'm using a fine screwdriver to insert the conductors into their terminals."/>
+      <TmpImage src={electricalEthernetOutletsPortraitImage} alt="The Ethernet jacks wired up and ready for installation."/>
+      <TmpImage src={electricalEthernetFixturesImage} alt="The Ethernet jacks use the same modular click-in system as the outlets and switches, so outlets and Ethernet jacks can live in the same electrical box."/>
+      <TmpImage src={electricalEthernetCompleteImage} alt="All done! Wiring complete and cover plate on."/>
+
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Electrical panel</h2>
+    <div class="mt-5">
+      <p>We installed a dedicated subpanel for the attic. The panel is supplied by three phases (we are fortunate to have three-phase power on the property) and has a dedicated RCD (FID switch in colloquial Slovene, serving the same residual current protection role as the GFCI outlets used in the USA) along with the usual miniature circuit breakers for overload protection.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={electricalPanelPreparationImage} alt="The two pieces of horizontal blocking in the stud wall will hold the electrical panel. Cable enters from below—you can see the collection of conduit at the base of the wall."/>
+      <TmpImage src={electricalPanelInsulationImage} alt="Conduit has been routed up to the future panel location and the wall insulated."/>
+      <TmpImage src={electricalPanelOpazInProgressImage} alt="Installation of the tongue and groove wall finish in progress."/>
+      <TmpImage src={electricalPanelOpazCompleteImage} alt="Tongue and groove wall finish done (at least to the height of the panel)! The panel is now ready to be installed."/>
+      <TmpImage src={electricalPanelPanelLevelImage} alt="Ensuring the panel is level."/>
+      <TmpImage src={electricalPanelConduitImage} alt="The panel's subframe attached to the wall, with conduit routed into the panel."/>
+      <TmpImage src={electricalPanelWiresSeparatedImage} alt="Conduit trimmed to length and outer cable sheathing stripped, exposing the individual conductors."/>
+      <TmpImage src={electricalPanelServiceLoopsImage} alt="I added service loops to each conductor, which give you some extra wire in case of future modifications or rerouting."/>
+      <TmpImage src={electricalPanelGroundsImage} alt="The ground conductors (yellow and green) routed to the ground busbar (top right). I'll then connect the neutrals (blue conductors) to the neutral busbar (top left), and finally install the circuit breakers and wire up the live conductors (brown)."/>
+      <TmpImage src={electricalPanelLoopFidImage} alt="A hook at the end of the conductors (foreground) makes for a better electrical connection in the terminals. The device in the background with the 2/4/6/N terminals is the RCD, which also serves as the main shutoff switch for the attic's electrical supply."/>
+      <TmpImage src={electricalPanelBreakersRailWithNotchImage} alt="A copper rail (bottom, with projecting copper teeth) connects the supply (from the RCD, the larger device at the left) to the individual miniature circuit breakers (the smaller devices towards the right). Although barely visible from the picture, there are in fact three separate, electrically insulated rails, one for each phase of the three-phase supply. The teeth in the rails connect to terminals in the bottoms of the breakers. The missing tooth at the fourth-from-left position is intentional, so as to avoid the neutral (N) terminal in the RCD."/>
+      <TmpImage src={electricalPanelCompleteImage} alt="Wiring complete! The blue conductors at left are neutral, the green/yellow conductors are grounds, and the brown conductors coming out of the circuit breakers are live. The two breakers at right are unused extras for future use."/>
+      <TmpImage src={electricalPanelCoverOpenImage} alt="The completed panel with the cover on."/>
+      <TmpImage src={electricalPanelCoverClosedImage} alt="All done!"/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Tongue and groove ceiling finish</h2>
+    <div class="mt-5">
+      <p>The original ceiling in the attic came with a nice tongue and groove finish. We removed this and set it aside at the very start of the project so as to insulate the ceiling.
+      With the ceiling insulated, it's now time to reinstall the ceiling finish.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={ceilingOpazMaterialsImage} alt="The original tongue and groove ceiling boards, ready for reinstallation."/>
+      <TmpImage src={ceilingOpazSawImage} alt="Cutting the boards to length on the miter saw."/>
+      <TmpImage src={ceilingOpazMartinNailgunImage} alt="Martin helped throughout the ceiling finish process. Here he is attaching the first few boards with an 18 gauge pneumatic brad nailer."/>
+      <TmpImage src={ceilingOpazNailgunImage} alt="Nailing a starter course in place..."/>
+      <TmpImage src={ceilingOpazHammerJigImage} alt="We used a jig made from a piece of tongue and groove OSB to fit the boards tightly. (Hitting the boards directly with a hammer would cause them to split, but the OSB jig fits over the boards and distributes force sufficiently safely.)"/>
+      <TmpImage src={ceilingOpazBottomCompleteImage} alt="The first bottom sector almost complete!"/>
+      <TmpImage src={ceilingOpazFinalStripBevelImage} alt="The first and final pieces need to be beveled to match the slope of the ceiling."/>
+      <TmpImage src={ceilingOpazCeilingNailgunImage} alt="Martin wiping down the ceiling before installing the tongue and groove boards."/>
+      <TmpImage src={ceilingOpazOshaLadderImage} alt="Our not-quite-OSHA-approved setup for reaching the start of the top sector. (I didn't lean the ladder higher up the ceiling at a more comfortable angle because it would risk puncturing the vapor barrier, which has only soft insulation underneath. Although I'm not sure why we didn't use a self-supporting A-frame ladder; perhaps we were playing around intentionally.)"/>
+      <TmpImage src={ceilingOpazSector2InProgressImage} alt="Here we've brought out the more sensible A-frame ladder."/>
+      <TmpImage src={ceilingOpazSector1CompleteImage} alt="Almost done! Martin is sweeping away sawdust and residual construction waste before wrapping up for the day."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Ceiling ridge lights</h2>
+    <div class="mt-5">
+      <p>We installed recessed lights along the length of the ceiling ridge. We first built out a lowered "soffit" at the top of the ridge, which created a flat cavity, into which we could then run cable and install the recessed lights. The lowered soffit also provides a cavity for ventilation of the LED lights' drivers—according to the manufacturer, the lights should have at least 50 mm (2 inches) clear space above.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={ridgeLightsRidgeSoffitImage} alt="Test-fitting the OSB soffit that creates the cavity at the ridge into which we will recess the lights."/>
+      <TmpImage src={ridgeLightsRidgeSoffitDriverImage} alt="Attaching the soffit to the ridge."/>
+      <TmpImage src={ridgeLightsMartinWithDrillImage} alt="Martin with the drill and hole saw we used to drill the holes that would hold the recessed lights."/>
+      <TmpImage src={ridgeLightsCablesImage} alt="Running electrical cable from hole to hole to power the lights."/>
+      <TmpImage src={ridgeLightsStuboutsImage} alt="Completed cabling, with stub-outs protruding from the light holes, ready to supply the lights."/>
+      <TmpImage src={ridgeLightsMartinNailgunImage} alt="Martin attaching tongue and groove finish ceiling to the OSB soffit."/>
+      <TmpImage src={ridgeLightsWiringImage} alt="Wiring the recessed lights."/>
+      <TmpImage src={ridgeLightsCompleteImage} alt="Jumping ahead a bit, here are the completed overhead lights."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Track lights along beams</h2>
+    <div class="mt-5">
+      <p>We installed track lights along the attic's main structural to serve as accent lights. The lights can slide along an aluminum track mounted on the beams, and can also pivot on a ball joint.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={trackLightsLightsInBoxImage} alt="The freshly-delivered track lights, still in their original packaging."/>
+      <TmpImage src={trackLightsStuboutImage} alt="Electrical wire comes out of the wall at the beam to supply the track lights."/>
+      <TmpImage src={trackLightsPigtailImage} alt="Adding a service loop to the wire (the loop gives some extra length in case of future maintenance or rewiring)."/>
+      <TmpImage src={trackLightsGroundImage} alt="Making the connections to the terminal block that powers the track lights."/>
+      <TmpImage src={trackLightsCoverImage} alt="The completed terminal block—you can see the protruding copper tabs, which attach to copper rails in the track."/>
+      <TmpImage src={trackLightsDriverImage} alt="Attaching the track to the beam."/>
+      <TmpImage src={trackLightsNightLightsImage} alt="The installed track lights. A three-way switch by the bed lets you turn the lights off from in bed."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Start of bathroom work: closing off the toilet frame</h2>
+    <div class="mt-5">
+      <p>We installed a hanging Geberit toilet, which has the flush tank and plumbing hidden in the wall. Here I'm walling off the structural frame on which the toilet will hang with aerated concrete blocks.</p>
+      <p class="mt-2">Disclaimer: this step was actually done much earlier in the job, before finishing and painting the west wall, but I'm including it here as we begin a large section on the bathroom.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomGeberitSiporexEliMortarImage} alt="We walled off the toilet frame with aerated concrete blocks."/>
+      <TmpImage src={bathroomGeberitSiporexDrainBricksImage} alt="Fitting the blocks over the protruding plumbing and mounting brackets."/>
+      <TmpImage src={bathroomGeberitSiporexTapTapImage} alt="The aerated concrete blocks are attached with a mortar-like adhesive. Here I'm tapping down on the block to ensure a good mortar bond."/>
+      <TmpImage src={bathroomGeberitSiporexFinishingImage} alt="Finishing off the edges around the walled-off frame."/>
+      <TmpImage src={bathroomGeberitSiporexDoneImage} alt="All done! The wall is now ready for a finish coat and painting (see earlier sections)."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Laying the bathroom screed floor</h2>
+    <div class="mt-5">
+      <p>We poured roughly 50 mm of cementitious screed (like concrete, but with smaller aggregate and nonstructural) for the bathroom floor on top of a layer of XPS. The XPS and screed together provide the height necessary for running plumbing in the floor with adequate fall/slope in the drain lines.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomScreedFloorDrainImage} alt="The plumbing in the bathroom floor, which will be covered by screed."/>
+      <TmpImage src={bathroomScreedXpsImage} alt="We first placed 50 mm XPS over the floor (we use a bottom layer of XPS instead of screed all the way down because it lessens the dead load on the ceiling below, and because it is cheaper and easier to install). The black tape around the perimeter of the bathroom is a foam-like material that serves as an isolation joint for the screed. "/>
+      <TmpImage src={bathroomScreedScreed1Image} alt="The first of the cementitious screed being laid on top of the XPS. We first establish level around the perimeter, then fill in towards the center."/>
+      <TmpImage src={bathroomScreedAnzeImage} alt="My cousin Anže, who was a crucial help during a few critical phases of the project, including the first phase of bathroom work. Here he is leveling out the screed."/>
+      <TmpImage src={bathroomScreedScreed2Image} alt="Nearing completion, only the final corner remains..."/>
+      <TmpImage src={bathroomScreedCompleteImage} alt="All done! The completed screed floor. We will later pour self-leveling compound over the screed and then tile the floor."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Framing the bathroom</h2>
+    <div class="mt-5">
+      <p>The bathroom is framed with standard stud-wall construction and sheathed with 12.5 mm tongue and groove OSB.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomFramingFramedImage} alt="The framed bathroom walls. The conduit running up the studs will supply the bathroom lights, ventilation fan, and outlets."/>
+      <TmpImage src={bathroomFramingHolesCompassImage} alt="We drilled holes in the OSB sheathing to fit over plumbing lines."/>
+      <TmpImage src={bathroomFramingOsbImage} alt='I attached a temporary "handle" to the back of the final piece of sheathing to allow me to maneuver it into place.'/>
+      <TmpImage src={bathroomFramingMartinDrillingImage} alt="Martin helped throughout sheathing of the bathroom walls. Here he is attaching the final board."/>
+      <TmpImage src={bathroomFramingSheathedInteriorImage} alt="All done! The bathroom sheathing completed."/>
+      <TmpImage src={bathroomFramingHappyMartinImage} alt="Martin, happy with a job well done!"/>
+      <TmpImage src={bathroomFramingOpazInProgressImage} alt="Attaching the tongue and groove finish to the exterior of the bathroom walls. At this point I had also installed the electrical box (blue box in top left) holding the bathroom light switches and outlets."/>
+      <TmpImage src={bathroomFramingOpazCompleteIshImage} alt="Almost done with the exterior bathroom wall finish."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Interlude: walling off the bathroom utility area</h2>
+    <div class="mt-5">
+      <p>We walled off the plumbing area in the far corner of the bathroom with a hip-height "pony wall" built from aerated concrete block. The wall also holds the hot and cold water lines for the future bathtub. The walled-off area will later be covered and serve as a shelf.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomPonyWallCompleteImage} alt='The completed "pony wall" that holds the hot and cold water lines for the bathtub and walls of the plumbing in the back.'/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Bathroom drywall and cement board</h2>
+    <div class="mt-5">
+      <p>The bathroom interior is finished with a combination of cement board and water-resistant drywall ("Glasroc X" and "Aquaroc", respectively, both manufactured by Saint Gobain). We used cementboard in the heavily-exposed areas (e.g. around the bath and sink) and drywall in the ceiling and less-exposed walls.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomDrywallSlatsImage} alt="These wooden slats will provide a fastening surface for the drywall boards."/>
+      <TmpImage src={bathroomDrywallSlatsLevelImage} alt="Using a straight edge to ensure the slats for the drywall are planar."/>
+      <TmpImage src={bathroomDrywallEliBackImage} alt="Holding up the first board of ceiling drywall with my back while my cousin Anže, who once again came to rescue, attaches the board below."/>
+      <TmpImage src={bathroomDrywallEliAnzeImage} alt="Anže attaching the ceiling drywall while I hold the board in place."/>
+      <TmpImage src={bathroomDrywallDrywallInstalledImage} alt="Completed ceiling drywall installation."/>
+      <TmpImage src={bathroomDrywallCementboardHoleImage} alt="Marking and drilling holes in the cement board to fit over plumbing lines. True to its name, the cement board is difficult to work and will immediatly dull a conventional drywall hole saw. I instead drilled out the circumference of large holes with a masonry bit, then punched out the hole."/>
+      <TmpImage src={bathroomDrywallCementboardInProgressImage} alt="Installing the first pieces of cement board (we used cement board in the water-exposed areas near the bathtub and sink)."/>
+      <TmpImage src={bathroomDrywallCompleteImage} alt="The completed drywall/cement board installation."/>
+      <TmpImage src={bathroomDrywallCompleteFinishedImage} alt="The completed interior surfaces after taping and finishing. We finished the drywall with standard gypsum-based drywall compound and finished the cement board with a lime-cement render. The ceiling and some of the walls will later be painted, and some tiled."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Waterproofing the bathroom</h2>
+    <div class="mt-5">
+      <p>We waterproofed the bathroom with an acrylic, brushed-on waterproofing compound manufactured by Ceresit. The surfaces are first impregnated with a primer (CT17), then finished with two brushed-on layers of waterproofing compound (CL51), applied in perpendicular directions.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomWaterproofingPrimerPortraitImage} alt="We first applied a coat of primer to all waterproofed surfaces to ensure a better bond of the waterproofing compound."/>
+      <TmpImage src={bathroomWaterproofingTapeImage} alt="An elastic waterproofing tape is applied over all corners; the waterproofing compound is then applied over the tape."/>
+      <TmpImage src={bathroomWaterproofingCl51Image} alt="CL51, a brushed-on acrylic waterproofing compound."/>
+      <TmpImage src={bathroomWaterproofingTapeBrushImage} alt="Beginning the waterproofing. The waterproofing compound is applied by brush in two layers. The second layer is applied, with brush strokes perpendicular to the first layer, a few hours after the first layer." />
+      <TmpImage src={bathroomWaterproofingCompleteImage} alt="The waterproofed bathroom. We covered the entire floor and the walls around the wet areas by the bathroom and sink."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Bathroom lights and ventilation fan</h2>
+    <div class="mt-5">
+      <p>We reused the bathroom lights from an old apartment!</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomLightsBoxLevelImage} alt="Checking the light box for level."/>
+      <TmpImage src={bathroomLightsBoxWiredImage} alt="The wired up light box."/>
+      <TmpImage src={bathroomLightsCompleteImage} alt="The completed bathroom lights."/>
+      <TmpImage src={bathroomFanStuboutsImage} alt="Supply conductors and ducting for the ventilation fan. The four holes in the wall are wall anchors for the ventilation's mounting frame."/>
+      <TmpImage src={bathroomFanFrameImage} alt="The fan's mounting frame attached, with wiring routed in."/>
+      <TmpImage src={bathroomFanWiredImage} alt="The wired-up bathroom fan."/>
+      <TmpImage src={bathroomFanCompleteImage} alt="The completed bathroom ventilation fan."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Interlude: bathroom cabinets</h2>
+    <div class="mt-5">
+      <p>We went for the easy route and purchased a stock bathroom cabinets instead of building the bathroom cabinets myself. However, the stock cabinet needed a bit of modification to fit under the sloped bathroom ceiling.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomCabinetDisassembledImage} alt="I separated the mirror from the shelf, because otherwise the assembly was too wide to install under the sloped bathroom ceiling."/>
+      <TmpImage src={bathroomCabinetBackHangersImage} alt="This OSB board will hold the mirror. The clips at the four corners will slip onto mounting brackets on the wall."/>
+      <TmpImage src={bathroomCabinetAdhesiveImage} alt="Attaching the mirror to the OSB mounting board with construction adhesive."/>
+      <TmpImage src={bathroomCabinetMirrorAttachedImage} alt="The mirror attached to the mounting board."/>
+      <TmpImage src={bathroomCabinetInstalledImage} alt="The installed mirror and cabinet. A cap piece holding an LED strip light will later go over the top of the mirror."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Bathtub enclosure walls</h2>
+    <div class="mt-5">
+      <p>The enclosure holding the bathtub is built out of aerated concrete, with a large flat shelf area (e.g. for towels, soap, shampoo, etc.) in the "dead area" under the slope of the roof.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomSiporexLaserImage} alt="Using a laser level to mark the final height of the bathtub walls."/>
+      <TmpImage src={bathroomSiporexBackRowImage} alt="The bathtub enclosure is made of aerated concrete blocks. This is the first row of the flat area behind the bathtub."/>
+      <TmpImage src={bathroomSiporexSawImage} alt="The aerated concrete blocks are cut without too much difficulty using hand saw (there a specialized saws for this purpose with large proprietary teeth, but a regular wood saw worked fine for me on this small-scale job)."/>
+      <TmpImage src={bathroomSiporexLevelImage} alt="Checking the walls for level. The wall in the foreground will support the bathtub; the area in the back will be a flat space on which to place towels, soap, etc."/>
+      <TmpImage src={bathroomSiporexFinalBrickImage} alt="Setting in place the final block of far bathtub wall."/>
+      <TmpImage src={bathroomSiporexCompleteImage} alt="The (nearly complete) bathtub enclosure. I would later add the front wall and fill in the small trench in the flat area in the back."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Bathtub screed</h2>
+    <div class="mt-5">
+      <p>We formed the final few centimeters of the bathtub enclosure with cementitious screed, which would form a nice firm surface for tile and could be easily shaped to get proper slope towards the bathtub in all directions.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathtubScreedFormsImage} alt="Small strips of OSB serve as the formwork for the screed."/>
+      <TmpImage src={bathtubScreedLevelImage} alt="The formwork is intentionally taller in the back to create a slope that will make water run into the bathtub."/>
+      <TmpImage src={bathtubScreedConcreteReadyImage} alt="Screed mixed and ready for laying."/>
+      <TmpImage src={bathtubScreedConcreteInProgressImage} alt="Striking off the screed using a level as a straightedge."/>
+      <TmpImage src={bathtubScreedCompleteImage} alt="The completed screed, ready to receive tiles."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Bathtub installation</h2>
+    <div class="mt-5">
+      <p>The bathtub is a standard acrylic tub, placed on the enclosure built in the previous section. One detail worth mentioning: we filled the gaps between the bathtub and the enclosure walls with a combination of XPS and spray foam. This both insulates the bathtub (so it holds heat for longer) and mechanically supports the bathtub, so it won't flex on the inside if you push it or stand on it.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathtubLegsImage} alt="Attaching the legs to the bathtub."/>
+      <TmpImage src={bathtubTestFitImage} alt="Test-fitting the bathtub. The legs are adjustable, making it easy to level the bathtub, but they were too short, so the bathtub rests on aerated concrete block (and is additionally supported around its edge by the wall enclosure)."/>
+      <TmpImage src={bathtubWallInProgressImage} alt="Insulating the area between the bathtub and enclosure walls with XPS and spray foam. This supports the bathtub mechanically and retains heat in the water."/>
+      <TmpImage src={bathtubCompleteImage} alt="The completed front wall, again build of aerated concrete block."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Self-leveling compound (pre-tiling)</h2>
+    <div class="mt-5">
+      <p>We poured self-leveling compound over the bathroom floor before tiling to fill in any gaps and irregularities in the screed below.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={bathroomLevelingCompoundMaterialsImage} alt="The self-leveling compound is cementitious/mineral-based and bonds nicely to the cementitious screed floor. You mix the material you'll need in buckets, then pour it all at once."/>
+      <TmpImage src={bathroomLevelingCompoundInProgressImage} alt="Rolling the compound with a bristly roller to work out air bubbles."/>
+      <TmpImage src={bathroomLevelingCompoundPouredImage} alt="The poured self-leveling compound, which produces a smooth, level, planar surface."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Tiling the bathroom</h2>
+    <div class="mt-5">
+      <p>We used a matte white 300 mm x 600 mm ceramic tile for the walls and bathtub surfaces and a textured 600 mm x 600 mm non-slip granite tile for the floor—the large format tiles make the installation quick. The dimensions of the bathtub and walls are intentionally designed to align with the modular 300 mm tile grid, minimizing cutting. We first tiled the floors, then the walls and bathtub surfaces, which avoids grout seam around the perimeter of the floor. </p>
+      <p class="mt-2">This was my first time tiling, and our neighbor Zdravko (an amazing man, but those are stories for another time) came to show me how the process works and lent me his tile saw for the duration of the job. We did the first part of the floor together, and then Martin and I did the rest of the job ourselves.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <!-- Floor -->
+      <h3 class="!mt-16 text-2xl text-center">Tiling the floor</h3>
+      <TmpImage src={tilingFloorZdravkoLayoutImage} alt="Zdravko taking measurements needed to fit the tiles around the floor drain."/>
+      <TmpImage src={tilingFloorDrainHoleImage} alt="The opening for the hole drain, cut with a diamond-tipped cutting disk on the angle grinder. The floor tiles are granite and quite a challenge to cut (the ceramic wall tiles were softer and much easier to cut)."/>
+      <TmpImage src={tilingFloorZdravkoSawImage} alt="Zdravko showing me how to cut tiles on the tile saw, which he lent me for the duration of the job. This was a wonderful tool to have—it is both precise and continuously wets the tiles with a jet of water, eliminating dust."/>
+      <TmpImage src={tilingFloorPhase1CompleteImage} alt="The first phase of the floor tiling complete. We did this in two phases—the long narrow geometry of the bathroom floor makes it difficult to do in a single phase without boxing yourself in."/>
+      <TmpImage src={tilingFloorPhase2InProgressImage} alt="Completing the second phase of floor tiling—the suspended toilet makes it easy to tile under the toilet, as opposed to cutting tile to fit around a traditional floor-draining toilet. Notice how I am inexperienced and getting thinset everywhere—much more of that to come!"/>
+      <!-- Bathtub wall-->
+      <h3 class="!mt-16 text-2xl text-center">Tiling the bathtub area</h3>
+      <TmpImage src={tilingBathtubTrowelLinesImage} alt="Applying tile adhesive to the bathtub walls. A notched trowel is used to create the neat line pattern—this makes for a better bond when the tile is pressed into the adhesive, and makes it easy to spread a consistent thickness adhesive."/>
+      <TmpImage src={tilingBathtubBaseboadToiletImage} alt="Applying skirting/baseboard tile around the perimeter of the bathroom floor, including under the toilet."/>
+      <TmpImage src={tilingBathtubMartin3Image} alt="Martin did a wonderful job of cleaning up the thinset I spread everywhere with my inexperienced hands. The hole in the wall is for an access hatch for servicing the bathtub plumbing—more on this below."/>
+      <TmpImage src={tilingBathtubBaseboardCompleteImage} alt="The skirting/baseboard tile complete."/>
+      <TmpImage src={tilingBathtubCompleteIshImage} alt="The bathtub wall complete."/>
+      <TmpImage src={tilingCompleteImage} alt="The flat area at the top of the bathtub complete. The hole at the base of the tub is for servicing the bathtub drain, and will be covered by a removable blind tile—more on this below."/>
+      <TmpImage src={tilingGroutMaterialsImage} alt="We grouted the tile with a flexible off-white CE-40 grout made by Ceresit."/>
+      <TmpImage src={tilingCompleteWithAccessHatchImage} alt="The completed tiling job. Aside from getting thinset everywhere while tiling, the job came out well enough for a first time laying tile. "/>
+      <!-- Access hatch -->
+      <h3 class="!mt-16 text-2xl text-center">Aside: access hatch for bathtub plumbing</h3>
+      <p class="text-center max-w-2xl mx-auto">
+      We left an intentional hole in the wall for an access hatch which we could use to access the bathtub drain in the event of clogs or future service. The hatch will be covered by a "blind" tile attached with magnets and removed and replaced with a suction cup—I saw a similar idea once on YouTube and wanted to try it out here. 
+      </p>
+      <TmpImage src={tilingAccessHatchReadyImage} alt="The hole in the wall for accessing the bathtub plumbing, which will be covered by a blind tile."/>
+      <TmpImage src={tilingAccessHatchScrewAnchorsImage} alt="These wall anchors are for screws that will hold brackets holding the blind tile."/>
+      <TmpImage src={tilingAccessHatchSpacerImage} alt="Using a straightedge with some wooden shims/gauges to judge the appropriate depth at which to attach the brackets so the blind tile will be flush with the rest of the wall."/>
+      <TmpImage src={tilingAccessHatchClipsAttachedImage} alt="Magnets on the back of the blind tile will attach to these steel angle brackets on the wall."/>
+      <TmpImage src={tilingAccessHatchTileLayoutImage} alt="Marking the position for the magnets on the back of the blind tile."/>
+      <TmpImage src={tilingAccessHatchMagnetsAttachedImage} alt="Attaching the magnets to the back of the tile with a water-resistant construction adhesive."/>
+      <TmpImage src={tilingAccessHatchDemo1Image} alt="The blind tile is held in place magnetically..."/>
+      <TmpImage src={tilingAccessHatchDemo2Image} alt="...and can be removed by suction cup."/>
+      <TmpImage src={tilingAccessHatchCompleteImage} alt="The end result—aside from the missing grout lines, the access hatch is hardly visible if you aren't looking for it."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Wrapping up the bathroom</h2>
+    <div class="mt-5">
+      <p>Miscellaneous finish work—installing the bathtub faucet, sink, shelf over the utility area, etc.</p>
+      <p class="mt-2">Fun aside: the entire set of bathtub fixtures (faucets and fittings for both the tub and sink) were a fun 40€ purchase off the Slovene equivalent of Craigslist or Facebook Marketplace. They are high-quality brass fixtures and would have cost many hundreds of euros if bought new (proper brass bathroom fixtures are expensive!).</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <h3 class="!mt-16 text-2xl text-center">Bathtub faucet</h3>
+      <TmpImage src={bathroomFaucetMaterialsImage} alt="The various materials for installing the bathtub faucet (fittings, escutcheons, sealing thread, the old temporary plugs)."/>
+      <TmpImage src={bathroomFaucetWrenchImage} alt="Tightening on the female-to-male fittings for the bathtub faucet."/>
+      <TmpImage src={bathroomFaucetFittingsAttachedImage} alt="The installed fittings. The fittings intentionally project out of the wall so the water from the faucet will comfortably reach over the lip of the bathtub.."/>
+      <TmpImage src={bathroomFaucetCompleteImage} alt="Installing the bathtub faucet."/>
+      <!-- Sink -->
+      <h3 class="!mt-16 text-2xl text-center">Sink</h3>
+      <TmpImage src={bathroomSinkMaskingTapePortraitImage} alt="Test-fitting the sink before installing. The masking tape protects the area around the sink from the silicone sealant used to attach the sink to the base cabinet."/>
+      <TmpImage src={bathroomSinkDryFitImage} alt="The installed sink."/>
+      <!-- Shelf -->
+      <h3 class="!mt-16 text-2xl text-center">Shelf over the utility area</h3>
+      <TmpImage src={bathroomShelfDryFitImage} alt="Test-fitting a piece of water-resistant drywall to cover the utility area (there are two columns near the far corner to support the board at all edges)."/>
+      <TmpImage src={bathroomShelfWaterproofingImage} alt="Waterproofing the shelf board."/>
+      <TmpImage src={bathroomShelfCompleteImage} alt="Waterproofing complete."/>
+      <TmpImage src={bathroomShelfInstalledImage} alt="The installed shelf over the utility area. I'll tile it at some point..."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Flooring installation</h2>
+    <div class="mt-5">
+      <p>New topic—flooring! We chose wood flooring (20 mm tongue and groove spruce boards) for the interior finish floor. We fastened the boards with countersunk screws driven directly through the faces of the boards into the OSB subfloor. We then filled the screw holes with wood filler.</p>
+      <p class="mt-2">
+      Aside: the more conventional way to fasten tongue and groove wood flooring is with blind nails through the tongues of each board, with the groove of the next board covering the nails. I found the spruce boards were too susceptible to splitting for this to work well, and the screws through the face did a better job of holding the boards in place, in exchange for more work filling the screw holes later.
+      </p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={floorInstallationReadyImage} alt="The cleaned and vacuumed subfloor ready for finish flooring."/>
+      <TmpImage src={floorInstallationSawImage} alt="The installation in progress. The miter saw in the foreground was used to cut the boards to length."/>
+      <TmpImage src={floorInstallationTapeImage} alt="Measuring the length of board needed to complete the current row."/>
+      <TmpImage src={floorInstallationJigImage} alt="We used a simple jig made from scrap piece of flooring to fit the boards tightly. (Hitting the boards directly with a hammer would cause them to split, but the jig fits over the boards and distributes force sufficiently safely.)"/>
+      <TmpImage src={floorInstallationDriverImage} alt="Fastening boards, which we screwed directly through their face into the OSB subfloor. The screws are countersunk at least 5 mm below the surface to allow for future sanding/refinishing. The hammer is being used as a lever to hold the board tightly in place."/>
+      <TmpImage src={floorInstallationProgressImage} alt="Almost done with the main living area!"/>
+      <TmpImage src={floorInstallationBedroomImage} alt="The completed living area and sleeping nook."/>
+      <TmpImage src={floorInstallationPuttyImage} alt="We filled screw holes with Akrilin, a flexible acrylic wood filler made by the Slovenian company JUB."/>
+      <TmpImage src={floorInstallationFilledHolesImage} alt="The screw holes after a first application of filler. The filler shrinks slightly, so we applied it in two coats—an initial bulk coat (shown above), followed by a finish coat flush with the surface."/>
+      <TmpImage src={floorInstallationSanderImage} alt="Sanding away filler that made it out of the screw holes between applications."/>
+      <TmpImage src={floorInstallationCompleteFloorImage} alt="The completed finish floor installation after filling screw holes and sanding."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Finishing the floor</h2>
+    <div class="mt-5">
+      <p>The floor is finished with a water-based polyurethane seal + finish system made by Italian company Chimiver. We left the floors their natural color (i.e. we did not use a stain). The polyurethane finish creates a polymerized protective film on top of floor that should last for many years without maintenance (as opposed to a waxed or natural oil finish, which needs to be renewed regularly). I'm happy with the product—it was practically odorless (being water-based), dried quickly, and preserved the natural character of the spruce boards without the artificial plastic look you'll sometimes see with polyurethane finishes.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={floorFinishReadyImage} alt="The freshly-installed finish floor, ready for sealing and finishing."/>
+      <TmpImage src={floorFinishMaterialsSealerImage} alt="Chimiver Ecostarter, a single-component water-based sealer applied in one or two coats before the finish (we used a single coat). The sealer ensures an even, high-quality finish result."/>
+      <TmpImage src={floorFinishRollerSealerImage} alt="Applying the sealant with a microfiber roller."/>
+      <TmpImage src={floorFinishSealedImage} alt="The sealed floor, still largely its natural color and luster, as desired."/>
+      <TmpImage src={floorFinishSandingImage} alt="The floor is sanded briefly with a high-grit sandpaper between every coat of sealer and finish. This mechanically scuffs up the previous coat at a miscroscopic level to ensure a better bond of the next coat."/>
+      <TmpImage src={floorFinishCleaningPortraitImage} alt="The floor must be thoroughly cleaned between coats: we first swept up sanding dust with a broom and cleaned the floor with a shop vac..."/>
+      <TmpImage src={floorFinishAirgunImage} alt="...then used compressed air to blow away any trace dust."/>
+      <TmpImage src={floorFinishMaterialsFinishImage} alt="Chimiver Ecostar, a single-component water-based finish (they call it a lacquer, but this is European terminology; it would be called finish in the USA). The finish is applied in two or three coats using a brush or microfiber roller, with sanding between coats."/>
+      <TmpImage src={floorFinishRollerCloseupImage} alt="The finish is milky white color when poured out of the jug, but is colorless when it cures."/>
+      <TmpImage src={floorFinishRollerFinishImage} alt="Applying the first coat of floor finish with a microfiber roller."/>
+      <TmpImage src={floorFinishFinishWetImage} alt="The completed first coat of finish. It is still wet and so appears high-gloss, but dries to a matte luster."/>
+      <TmpImage src={floorFinishCompleteImage} alt="The complete finished floor after intermediate sanding and another coat of finish."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Finish carpentry: floor skirting/baseboards</h2>
+    <div class="mt-5">
+      <p>We finished the perimeter of the floor with simple skirting made from the same locally-sourced spruce stock as the tongue and groove boards used for the wall finish. The boards are already planed and sanded, and we just ripped them to width and milled the simple profile ourselves with a hand router.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={baseboardsRdImage} alt="R&D: testing out various board thicknesses and profiles to find the one we liked best."/>
+      <TmpImage src={baseboardsMilledBoardsImage} alt="We settled for a simple coved profile and 12 mm boards."/>
+      <TmpImage src={baseboardsRippingImage} alt="Ripping the boards to width on the table saw. We used the same stock as for the tongue and groove wall finish."/>
+      <TmpImage src={baseboardsRouterImage} alt="We milled the profile with a coved bit and a hand router."/>
+      <TmpImage src={baseboardsCopeImage} alt="A coped end used to make an interior corner."/>
+      <TmpImage src={baseboardsCopeDryFitImage} alt="Test-fitting the coped joint."/>
+      <TmpImage src={baseboardsNailgunImage} alt="Attaching the baseboards to the wall using an 18 gauge brad nailer."/>
+      <TmpImage src={baseboardsAdhesiveImage} alt="We attached the boards with construction adhesive in the masonry portions of the wall, which would not accept fasteners."/>
+      <TmpImage src={baseboardsWeightsImage} alt="Using weights to hold the baseboards in place while the adhesive cures."/>
+      <TmpImage src={baseboardsCompleteBathroomImage} alt="The completed baseboards—they are simple and unobtrusive."/>
+      <TmpImage src={baseboardsCompleteCornerImage} alt="The completed baseboards in the far corner of the living area."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Aside: refitting hinges</h2>
+    <div class="mt-5">
+      <p>We used old doors we had salvaged from a previous apartment, but did not have the old hinges. The holes in the doors from the previous hinges were too large for the new hinges we would use; this section shows the process of filling the old holes and installing the new hinges.</p>
+      <p class="mt-2">Aside: this style of hinge is common on simple interior doors in Slovenia, and is probably unfamiliar to US readers familiar with the usual butt hinges.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={doorHingePrepOldHoleImage} alt="The hole in the door from the old hinge was too large for the new hinges we would use, and would have to be filled."/>
+      <TmpImage src={doorHingePrepDowelImage} alt="Filling the existing hole with a hardwood dowel, which is glued in place and left to sit until the glue dries."/>
+      <TmpImage src={doorHingePrepFlushImage} alt="Cutting the dowel flush with the surface of the door. A flexible fine-toothed Japanese hand saw is the correct tool for the job, but I did not have one on hand, and made due with an oscillating multitool."/>
+      <TmpImage src={doorHingePrepPilotHoleImage} alt="Drilling a starter guide hole with a thin-diameter drill bit."/>
+      <TmpImage src={doorHingePrepHoleImage} alt="Drilling the correct diameter pilot hole for the new hinges."/>
+      <TmpImage src={doorHingePrepHingeImage} alt="The new hinge is screwed into the new pilot hole and fits over a matching pin in the door jamb."/>
+      <TmpImage src={doorHingePrepHingeInImage} alt="The new hinge installed. The door is now ready to be hung."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Installing interior doors</h2>
+    <div class="mt-5">
+      <p>We reused old doors we had salvaged from a previous apartment, which left us with fond memories and many hundreds of euros in our pockets (doors are expensive!). We built new jambs to match the existing doors.</p>
+      <p class="mt-2">Fun aside: we built the jambs with lumber milled from our own forest, and jointed and thickness planed for me by our neighbor (I have neither a jointer or a thickness planer, but my neighbors are both better equipped and gracious with their tools!).</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={doorInstallationReadyImage} alt="The bathroom rough opening and door, ready for installation."/>
+      <TmpImage src={doorInstallationJambsRoughStockImage} alt="Our stack of lumber (mostly spruce—the dominant construction softwood in Slovenia and much of Central Europe), from which we made the door jambs. The jambs are made from nominally 50 mm boards, which were jointed and then planed to 40 mm."/>
+      <TmpImage src={doorInstallationJambsInCarImage} alt="The jointed and planed jambs, freshly picked up from my neighbor, who processed them for me. (As mentioned in the introduction, I have neither a jointer nor a thickness planer, but my neighbors are better equipped and gracious with their tools!)"/>
+      <TmpImage src={doorInstallationMiterSawImage} alt="Cutting the jambs to length on the miter saw..."/>
+      <TmpImage src={doorInstallationLayoutImage} alt="...and to width on the table saw."/>
+      <TmpImage src={doorInstallationDryFitImage} alt="Test-fitting the jambs before attaching them. I left a roughly 8 mm gap between the rough opening and jambs. The test fit looks good!"/>
+      <TmpImage src={doorInstallationShimsMiterSawImage} alt="Cutting shims on the miter saw. I would use these shims to plumb and level the jambs."/>
+      <TmpImage src={doorInstallationShimsImage} alt="Shims are used to plumb and level the side and top jambs, and to provide mechanical support the jambs where they are screwed into the framing."/>
+      <TmpImage src={doorInstallationLevelImage} alt="Ensuring the side jambs are plumb before attaching them."/>
+      <TmpImage src={doorInstallationPilotHolesImage} alt="Attaching the side jambs—we used countersunk construction screws, and later filled the screw holes with wood filler."/>
+      <TmpImage src={doorInstallationFillingScrewHolesImage} alt="Filling the screw holes with wood filler."/>
+      <TmpImage src={doorInstallationJambsCompleteImage} alt="The completed jambs for the bathroom door."/>
+      <TmpImage src={doorInstallationCuttingShimsImage} alt="Cutting away the protruding parts of the shims with an oscillating multitool after attaching the jambs."/>
+      <TmpImage src={doorInstallationHingeImage} alt="Attaching the hinges to the jambs. Matching hinges on the door fit over and pivot on the pin hinges in the jambs. These hinges are simple and don't allow any adjustment, so they have to be accurately placed."/>
+      <TmpImage src={doorInstallationHungOpenImage} alt="Testing the door operation after hanging the door."/>
+      <TmpImage src={doorInstallationHungImage} alt="All done! The bathroom door successfully hung."/>
+      <TmpImage src={doorInstallationEntryOpeningImage} alt="The rough opening for the main entry door into the attic living space."/>
+      <TmpImage src={doorInstallationEntryHungImage} alt="The main entry door hung. The process of building the jambs and hanging the door is analogous to the process for the bathroom door; here is the finished result."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Finish carpentry: door casings</h2>
+    <div class="mt-5">
+      <p>The door casings, which cover the gap between the door jambs and rough opening, are made from the same 20 mm spruce stock as the finish floor. We made simple butt casings with a coved profile. Like for the baseboard, the boards are already planed and sanded, and we just ripped them to width and milled the simple profile ourselves with a hand router.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={doorCasingsStockImage} alt="The 20 mm spruce stock from which we made the door casings."/>
+      <TmpImage src={doorCasingsRouterImage} alt="We used a hand router and a coved bit to add a simple decorative profile to the casings."/>
+      <TmpImage src={doorCasingsInProgressImage} alt="Installing the first piece of casing on the main entry door."/>
+      <TmpImage src={doorCasingsCornerImage} alt="We used a simple butt joint to join the top and side casings."/>
+      <TmpImage src={doorCasingsTopImage} alt="The installed casing on the inside of the main entry door. Similar casings are installed on the exterior side, and on the bathroom door."/>
+      <TmpImage src={doorCasingsNailHolesImage} alt="The casings are attached with 18 gauge brad nails; the nail holes are filled with wood filler..."/>
+      <TmpImage src={doorCasingsSandingImage} alt="..and then sanded flush to remove any residual filler."/>
+      <TmpImage src={doorCasingsCompleteImage} alt="The completed casing on the entry door after finishing with linseed oil."/>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-3xl">Finish carpentry: thresholds</h2>
+    <div class="mt-5">
+      <p>We built two thresholds—one to cover to cover the butt joints at the main entry door and one to cover the gap between the main living space and sleeping nook (which I left intentionally for insurance, as expansion space to minimize buckling in the event of excessive expansion). The thresholds are made from the same spruce lumber as the tongue and groove wall finish, and are made from two pieces joined together on edge—I didn't have any flat stock wide enough to make the thresholds in one piece.</p>
+    </div>
+    <div class="mt-8 space-y-8">
+      <TmpImage src={thresholdsGapBed1Image} alt="The expansion gap between the main living space and sleeping nook, which we would cover with a threshold."/>
+      <TmpImage src={thresholdsBevelSaw2Image} alt="Shaping the threshold part 1: the end goal was a curved edge to match the profile of the arch of a human foot; I began by cutting a bevel on the table saw to get the rough shape."/>
+      <TmpImage src={thresholdsBevelSawImage} alt="On the way to a curved edge—the temporary beveled edge made on the table saw."/>
+      <TmpImage src={thresholdsShapingRoughImage} alt="I then rounded out the beveled edge with an aggressive sanding disk on the angle grinder..."/>
+      <TmpImage src={thresholdsShapingSanderImage} alt="...and finally smoothed this out with an orbital sander to create a smooth rounded edge."/>
+      <TmpImage src={thresholdsDoorGapImage} alt="The first piece of the threshold, which would entirely span the gap in the floor, ready for installation."/>
+      <TmpImage src={thresholdsDoorReady1Image} alt="The second piece of the threshold, with ends notched to fit around the door jambs, ready for installation."/>
+      <TmpImage src={thresholdsDoorIn1Image} alt="The second piece of the main entry threshold in place."/>
+      <TmpImage src={thresholdsCompleteEntry2Image} alt="The main entry threshold after filling, sanding, and finishing."/>
+      <TmpImage src={thresholdsCompleteBedImage} alt="The threshold over the gap between the sleeping nook and living area, made with a analogous procedure as for the main entry threshold."/>
     </div>
   </section>
 
 </BaseLayout>
+
+
